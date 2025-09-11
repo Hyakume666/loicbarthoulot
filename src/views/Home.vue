@@ -25,7 +25,7 @@
             
             <p class="hero-description fade-in-up delay-1">
               Étudiant en Informatique de Gestion, passionné d'IT.<br>
-              J'aide particuliers et petites structures à monter, dépanner et optimiser leurs PC,<br>
+              J'aide particuliers et petites structures à monter, dépanner et optimiser leurs PC 
               et je crée des sites web modernes et performants adaptés à leurs besoins.
             </p>
             

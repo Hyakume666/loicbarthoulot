@@ -36,11 +36,11 @@
                 <h3 class="text-primary-custom mb-3">Coordonnées</h3>
                 <div class="row">
                   <div class="col-md-6">
-                    <p style="color: var(--text) !important;"><i class="fas fa-envelope me-2" style="color: var(--primary);"></i> loic.barthoulot@email.com</p>
-                    <p style="color: var(--text) !important;"><i class="fas fa-phone me-2" style="color: var(--primary);"></i> +33 6 12 34 56 78</p>
+                    <p style="color: var(--text) !important;"><i class="fas fa-envelope me-2" style="color: var(--primary);"></i> barthoulot12@gmail.com</p>
+                    <p style="color: var(--text) !important;"><i class="fas fa-phone me-2" style="color: var(--primary);"></i> À obtenir après un premier contact</p>
                   </div>
                   <div class="col-md-6">
-                    <p style="color: var(--text) !important;"><i class="fas fa-map-marker-alt me-2" style="color: var(--primary);"></i> Votre ville, France</p>
+                    <p style="color: var(--text) !important;"><i class="fas fa-map-marker-alt me-2" style="color: var(--primary);"></i> La Chaux-de-Fonds, Suisse</p>
                     <p style="color: var(--text) !important;"><i class="fab fa-linkedin me-2" style="color: var(--primary);"></i> LinkedIn Profile</p>
                   </div>
                 </div>

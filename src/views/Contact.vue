@@ -12,12 +12,12 @@
 
           <!-- Informations de contact -->
           <div class="row g-4 mb-5 justify-content-center">
-            <div class="col-md-3 text-center">
+            <div class="col-md-4 text-center">
               <div class="card card-custom contact-form-card h-100">
                 <div class="card-body p-4">
                   <div class="icon-feature">📧</div>
                   <h5 style="color: var(--text) !important;">Email</h5>
-                  <p style="color: var(--text) !important;">loic.barthoulot@email.com</p>
+                  <p style="color: var(--text) !important;">barthoulot12@gmail.com</p>
                 </div>
               </div>
             </div>
@@ -26,7 +26,7 @@
                 <div class="card-body p-4">
                   <div class="icon-feature">📱</div>
                   <h5 style="color: var(--text) !important;">Téléphone</h5>
-                  <p style="color: var(--text) !important;">+33 6 12 34 56 78</p>
+                  <p style="color: var(--text) !important;">Après un premier contact</p>
                 </div>
               </div>
             </div>

@@ -1,7 +1,8 @@
 # 🌐 Loïc Barthoulot – Portfolio & Services IT
 
 Bienvenue sur mon site personnel !  
-Ce projet a pour but de **présenter mon parcours (CV)** et de mettre en avant mes **services dans le domaine informatique** :  
+Ce projet a pour but de **présenter mon parcours (CV)** et de mettre en avant mes **services dans le domaine informatique** :
+
 🖥️ Montage PC sur mesure · ⚙️ Dépannage & optimisation · 🌐 Création de sites web modernes  
 
 ---

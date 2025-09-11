@@ -35,18 +35,18 @@
         <div class="row g-4">
           <div class="col-md-4 text-center">
             <div class="icon-feature">⚡</div>
-            <h5 style="color: var(--text) !important;">Intervention rapide</h5>
-            <p style="color: var(--muted) !important;">Disponible 7j/7 pour vos urgences informatiques</p>
+            <h5 style="color: var(--text) !important;">Passion & polyvalence</h5>
+            <p style="color: var(--muted) !important;">Que ce soit pour un PC gaming, une machine bureautique ou un site web, je traite chaque projet avec soin et passion, en m’adaptant aux besoins spécifiques de chacun.</p>
           </div>
           <div class="col-md-4 text-center">
             <div class="icon-feature">🛡️</div>
-            <h5 style="color: var(--text) !important;">Garantie qualité</h5>
-            <p style="color: var(--muted) !important;">Toutes mes interventions sont garanties</p>
+            <h5 style="color: var(--text) !important;">Approche personnalisée</h5>
+            <p style="color: var(--muted) !important;">Je prends le temps d’écouter vos attentes et de proposer une solution adaptée à votre usage, votre budget et vos objectifs.</p>
           </div>
           <div class="col-md-4 text-center">
             <div class="icon-feature">💰</div>
-            <h5 style="color: var(--text) !important;">Prix transparents</h5>
-            <p style="color: var(--muted) !important;">Devis gratuit et tarifs clairs</p>
+            <h5 style="color: var(--text) !important;">Prix clairs et transparents</h5>
+            <p style="color: var(--muted) !important;">Vous savez à l’avance ce que vous payez : pas de coûts cachés, des tarifs justes adaptés à la prestation.</p>
           </div>
         </div>
       </section>
@@ -61,7 +61,7 @@ const services = ref([
   {
     id: 1,
     title: 'Montage de PC sur mesure',
-    description: 'Assemblage complet de votre configuration personnalisée selon vos besoins et votre budget. Conseil dans le choix des composants et optimisation des performances.',
+    description: 'Assemblage complet de votre configuration personnalisée selon vos besoins et votre budget.',
     price: 'Sur devis',
     image: 'https://images.pexels.com/photos/1029757/pexels-photo-1029757.jpeg?auto=compress&cs=tinysrgb&w=600',
     link: '/services/montage-pc'
@@ -69,7 +69,7 @@ const services = ref([
   {
     id: 2,
     title: 'Dépannage & réparation',
-    description: 'Diagnostic et réparation de pannes matérielles et logicielles. Récupération de données, remplacement de composants défaillants.',
+    description: 'Diagnostic et réparation de pannes matérielles et logicielles.',
     price: 'Sur devis',
     image: 'https://images.pexels.com/photos/5380664/pexels-photo-5380664.jpeg?auto=compress&cs=tinysrgb&w=600',
     link: '/services/depannage-reparation'

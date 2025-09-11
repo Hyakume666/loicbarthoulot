@@ -26,7 +26,7 @@
             <!-- LinkedIn et bouton scroll top -->
             <div class="footer-actions">
               <a 
-                href="https://linkedin.com/in/loic-barthoulot" 
+                href="https://www.linkedin.com/in/loic-barthoulot/" 
                 class="footer-link linkedin-link"
                 target="_blank"
                 rel="noopener noreferrer"
