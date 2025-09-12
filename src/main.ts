@@ -16,9 +16,6 @@ import Contact from './views/Contact.vue'
 // Import service detail pages
 import DepannageReparation from './views/services/DepannageReparation.vue'
 import NettoyageEntretien from './views/services/NettoyageEntretien.vue'
-import InstallationLogiciels from './views/services/InstallationLogiciels.vue'
-import OptimisationPerformance from './views/services/OptimisationPerformance.vue'
-import ConseilMateriel from './views/services/ConseilMateriel.vue'
 
 const routes = [
   { path: '/', name: 'Home', component: Home },

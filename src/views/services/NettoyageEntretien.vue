@@ -1,5 +1,5 @@
 <template>
-  <div class="section-padding" style="background-color: var(--bg) !important; min-height: 100vh;">
+  <div class="section-padding entretien-page" style="background-color: var(--bg) !important; min-height: 100vh;">
     <div class="container">
       <!-- Bouton retour -->
       <div class="mb-4">
@@ -30,7 +30,7 @@
                 que logiciel, pour retrouver des performances optimales.
               </p>
               <p style="color: var(--text) !important;">
-                <strong>Recommandation :</strong> Un entretien tous les 6 à 12 mois selon l'utilisation.
+                <strong>Recommandation :</strong> Un entretien tous les 6 à 12 mois selon l'environnement et l'utilisation.
               </p>
             </div>
           </div>
@@ -63,9 +63,6 @@
                       <i class="fas fa-check text-primary-custom me-2"></i><span style="color: var(--text) !important;">Nettoyage ventilateurs</span>
                     </li>
                     <li class="mb-2">
-                      <i class="fas fa-check text-primary-custom me-2"></i><span style="color: var(--text) !important;">Vérification connectiques</span>
-                    </li>
-                    <li class="mb-2">
                       <i class="fas fa-check text-primary-custom me-2"></i><span style="color: var(--text) !important;">Contrôle températures</span>
                     </li>
                   </ul>
@@ -78,9 +75,6 @@
                     </li>
                     <li class="mb-2">
                       <i class="fas fa-check text-primary-custom me-2"></i><span style="color: var(--text) !important;">Suppression fichiers temporaires</span>
-                    </li>
-                    <li class="mb-2">
-                      <i class="fas fa-check text-primary-custom me-2"></i><span style="color: var(--text) !important;">Défragmentation disque dur</span>
                     </li>
                     <li class="mb-2">
                       <i class="fas fa-check text-primary-custom me-2"></i><span style="color: var(--text) !important;">Mise à jour drivers</span>
@@ -167,3 +161,11 @@ const typesEntretien = ref([
   }
 ])
 </script>
+
+<style scoped>
+/* Désactive le hover uniquement sur cette page */
+.entretien-page .card-custom:hover {
+  transform: none !important;
+  box-shadow: none !important;
+}
+</style>

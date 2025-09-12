@@ -65,8 +65,8 @@
           </div>
           <div class="col-md-4 text-center">
             <div class="icon-feature">🛡️</div>
-            <h5 style="color: var(--text);">Garantie complète</h5>
-            <p style="color: var(--muted);">Garantie sur l'assemblage et accompagnement post-montage</p>
+            <h5 style="color: var(--text);">Fiabilité éprouvée</h5>
+            <p style="color: var(--muted);">Tous les composants passent par des tests intensifs avant la livraison.</p>
           </div>
           <div class="col-md-4 text-center">
             <div class="icon-feature">⚡</div>
@@ -94,7 +94,6 @@ const configurations = ref([
       'Refroidissement silencieux',
       'Faible consommation électrique',
       'Évolutivité future assurée',
-      'Garantie 2 ans sur l\'assemblage'
     ]
   },
   {
@@ -108,7 +107,7 @@ const configurations = ref([
       'Budget maîtrisé et optimisé',
       'Évolutivité gaming assurée',
       'Refroidissement efficace',
-      'Support technique inclus'
+      'Peu gourmand en énergie',
     ]
   },
   {
@@ -118,11 +117,11 @@ const configurations = ref([
     description: 'Le meilleur rapport performance/prix pour les gamers exigeants. Gaming en 1440p avec des réglages élevés sur la plupart des jeux.',
     features: [
       'Gaming 1440p haute qualité',
+      'Fluidité optimale sur la majorité des AAA actuels',
       'Excellent rapport perf/prix',
-      'Ray tracing compatible',
       'Streaming et multitâche',
-      'Refroidissement premium',
-      'Garantie performance 3 ans'
+      'Excellent refroidissement',
+      'Compatible avec les jeux VR',
     ]
   },
   {
@@ -131,12 +130,12 @@ const configurations = ref([
     icon: '👑',
     description: 'Configuration ultime pour les passionnés. Gaming en 1440p/4K avec ray tracing, haute fréquence et performances exceptionnelles.',
     features: [
-      'Gaming 4K et haute fréquence',
+      'Gaming en 4K',
       'Ray tracing ultra performant',
       'Composants haut de gamme',
-      'Refroidissement sur mesure',
-      'Overclocking optimisé',
-      'Support premium à vie'
+      'Refroidissement premium',
+      'Durabilité assurée avec composants haut de gamme',
+      'Convient également pour la création de contenu (Montage vidéo, rendus 3D)'
     ]
   }
 ])

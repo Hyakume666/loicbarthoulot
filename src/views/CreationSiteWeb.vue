@@ -1,5 +1,5 @@
 <template>
-  <div class="section-padding" style="background-color: var(--bg) !important; min-height: 100vh;">
+  <div class="section-padding creation-site-page" style="background-color: var(--bg) !important; min-height: 100vh;">
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-lg-8">
@@ -84,36 +84,6 @@
             </div>
           </div>
 
-          <!-- Technologies -->
-          <div class="card card-custom mb-5">
-            <div class="card-body p-4">
-              <h3 class="text-primary-custom mb-4">Technologies proposées</h3>
-              <div class="row g-4">
-                <div class="col-md-4 text-center">
-                  <div class="mb-3">
-                    <i class="fab fa-vuejs text-primary-custom" style="font-size: 2.5rem;"></i>
-                  </div>
-                  <h5 style="color: var(--text) !important;">Vue.js + Bootstrap</h5>
-                  <p style="color: var(--muted) !important;" class="small">Framework moderne et performant</p>
-                </div>
-                <div class="col-md-4 text-center">
-                  <div class="mb-3">
-                    <i class="fab fa-react text-primary-custom" style="font-size: 2.5rem;"></i>
-                  </div>
-                  <h5 style="color: var(--text) !important;">React + Tailwind</h5>
-                  <p style="color: var(--muted) !important;" class="small">Stack populaire et flexible</p>
-                </div>
-                <div class="col-md-4 text-center">
-                  <div class="mb-3">
-                    <i class="fas fa-code text-primary-custom" style="font-size: 2.5rem;"></i>
-                  </div>
-                  <h5 style="color: var(--text) !important;">Stack sur mesure</h5>
-                  <p style="color: var(--muted) !important;" class="small">Selon vos besoins spécifiques</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
           <!-- Call to action -->
           <div class="text-center">
             <h3 class="mb-4" style="color: var(--text) !important;">Prêt à créer votre site web ?</h3>
@@ -160,3 +130,11 @@ const advantages = ref([
   }
 ])
 </script>
+
+<style scoped>
+/* Désactive le hover uniquement sur cette page */
+.creation-site-page .card-custom:hover {
+  transform: none !important;
+  box-shadow: none !important;
+}
+</style>

@@ -1,5 +1,5 @@
 <template>
-  <div class="section-padding" style="background-color: var(--bg) !important; min-height: 100vh;">
+  <div class="section-padding depannage-page" style="background-color: var(--bg) !important; min-height: 100vh;">
     <div class="container">
       <!-- Bouton retour -->
       <div class="mb-4">
@@ -23,14 +23,14 @@
               <div class="text-center mb-4">
                 <div class="icon-feature">🔧</div>
               </div>
-              <h3 class="text-primary-custom text-center mb-4">Expertise en dépannage informatique</h3>
+              <h3 class="text-primary-custom text-center mb-4">Assistance informatique</h3>
               <p style="color: var(--text) !important;" class="mb-4">
                 Votre ordinateur ne démarre plus ? Il est lent ou présente des dysfonctionnements ? 
                 Je diagnostique et répare tous types de pannes matérielles et logicielles avec 
                 efficacité et transparence.
               </p>
               <p style="color: var(--text) !important;">
-                <strong>Intervention rapide :</strong> Disponible 7j/7 pour vos urgences informatiques.
+                <strong>Temps de réponse rapide :</strong> Joignable 7j/7 pour vos urgences informatiques.
               </p>
             </div>
           </div>
@@ -56,9 +56,6 @@
                 <div class="col-md-6">
                   <ul class="list-unstyled">
                     <li class="mb-2">
-                      <i class="fas fa-check text-primary-custom me-2"></i><span style="color: var(--text) !important;">Diagnostic complet gratuit</span>
-                    </li>
-                    <li class="mb-2">
                       <i class="fas fa-check text-primary-custom me-2"></i><span style="color: var(--text) !important;">Réparation sur place ou en atelier</span>
                     </li>
                     <li class="mb-2">
@@ -73,9 +70,6 @@
                     </li>
                     <li class="mb-2">
                       <i class="fas fa-check text-primary-custom me-2"></i><span style="color: var(--text) !important;">Tests de stabilité</span>
-                    </li>
-                    <li class="mb-2">
-                      <i class="fas fa-check text-primary-custom me-2"></i><span style="color: var(--text) !important;">Garantie sur les réparations</span>
                     </li>
                   </ul>
                 </div>
@@ -130,3 +124,11 @@ const typesPannes = ref([
   }
 ])
 </script>
+
+<style scoped>
+/* Désactive le hover uniquement sur cette page */
+.depannage-page .card-custom:hover {
+  transform: none !important;
+  box-shadow: none !important;
+}
+</style>
