@@ -145,16 +145,16 @@ const submitForm = async () => {
   try {
     // Configuration EmailJS (remplacez par vos propres IDs)
     await emailjs.send(
-      'YOUR_SERVICE_ID', // Service ID EmailJS
-      'YOUR_TEMPLATE_ID', // Template ID EmailJS
+      'service_01r3h6v', // Service ID EmailJS
+      'template_en5rdnk', // Template ID EmailJS
       {
         from_name: `${form.value.firstName} ${form.value.lastName}`,
         from_email: form.value.email,
         subject: form.value.subject,
         message: form.value.message,
-        to_email: 'loic.barthoulot@email.com'
+        to_email: 'barthoulot12@gmail.com'
       },
-      'YOUR_PUBLIC_KEY' // Public Key EmailJS
+      'bPELV2NdtsMXZ_THB' // Public Key EmailJS
     )
     
     showSuccess.value = true
@@ -196,5 +196,12 @@ const submitForm = async () => {
 
 .form-control::placeholder {
   color: var(--muted) !important;
+}
+
+.btn-primary-custom {
+  background-color: #0d6efd; /* Bleu Bootstrap par défaut */
+  color: #fff;
+  border: none;
+  transition: all 0.3s ease;
 }
 </style>
