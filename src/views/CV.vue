@@ -97,9 +97,6 @@
                           <i class="fas fa-check text-primary-custom me-2"></i>Design patterns
                         </li>
                         <li class="mb-2" style="color: var(--text) !important;">
-                          <i class="fas fa-check text-primary-custom me-2"></i>Python
-                        </li>
-                        <li class="mb-2" style="color: var(--text) !important;">
                           <i class="fas fa-check text-primary-custom me-2"></i>Architecture logicielle
                         </li>
                       </ul>
