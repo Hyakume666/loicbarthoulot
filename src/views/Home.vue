@@ -33,8 +33,7 @@
 
             <p class="hero-description fade-in-up delay-2">
               Étudiant en Informatique de Gestion, passionné d'IT.<br><br>
-              J'aide particuliers et petites structures à monter, dépanner et optimiser leurs PC, automatiser leurs tâches quotidiennes
-              et je crée des sites web modernes et performants adaptés à leurs besoins à des prix imbattables
+              Je donne un coup de main aux particuliers et aux petites structures pour monter, dépanner et optimiser leurs PC, automatiser leurs tâches du quotidien, et je conçois aussi des sites web modernes, rapides et parfaitement adaptés à leurs besoins, le tout à des tarifs très accessibles.
             </p>
 
             <div class="hero-cta fade-in-up delay-3">
