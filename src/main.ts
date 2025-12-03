@@ -31,7 +31,7 @@ const routes = [
 ]
 
 const router = createRouter({
-    history: createWebHashHistory('/loicbarthoulot/'),
+    history: createWebHashHistory('/'),
   routes,
   scrollBehavior() {
     return { top: 0 }
