@@ -32,9 +32,9 @@
             
             
             <p class="hero-description fade-in-up delay-2">
-              Étudiant en Informatique de Gestion, passionné d'IT.<br>
-              J'aide particuliers et petites structures à monter, dépanner et optimiser leurs PC,<br>
-              et je crée des sites web modernes et performants adaptés à leurs besoins.
+              Étudiant en Informatique de Gestion, passionné d'IT.<br><br>
+              J'aide particuliers et petites structures à monter, dépanner et optimiser leurs PC, automatiser leurs tâches quotidiennes
+              et je crée des sites web modernes et performants adaptés à leurs besoins à des prix imbattables
             </p>
             
             <div class="hero-cta fade-in-up delay-3">

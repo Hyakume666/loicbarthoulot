@@ -12,10 +12,11 @@ import MontagePC from './views/MontagePC.vue'
 import CreationSiteWeb from './views/CreationSiteWeb.vue'
 import CV from './views/CV.vue'
 import Contact from './views/Contact.vue'
+import AutomatisationIa from './views/AutomatisationIa.vue'
 
 // Import service detail pages
-import DepannageReparation from './views/services/DepannageReparation.vue'
-import NettoyageEntretien from './views/services/NettoyageEntretien.vue'
+import DepannageReparation from './views/DepannageReparation.vue'
+import NettoyageEntretien from './views/NettoyageEntretien.vue'
 
 const routes = [
   { path: '/', name: 'Home', component: Home },
@@ -24,6 +25,7 @@ const routes = [
   { path: '/services/depannage-reparation', name: 'DepannageReparation', component: DepannageReparation },
   { path: '/services/nettoyage-entretien', name: 'NettoyageEntretien', component: NettoyageEntretien },
   { path: '/services/creation-site-web', name: 'CreationSiteWeb', component: CreationSiteWeb },
+  { path: '/services/automatisation-ia', name: 'AutomatisationIa', component: AutomatisationIa },
   { path: '/cv', name: 'CV', component: CV },
   { path: '/contact', name: 'Contact', component: Contact }
 ]

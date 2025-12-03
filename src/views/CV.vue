@@ -86,12 +86,21 @@
                         <li class="mb-2" style="color: var(--text) !important;">
                           <i class="fas fa-check text-primary-custom me-2"></i>Développement structuré & modulaire
                         </li>
+                        <li class="mb-2" style="color: var(--text) !important;">
+                          <i class="fas fa-check text-primary-custom me-2"></i>Hibernate 6 + JDBC
+                        </li>
                       </ul>
                     </div>
                     <div class="col-md-6">
                       <ul class="list-unstyled">
                         <li class="mb-2" style="color: var(--text) !important;">
                           <i class="fas fa-check text-primary-custom me-2"></i>Design patterns
+                        </li>
+                        <li class="mb-2" style="color: var(--text) !important;">
+                          <i class="fas fa-check text-primary-custom me-2"></i>Python
+                        </li>
+                        <li class="mb-2" style="color: var(--text) !important;">
+                          <i class="fas fa-check text-primary-custom me-2"></i>Architecture logicielle
                         </li>
                       </ul>
                     </div>
@@ -121,6 +130,29 @@
                         </li>
                         <li class="mb-2" style="color: var(--text) !important;">
                           <i class="fas fa-check text-primary-custom me-2"></i>UML, BPMN
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Conteneurisation-->
+                <div class="mb-4">
+                  <h5 class="mb-3" style="color: var(--text) !important;">
+                    <i class="fas fa-docker me-2 text-primary-custom"></i>Conteneurisation
+                  </h5>
+                  <div class="row g-2">
+                    <div class="col-md-6">
+                      <ul class="list-unstyled">
+                        <li class="mb-2" style="color: var(--text) !important;">
+                          <i class="fas fa-check text-primary-custom me-2"></i>Docker (images, volumes, réseaux, multi-stage builds)
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="col-md-6">
+                      <ul class="list-unstyled">
+                        <li class="mb-2" style="color: var(--text) !important;">
+                          <i class="fas fa-check text-primary-custom me-2"></i>Kubernetes / K3s
                         </li>
                       </ul>
                     </div>

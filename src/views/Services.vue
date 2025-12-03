@@ -89,6 +89,14 @@ const services = ref([
     price: 'Sur devis',
     image: 'https://images.pexels.com/photos/270348/pexels-photo-270348.jpeg?auto=compress&cs=tinysrgb&w=600',
     link: '/services/creation-site-web'
+  },
+  {
+    id: 5,
+    title: 'Automatisation IA pour indépendants & PME',
+    description: 'Gagne des heures chaque semaine en automatisant tes tâches répétitives avec l’IA, sans devoir changer d’outils ni réinventer ton business.',
+    price: 'Sur devis',
+    image: 'https://images.pexels.com/photos/9028873/pexels-photo-9028873.jpeg',
+    link: '/services/automatisation-ia'
   }
 ])
 </script>
