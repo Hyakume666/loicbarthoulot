@@ -11,7 +11,7 @@
         <div class="particle"></div>
         <div class="particle"></div>
       </div>
-      
+
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-lg-8 text-center">
@@ -20,7 +20,7 @@
               <h1 class="hero-name">LOÏC BARTHOULOT</h1>
               <div class="hero-name-glow"></div>
             </div>
-            
+
             <!-- Titre professionnel avec animation -->
             <div class="hero-title-container fade-in-up delay-1">
               <h2 class="hero-title">
@@ -29,16 +29,16 @@
                 <span class="title-line">Passionné d'hardware</span>
               </h2>
             </div>
-            
-            
+
+
             <p class="hero-description fade-in-up delay-2">
               Étudiant en Informatique de Gestion, passionné d'IT.<br><br>
               J'aide particuliers et petites structures à monter, dépanner et optimiser leurs PC, automatiser leurs tâches quotidiennes
               et je crée des sites web modernes et performants adaptés à leurs besoins à des prix imbattables
             </p>
-            
+
             <div class="hero-cta fade-in-up delay-3">
-              <router-link to="/services" class="btn btn-primary-custom me-3">
+              <router-link to="/services" class="btn btn-primary-custom">
                 <i class="fas fa-cogs me-2"></i>
                 Voir mes services
               </router-link>
@@ -88,10 +88,10 @@
 
 /* Hero Section */
 .hero-section {
-  background: 
-    radial-gradient(circle at 20% 80%, rgba(11, 94, 215, 0.15) 0%, transparent 50%),
-    radial-gradient(circle at 80% 20%, rgba(79, 70, 229, 0.15) 0%, transparent 50%),
-    linear-gradient(135deg, #0b0d10 0%, #151a1f 100%);
+  background:
+      radial-gradient(circle at 20% 80%, rgba(11, 94, 215, 0.15) 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, rgba(79, 70, 229, 0.15) 0%, transparent 50%),
+      linear-gradient(135deg, #0b0d10 0%, #151a1f 100%);
   padding: 180px 0 100px 0;
   position: relative;
   overflow: hidden;
@@ -196,10 +196,10 @@
   margin: 0;
   position: relative;
   z-index: 2;
-  text-shadow: 
-    0 0 10px rgba(11, 94, 215, 0.5),
-    0 0 20px rgba(11, 94, 215, 0.3),
-    0 0 30px rgba(11, 94, 215, 0.2);
+  text-shadow:
+      0 0 10px rgba(11, 94, 215, 0.5),
+      0 0 20px rgba(11, 94, 215, 0.3),
+      0 0 30px rgba(11, 94, 215, 0.2);
   background: linear-gradient(135deg, #e6e9ef 0%, #ffffff 50%, #e6e9ef 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -300,25 +300,6 @@
     transform: translateY(0);
   }
 }
-
-/* Ancien style supprimé */
-/*.title-highlight {
-  background: linear-gradient(135deg, var(--primary) 0%, #4f46e5 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  font-weight: 600;
-  position: relative;
-  padding: 8px 16px;
-  border-radius: 8px;
-  border-bottom: 2px solid rgba(11, 94, 215, 0.4);
-  background-color: rgba(11, 94, 215, 0.05);
-  transition: border-color 0.3s ease;
-}
-
-.title-highlight:hover {
-  border-bottom-color: rgba(11, 94, 215, 0.8);
-}*/
 
 .title-separator {
   color: var(--muted);
@@ -421,89 +402,109 @@
   .home-wrapper {
     padding-top: 70px;
   }
-  
+
   .hero-section {
-    padding: 80px 0;
+    padding: 100px 0 60px 0;
+    text-align: center;
   }
-  
+
   .hero-name {
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
+    font-size: 2.2rem;
   }
-  
+
+  .hero-title {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .title-separator {
+    display: none;
+  }
+
+  .title-line {
+    display: block;
+    padding: 0;
+    font-size: 1.3rem;
+  }
+
   .hero-description {
     font-size: 1.1rem;
     margin-bottom: 2rem;
+    padding: 0 15px;
   }
-  
-  .skills-section {
-    padding: 60px 0;
-  }
-  
-  .cta-title {
-    font-size: 2rem;
-    margin-bottom: 1.5rem;
-  }
-  
-  .hero-cta .btn {
-    display: block;
-    margin: 0 0 1rem 0;
-    width: 100%;
-    max-width: 280px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  
-  .hero-cta .me-3 {
-    margin-right: 0 !important;
-    margin-bottom: 1rem;
-  }
-}
 
-@media (max-width: 576px) {
-  .hero-name {
-    font-size: 2rem;
-  }
-  
-  .cta-title {
-    font-size: 1.75rem;
-  }
-  
-  .hero-cta .btn {
-    width: 100%;
-    max-width: 280px;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-  }
-  
-  .hero-cta .me-3 {
-    margin-right: 0 !important;
-    margin-bottom: 1rem;
-  }
-}
-
-/* Media queries spécifiques pour iPhone 16, Galaxy S24, Pixel 9 */
-@media (max-width: 430px) {
   .hero-cta {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 1rem;
+    width: 100%;
+    padding: 0 20px;
   }
-  
+
   .hero-cta .btn {
-    width: 100% !important;
-    max-width: 280px !important;
-    margin: 0 !important;
-    display: block !important;
+    width: 100%;
+    max-width: 280px;
+    margin: 0 auto;
+    display: block;
+    text-align: center;
   }
-  
-  .hero-cta .me-3 {
-    margin-right: 0 !important;
-    margin-bottom: 0 !important;
+
+  .final-cta-section {
+    padding: 60px 0;
+    margin-bottom: 60px;
   }
-  
+
+  .cta-title {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    padding: 0 15px;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-name {
+    font-size: 1.8rem;
+  }
+
+  .title-line {
+    font-size: 1.1rem;
+  }
+
+  .cta-title {
+    font-size: 1.75rem;
+  }
+
+  .hero-cta .btn {
+    width: 100%;
+    max-width: 260px;
+    padding: 12px 20px;
+    font-size: 1rem;
+  }
+}
+
+/* Media queries spécifiques pour iPhone, Galaxy, Pixel */
+@media (max-width: 430px) {
+  .hero-section {
+    padding: 80px 0 50px 0;
+  }
+
+  .hero-cta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 0 15px;
+  }
+
+  .hero-cta .btn {
+    width: 100%;
+    max-width: 250px;
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+  }
+
   .final-cta-section {
     margin-bottom: 60px;
   }
@@ -511,23 +512,34 @@
 
 /* Media query ultra-spécifique pour les très petits écrans */
 @media (max-width: 390px) {
+  .hero-name {
+    font-size: 1.6rem;
+  }
+
+  .title-line {
+    font-size: 1rem;
+  }
+
   .hero-cta {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    justify-content: center !important;
-    gap: 1rem !important;
-    width: 100% !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    width: 100%;
+    padding: 0 10px;
   }
-  
+
   .hero-cta .btn {
-    width: 90% !important;
-    max-width: 260px !important;
-    margin: 0 auto !important;
-    display: block !important;
-    text-align: center !important;
+    width: 100%;
+    max-width: 240px;
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+    padding: 12px 16px;
+    font-size: 0.95rem;
   }
-  
+
   .final-cta-section {
     margin-bottom: 60px;
   }
