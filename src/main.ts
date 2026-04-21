@@ -7,6 +7,7 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js'
 
 // Import components
 import Home from './views/Home.vue'
+import NotFound from './views/NotFound.vue'
 import Services from './views/Services.vue'
 import MontagePC from './views/MontagePC.vue'
 import CreationSiteWeb from './views/CreationSiteWeb.vue'
@@ -27,7 +28,8 @@ const routes = [
   { path: '/services/creation-site-web', name: 'CreationSiteWeb', component: CreationSiteWeb },
   { path: '/services/automatisation-ia', name: 'AutomatisationIa', component: AutomatisationIa },
   { path: '/cv', name: 'CV', component: CV },
-  { path: '/contact', name: 'Contact', component: Contact }
+  { path: '/contact', name: 'Contact', component: Contact },
+  { path: '/:pathMatch(.*)*', name: 'NotFound', component: NotFound }
 ]
 
 const router = createRouter({

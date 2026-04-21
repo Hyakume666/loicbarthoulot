@@ -35,10 +35,8 @@ C’est un projet en constante évolution, pensé pour être **sobre, profession
   - Montage de PC (bureautique, gaming – entrée, milieu, haut de gamme)  
   - Dépannage & réparation  
   - Nettoyage & entretien  
-  - Installation de logiciels  
-  - Optimisation & performance  
-  - Conseil matériel  
   - Création de sites web  
+  - Automatisation IA pour indépendants & PME  
 - **CV** → Mon parcours complet + téléchargement du PDF  
 - **Contact** → Formulaire simple redirigeant vers ma boîte mail (via Formspree ou EmailJS)  
 

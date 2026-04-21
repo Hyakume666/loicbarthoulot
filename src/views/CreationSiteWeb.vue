@@ -102,6 +102,11 @@
 
 <script setup lang="ts">
 import { ref } from 'vue'
+import { usePageMeta } from '@/composables/usePageMeta'
+usePageMeta(
+  'Création de Site Web | Loïc Barthoulot',
+  'Site vitrine performant et responsive avec SEO de base, formulaire de contact et déploiement inclus. Stack Vue.js + Bootstrap.'
+)
 
 const advantages = ref([
   {

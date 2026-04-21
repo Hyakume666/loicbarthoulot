@@ -1,4 +1,4 @@
-<template>
+﻿<template>
   <div class="section-padding" style="min-height: 100vh;">
     <div class="container">
       <div class="text-center mb-5">
@@ -36,17 +36,17 @@
           <div class="col-md-4 text-center">
             <div class="icon-feature">⚡</div>
             <h5 style="color: var(--text) !important;">Passion & polyvalence</h5>
-            <p style="color: var(--muted) !important;">Que ce soit pour un PC gaming, une machine bureautique ou un site web, je traite chaque projet avec soin et passion, en m’adaptant aux besoins spécifiques de chacun.</p>
+            <p style="color: var(--muted) !important;">Que ce soit pour un PC gaming, une machine bureautique ou un site web, je traite chaque projet avec soin et passion, en m'adaptant aux besoins spécifiques de chacun.</p>
           </div>
           <div class="col-md-4 text-center">
             <div class="icon-feature">🛡️</div>
             <h5 style="color: var(--text) !important;">Approche personnalisée</h5>
-            <p style="color: var(--muted) !important;">Je prends le temps d’écouter vos attentes et de proposer une solution adaptée à votre usage, votre budget et vos objectifs.</p>
+            <p style="color: var(--muted) !important;">Je prends le temps d'écouter vos attentes et de proposer une solution adaptée à votre usage, votre budget et vos objectifs.</p>
           </div>
           <div class="col-md-4 text-center">
             <div class="icon-feature">💰</div>
             <h5 style="color: var(--text) !important;">Prix clairs et transparents</h5>
-            <p style="color: var(--muted) !important;">Vous savez à l’avance ce que vous payez : pas de coûts cachés, des tarifs justes adaptés à la prestation.</p>
+            <p style="color: var(--muted) !important;">Vous savez à l'avance ce que vous payez : pas de coûts cachés, des tarifs justes adaptés à la prestation.</p>
           </div>
         </div>
       </section>
@@ -55,48 +55,10 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
-
-const services = ref([
-  {
-    id: 1,
-    title: 'Montage de PC sur mesure',
-    description: 'Assemblage complet de votre configuration personnalisée selon vos besoins et votre budget.',
-    price: 'Sur devis',
-    image: 'https://images.pexels.com/photos/1029757/pexels-photo-1029757.jpeg?auto=compress&cs=tinysrgb&w=600',
-    link: '/services/montage-pc'
-  },
-  {
-    id: 2,
-    title: 'Dépannage & réparation',
-    description: 'Diagnostic et réparation de pannes matérielles et logicielles.',
-    price: 'Sur devis',
-    image: 'https://images.pexels.com/photos/5380664/pexels-photo-5380664.jpeg?auto=compress&cs=tinysrgb&w=600',
-    link: '/services/depannage-reparation'
-  },
-  {
-    id: 3,
-    title: 'Nettoyage et entretien',
-    description: 'Nettoyage complet de votre ordinateur (poussière, ventilateurs), maintenance logicielle et optimisation des performances.',
-    price: 'Sur devis',
-    image: 'https://images.pexels.com/photos/4792728/pexels-photo-4792728.jpeg?auto=compress&cs=tinysrgb&w=600',
-    link: '/services/nettoyage-entretien'
-  },
-  {
-    id: 4,
-    title: 'Création de site web',
-    description: 'Site vitrine performant et responsive avec SEO de base, design moderne, intégration formulaire de contact et déploiement inclus.',
-    price: 'Sur devis',
-    image: 'https://images.pexels.com/photos/270348/pexels-photo-270348.jpeg?auto=compress&cs=tinysrgb&w=600',
-    link: '/services/creation-site-web'
-  },
-  {
-    id: 5,
-    title: 'Automatisation IA pour indépendants & PME',
-    description: 'Gagne des heures chaque semaine en automatisant tes tâches répétitives avec l’IA, sans devoir changer d’outils ni réinventer ton business.',
-    price: 'Sur devis',
-    image: 'https://images.pexels.com/photos/9028873/pexels-photo-9028873.jpeg',
-    link: '/services/automatisation-ia'
-  }
-])
+import { services } from '@/data/services'
+import { usePageMeta } from '@/composables/usePageMeta'
+usePageMeta(
+  'Services IT | Loïc Barthoulot',
+  'Montage PC sur mesure, dépannage, nettoyage, création de site web et automatisation IA. Prestations pour particuliers et petites entreprises.'
+)
 </script>

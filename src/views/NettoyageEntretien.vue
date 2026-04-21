@@ -133,6 +133,11 @@
 
 <script setup lang="ts">
 import { ref } from 'vue'
+import { usePageMeta } from '@/composables/usePageMeta'
+usePageMeta(
+  'Nettoyage & Entretien PC | Loïc Barthoulot',
+  'Dépoussiérage, nettoyage des ventilateurs, optimisation logicielle et mise à jour des drivers. Redonnez un coup de jeune à votre PC.'
+)
 
 const typesEntretien = ref([
   {

@@ -22,3 +22,8 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Claude & graphify dev artifacts
+.claude/
+CLAUDE.md
+graphify-out/

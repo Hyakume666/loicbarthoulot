@@ -126,6 +126,11 @@
 
 <script setup lang="ts">
 import { ref } from 'vue'
+import { usePageMeta } from '@/composables/usePageMeta'
+usePageMeta(
+  'Contact | Loïc Barthoulot',
+  'Contactez Loïc Barthoulot pour un devis, une question ou une démo gratuite. Réponse rapide.'
+)
 import emailjs from 'emailjs-com'
 
 const form = ref({

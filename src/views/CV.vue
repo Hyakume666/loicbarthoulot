@@ -1,4 +1,4 @@
-<template>
+﻿<template>
   <div class="section-padding" style="min-height: 100vh;">
     <div class="container">
       <div class="row">
@@ -21,9 +21,9 @@
                   personnalisé et des conseils adaptés à leurs besoins.
                 </p>
                 <p style="color: var(--text) !important;">
-                  Ma formation actuelle en Informatique de Gestion me permet d’apporter une véritable 
+                  Ma formation actuelle en Informatique de Gestion me permet d'apporter une véritable 
                   plus-value : une approche qui allie expertise technique, compréhension des enjeux 
-                  métiers et vision stratégique des systèmes d’information.
+                  métiers et vision stratégique des systèmes d'information.
                 </p>
                 <p style="color: var(--text) !important;">
                   Mon approche combine passion du hardware, savoir-faire technique et vision moderne 
@@ -345,7 +345,11 @@
 </template>
 
 <script setup lang="ts">
-// Page CV refonte avec informations publiques uniquement
+import { usePageMeta } from '@/composables/usePageMeta'
+usePageMeta(
+  'Mon CV | Loïc Barthoulot',
+  'Parcours, compétences et expériences de Loïc Barthoulot, étudiant en informatique de gestion passionné d\'IT et de hardware.'
+)
 </script>
 
 <style scoped>

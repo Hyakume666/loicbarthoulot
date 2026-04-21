@@ -72,7 +72,11 @@
 </template>
 
 <script setup lang="ts">
-// Page d'accueil sobre et professionnelle
+import { usePageMeta } from '@/composables/usePageMeta'
+usePageMeta(
+  'Loïc Barthoulot | Services IT & Création Web',
+  'Étudiant en informatique, je monte, dépanne et optimise vos PC, automatise vos tâches avec l\'IA et crée des sites web modernes. Tarifs accessibles.'
+)
 </script>
 
 <style scoped>

@@ -1,4 +1,4 @@
-<template>
+﻿<template>
   <div class="section-padding automation-page" style="background-color: var(--bg) !important; min-height: 100vh;">
     <div class="container">
       <!-- Bouton retour -->
@@ -100,13 +100,18 @@
 
 <script setup lang="ts">
 import { ref } from 'vue'
+import { usePageMeta } from '@/composables/usePageMeta'
+usePageMeta(
+  'Automatisation IA pour indépendants & PME | Loïc Barthoulot',
+  'Automatisez vos tâches répétitives avec l\'IA : e-mails, documents, chatbots, dashboards. Workflows Make, Notion, Google. Démo gratuite.'
+)
 
 const typesAutomatisations = ref([
   {
     id: 1,
     icon: '📧',
     title: 'Automatisation des e-mails',
-    description: 'Tri, classification, réponses suggérées et extraction automatique d’informations importantes.'
+    description: 'Tri, classification, réponses suggérées et extraction automatique d\'informations importantes.'
   },
   {
     id: 2,
