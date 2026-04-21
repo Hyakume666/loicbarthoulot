@@ -129,7 +129,8 @@ import { ref } from 'vue'
 import { usePageMeta } from '@/composables/usePageMeta'
 usePageMeta(
   'Contact | Loïc Barthoulot',
-  'Contactez Loïc Barthoulot pour un devis, une question ou une démo gratuite. Réponse rapide.'
+  'Contactez Loïc Barthoulot pour un devis, une question ou une démo gratuite. Réponse rapide.',
+  { path: '/contact' }
 )
 import emailjs from 'emailjs-com'
 

@@ -105,7 +105,8 @@ import { ref } from 'vue'
 import { usePageMeta } from '@/composables/usePageMeta'
 usePageMeta(
   'Création de Site Web | Loïc Barthoulot',
-  'Site vitrine performant et responsive avec SEO de base, formulaire de contact et déploiement inclus. Stack Vue.js + Bootstrap.'
+  'Site vitrine performant et responsive avec SEO de base, formulaire de contact et déploiement inclus. Stack Vue.js + Bootstrap.',
+  { path: '/services/creation-site-web' }
 )
 
 const advantages = ref([

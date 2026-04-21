@@ -348,7 +348,8 @@
 import { usePageMeta } from '@/composables/usePageMeta'
 usePageMeta(
   'Mon CV | Loïc Barthoulot',
-  'Parcours, compétences et expériences de Loïc Barthoulot, étudiant en informatique de gestion passionné d\'IT et de hardware.'
+  'Parcours, compétences et expériences de Loïc Barthoulot, étudiant en informatique de gestion passionné d\'IT et de hardware.',
+  { path: '/cv', type: 'profile' }
 )
 </script>
 

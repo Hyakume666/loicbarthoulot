@@ -84,7 +84,8 @@ import { ref } from 'vue'
 import { usePageMeta } from '@/composables/usePageMeta'
 usePageMeta(
   'Montage PC sur mesure | Loïc Barthoulot',
-  'Assemblage de configurations personnalisées : bureautique, gaming entrée, milieu et haut de gamme. Optimisation BIOS incluse. Sur devis.'
+  'Assemblage de configurations personnalisées : bureautique, gaming entrée, milieu et haut de gamme. Optimisation BIOS incluse. Sur devis.',
+  { path: '/services/montage-pc' }
 )
 
 const configurations = ref([

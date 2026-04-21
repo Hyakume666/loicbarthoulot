@@ -4,7 +4,7 @@
       <router-link to="/" class="navbar-brand">
         <picture>
           <source :srcset="logoWebp" type="image/webp">
-          <img :src="logoPng" alt="Logo" height="60" class="me-2">
+          <img :src="logoPng" alt="Loïc Barthoulot - Services IT Suisse" height="60" class="me-2">
         </picture>
       </router-link>
       

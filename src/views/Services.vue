@@ -59,6 +59,7 @@ import { services } from '@/data/services'
 import { usePageMeta } from '@/composables/usePageMeta'
 usePageMeta(
   'Services IT | Loïc Barthoulot',
-  'Montage PC sur mesure, dépannage, nettoyage, création de site web et automatisation IA. Prestations pour particuliers et petites entreprises.'
+  'Montage PC sur mesure, dépannage, nettoyage, création de site web et automatisation IA. Prestations pour particuliers et petites entreprises.',
+  { path: '/services' }
 )
 </script>

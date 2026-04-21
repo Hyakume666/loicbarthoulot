@@ -1,11 +1,8 @@
-import { createApp } from 'vue'
-import { createRouter, createWebHashHistory } from 'vue-router'
+import { ViteSSG } from 'vite-ssg'
 import App from './App.vue'
 import './style.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import 'bootstrap/dist/js/bootstrap.bundle.min.js'
 
-// Import components
 import Home from './views/Home.vue'
 import NotFound from './views/NotFound.vue'
 import Services from './views/Services.vue'
@@ -14,8 +11,6 @@ import CreationSiteWeb from './views/CreationSiteWeb.vue'
 import CV from './views/CV.vue'
 import Contact from './views/Contact.vue'
 import AutomatisationIa from './views/AutomatisationIa.vue'
-
-// Import service detail pages
 import DepannageReparation from './views/DepannageReparation.vue'
 import NettoyageEntretien from './views/NettoyageEntretien.vue'
 
@@ -32,14 +27,25 @@ const routes = [
   { path: '/:pathMatch(.*)*', name: 'NotFound', component: NotFound }
 ]
 
-const router = createRouter({
-    history: createWebHashHistory('/'),
-  routes,
-  scrollBehavior() {
-    return { top: 0 }
+export const createApp = ViteSSG(
+  App,
+  {
+    routes,
+    base: '/',
+    scrollBehavior() {
+      return { top: 0 }
+    }
+  },
+  ({ isClient }) => {
+    if (isClient) {
+      import('bootstrap/dist/js/bootstrap.bundle.min.js')
+      const redirect = sessionStorage.getItem('spa-redirect')
+      if (redirect) {
+        sessionStorage.removeItem('spa-redirect')
+        if (redirect !== window.location.pathname + window.location.search + window.location.hash) {
+          window.history.replaceState(null, '', redirect)
+        }
+      }
+    }
   }
-})
-
-const app = createApp(App)
-app.use(router)
-app.mount('#app')
+)

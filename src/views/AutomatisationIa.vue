@@ -103,7 +103,8 @@ import { ref } from 'vue'
 import { usePageMeta } from '@/composables/usePageMeta'
 usePageMeta(
   'Automatisation IA pour indépendants & PME | Loïc Barthoulot',
-  'Automatisez vos tâches répétitives avec l\'IA : e-mails, documents, chatbots, dashboards. Workflows Make, Notion, Google. Démo gratuite.'
+  'Automatisez vos tâches répétitives avec l\'IA : e-mails, documents, chatbots, dashboards. Workflows Make, Notion, Google. Démo gratuite.',
+  { path: '/services/automatisation-ia' }
 )
 
 const typesAutomatisations = ref([

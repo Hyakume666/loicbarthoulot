@@ -99,7 +99,8 @@ import { ref } from 'vue'
 import { usePageMeta } from '@/composables/usePageMeta'
 usePageMeta(
   'Dépannage & Réparation PC | Loïc Barthoulot',
-  'Diagnostic et réparation de pannes matérielles et logicielles. Récupération de données, remplacement de composants. Joignable 7j/7.'
+  'Diagnostic et réparation de pannes matérielles et logicielles. Récupération de données, remplacement de composants. Joignable 7j/7.',
+  { path: '/services/depannage-reparation' }
 )
 
 const typesPannes = ref([

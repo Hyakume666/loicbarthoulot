@@ -136,7 +136,8 @@ import { ref } from 'vue'
 import { usePageMeta } from '@/composables/usePageMeta'
 usePageMeta(
   'Nettoyage & Entretien PC | Loïc Barthoulot',
-  'Dépoussiérage, nettoyage des ventilateurs, optimisation logicielle et mise à jour des drivers. Redonnez un coup de jeune à votre PC.'
+  'Dépoussiérage, nettoyage des ventilateurs, optimisation logicielle et mise à jour des drivers. Redonnez un coup de jeune à votre PC.',
+  { path: '/services/nettoyage-entretien' }
 )
 
 const typesEntretien = ref([

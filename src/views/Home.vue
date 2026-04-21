@@ -17,7 +17,10 @@
           <div class="col-lg-8 text-center">
             <!-- Nom principal avec effet néon -->
             <div class="hero-name-container fade-in-up">
-              <h1 class="hero-name">LOÏC BARTHOULOT</h1>
+              <h1 class="hero-name">
+                LOÏC BARTHOULOT
+                <span class="visually-hidden"> — Services IT, montage PC & création web en Suisse</span>
+              </h1>
               <div class="hero-name-glow"></div>
             </div>
 
@@ -74,8 +77,9 @@
 <script setup lang="ts">
 import { usePageMeta } from '@/composables/usePageMeta'
 usePageMeta(
-  'Loïc Barthoulot | Services IT & Création Web',
-  'Étudiant en informatique, je monte, dépanne et optimise vos PC, automatise vos tâches avec l\'IA et crée des sites web modernes. Tarifs accessibles.'
+  'Loïc Barthoulot | Services IT, Montage PC & Création Web en Suisse',
+  'Étudiant en informatique, je monte, dépanne et optimise vos PC, automatise vos tâches avec l\'IA et crée des sites web modernes. Tarifs accessibles.',
+  { path: '/' }
 )
 </script>
 
