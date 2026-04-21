@@ -23,6 +23,9 @@ dist-ssr
 *.sln
 *.sw?
 
+# Build artifacts
+*.tsbuildinfo
+
 # Claude & graphify dev artifacts
 .claude/
 CLAUDE.md
