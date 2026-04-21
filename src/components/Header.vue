@@ -2,7 +2,10 @@
   <nav class="navbar navbar-expand-lg navbar-dark navbar-dark-custom fixed-top mobile-push-menu" style="margin: 0; padding-top: 0; padding-bottom: 0;">
     <div class="container">
       <router-link to="/" class="navbar-brand">
-        <img :src="logoUrl" alt="Logo" height="60" class="me-2">
+        <picture>
+          <source :srcset="logoWebp" type="image/webp">
+          <img :src="logoPng" alt="Logo" height="60" class="me-2">
+        </picture>
       </router-link>
       
       <button 
@@ -35,7 +38,8 @@
 </template>
 
 <script setup lang="ts">
-  const logoUrl = import.meta.env.BASE_URL + 'LogoTest.png'
+const logoWebp = import.meta.env.BASE_URL + 'logo.webp'
+const logoPng = import.meta.env.BASE_URL + 'logo.png'
 </script>
 
 <style scoped>
