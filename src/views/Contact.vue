@@ -17,7 +17,7 @@
                 <div class="card-body p-4">
                   <div class="icon-feature">📧</div>
                   <h5 style="color: var(--text) !important;">Email</h5>
-                  <p style="color: var(--text) !important;">barthoulot12@gmail.com</p>
+                  <p style="color: var(--text) !important;">contact@loicbarthoulot.ch</p>
                 </div>
               </div>
             </div>
@@ -158,7 +158,7 @@ const submitForm = async () => {
         from_email: form.value.email,
         subject: form.value.subject,
         message: form.value.message,
-        to_email: 'barthoulot12@gmail.com'
+        to_email: 'contact@loicbarthoulot.ch'
       },
       'bPELV2NdtsMXZ_THB' // Public Key EmailJS
     )
