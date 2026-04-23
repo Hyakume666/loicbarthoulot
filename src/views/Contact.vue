@@ -42,45 +42,53 @@
                 Votre message a été envoyé avec succès ! Je vous répondrai dans les plus brefs délais.
               </div>
 
-              <form @submit.prevent="submitForm">
+              <div v-if="showError" class="alert alert-danger" role="alert">
+                <i class="fas fa-exclamation-circle me-2"></i>
+                Une erreur est survenue lors de l'envoi. Veuillez réessayer.
+              </div>
+
+              <form @submit.prevent="submitForm" novalidate>
                 <div class="row g-3">
                   <div class="col-md-6">
                     <label for="firstName" class="form-label" style="color: var(--text) !important;">Prénom *</label>
-                    <input 
-                      type="text" 
-                      class="form-control" 
-                      id="firstName" 
-                      v-model="form.firstName" 
-                      required
+                    <input
+                      type="text"
+                      class="form-control"
+                      :class="{ 'is-invalid': errors.firstName }"
+                      id="firstName"
+                      v-model="form.firstName"
                     >
+                    <div class="invalid-feedback">{{ errors.firstName }}</div>
                   </div>
                   <div class="col-md-6">
                     <label for="lastName" class="form-label" style="color: var(--text) !important;">Nom *</label>
-                    <input 
-                      type="text" 
-                      class="form-control" 
-                      id="lastName" 
-                      v-model="form.lastName" 
-                      required
+                    <input
+                      type="text"
+                      class="form-control"
+                      :class="{ 'is-invalid': errors.lastName }"
+                      id="lastName"
+                      v-model="form.lastName"
                     >
+                    <div class="invalid-feedback">{{ errors.lastName }}</div>
                   </div>
                   <div class="col-12">
                     <label for="email" class="form-label" style="color: var(--text) !important;">Email *</label>
-                    <input 
-                      type="email" 
-                      class="form-control" 
-                      id="email" 
-                      v-model="form.email" 
-                      required
+                    <input
+                      type="email"
+                      class="form-control"
+                      :class="{ 'is-invalid': errors.email }"
+                      id="email"
+                      v-model="form.email"
                     >
+                    <div class="invalid-feedback">{{ errors.email }}</div>
                   </div>
                   <div class="col-12">
                     <label for="subject" class="form-label" style="color: var(--text) !important;">Sujet *</label>
-                    <select 
-                      class="form-select" 
-                      id="subject" 
-                      v-model="form.subject" 
-                      required
+                    <select
+                      class="form-select"
+                      :class="{ 'is-invalid': errors.subject }"
+                      id="subject"
+                      v-model="form.subject"
                     >
                       <option value="">Choisissez un sujet</option>
                       <option value="montage">Montage PC</option>
@@ -88,17 +96,19 @@
                       <option value="nettoyage">Nettoyage / Entretien</option>
                       <option value="autre">Autre</option>
                     </select>
+                    <div class="invalid-feedback">{{ errors.subject }}</div>
                   </div>
                   <div class="col-12">
                     <label for="message" class="form-label" style="color: var(--text) !important;">Message *</label>
-                    <textarea 
-                      class="form-control" 
-                      id="message" 
-                      rows="5" 
-                      v-model="form.message" 
-                      required
+                    <textarea
+                      class="form-control"
+                      :class="{ 'is-invalid': errors.message }"
+                      id="message"
+                      rows="5"
+                      v-model="form.message"
                       placeholder="Décrivez votre projet ou votre problème..."
                     ></textarea>
+                    <div class="invalid-feedback">{{ errors.message }}</div>
                   </div>
                   <div class="col-12">
                     <button 
@@ -127,59 +137,61 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { usePageMeta } from '@/composables/usePageMeta'
+import emailjs from '@emailjs/browser'
+
 usePageMeta(
   'Contact | Loïc Barthoulot',
   'Contactez Loïc Barthoulot pour un devis, une question ou une démo gratuite. Réponse rapide.',
   { path: '/contact' }
 )
-import emailjs from 'emailjs-com'
 
-const form = ref({
-  firstName: '',
-  lastName: '',
-  email: '',
-  subject: '',
-  message: ''
-})
+const emptyForm = () => ({ firstName: '', lastName: '', email: '', subject: '', message: '' })
+const emptyErrors = () => ({ firstName: '', lastName: '', email: '', subject: '', message: '' })
 
+const form = ref(emptyForm())
+const errors = ref(emptyErrors())
 const isSubmitting = ref(false)
 const showSuccess = ref(false)
+const showError = ref(false)
+
+const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+
+const validate = (): boolean => {
+  errors.value = emptyErrors()
+  if (!form.value.firstName.trim()) errors.value.firstName = 'Le prénom est requis.'
+  if (!form.value.lastName.trim()) errors.value.lastName = 'Le nom est requis.'
+  if (!form.value.email.trim()) errors.value.email = 'L\'adresse email est requise.'
+  else if (!EMAIL_RE.test(form.value.email)) errors.value.email = 'Adresse email invalide.'
+  if (!form.value.subject) errors.value.subject = 'Veuillez choisir un sujet.'
+  if (!form.value.message.trim()) errors.value.message = 'Le message est requis.'
+  else if (form.value.message.trim().length < 10) errors.value.message = 'Le message doit contenir au moins 10 caractères.'
+  return Object.values(errors.value).every(e => !e)
+}
 
 const submitForm = async () => {
+  if (!validate()) return
   isSubmitting.value = true
-  
+  showError.value = false
+
   try {
-    // Configuration EmailJS (remplacez par vos propres IDs)
     await emailjs.send(
-      'service_01r3h6v', // Service ID EmailJS
-      'template_en5rdnk', // Template ID EmailJS
+      'service_01r3h6v',
+      'template_en5rdnk',
       {
         from_name: `${form.value.firstName} ${form.value.lastName}`,
         from_email: form.value.email,
         subject: form.value.subject,
-        message: form.value.message,
-        to_email: 'contact@loicbarthoulot.ch'
+        message: form.value.message
       },
-      'bPELV2NdtsMXZ_THB' // Public Key EmailJS
+      'bPELV2NdtsMXZ_THB'
     )
-    
+    form.value = emptyForm()
     showSuccess.value = true
-    // Reset form
-    form.value = {
-      firstName: '',
-      lastName: '',
-      email: '',
-      subject: '',
-      message: ''
-    }
-    
-    // Hide success message after 5 seconds
-    setTimeout(() => {
-      showSuccess.value = false
-    }, 5000)
+    setTimeout(() => { showSuccess.value = false }, 5000)
   } catch (error) {
     console.error('Erreur lors de l\'envoi:', error)
-    alert('Une erreur est survenue lors de l\'envoi. Veuillez réessayer.')
+    showError.value = true
+    setTimeout(() => { showError.value = false }, 5000)
   } finally {
     isSubmitting.value = false
   }
