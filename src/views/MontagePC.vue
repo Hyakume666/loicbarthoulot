@@ -9,8 +9,8 @@
       </div>
       
       <div class="text-center mb-5">
-        <h1 class="display-4 fw-bold" style="color: var(--text) !important;">Montage de PC sur mesure</h1>
-        <p class="lead" style="color: var(--muted) !important;">
+        <h1 class="display-4 fw-bold">Montage de PC sur mesure</h1>
+        <p class="lead">
           Configurations adaptées à tous vos besoins et budgets
         </p>
       </div>
@@ -20,13 +20,13 @@
           <div class="sub-service-card">
             <div class="row align-items-center">
               <div class="col-lg-8">
-                <h3 class="text-primary-custom mb-3" style="color: var(--primary);">{{ config.title }}</h3>
-                <p class="mb-4" style="color: var(--muted);">{{ config.description }}</p>
+                <h3 class="text-primary-custom mb-3">{{ config.title }}</h3>
+                <p class="mb-4">{{ config.description }}</p>
                 <div class="row g-3">
                   <div class="col-md-6">
                     <ul class="list-unstyled">
                       <li v-for="feature in config.features.slice(0, Math.ceil(config.features.length / 2))" 
-                          :key="feature" class="mb-2" style="color: var(--text);">
+                          :key="feature" class="mb-2">
                         <i class="fas fa-check text-primary-custom me-2"></i>{{ feature }}
                       </li>
                     </ul>
@@ -34,7 +34,7 @@
                   <div class="col-md-6">
                     <ul class="list-unstyled">
                       <li v-for="feature in config.features.slice(Math.ceil(config.features.length / 2))" 
-                          :key="feature" class="mb-2" style="color: var(--text);">
+                          :key="feature" class="mb-2">
                         <i class="fas fa-check text-primary-custom me-2"></i>{{ feature }}
                       </li>
                     </ul>
@@ -55,23 +55,23 @@
       <!-- Section avantages -->
       <section class="mt-5 pt-5">
         <div class="text-center mb-5">
-          <h2 class="display-5 fw-bold" style="color: var(--text);">Pourquoi choisir un montage sur mesure ?</h2>
+          <h2 class="display-5 fw-bold">Pourquoi choisir un montage sur mesure ?</h2>
         </div>
         <div class="row g-4">
           <div class="col-md-4 text-center">
             <div class="icon-feature">🎯</div>
-            <h5 style="color: var(--text);">Adapté à vos besoins</h5>
-            <p style="color: var(--muted);">Configuration personnalisée selon votre usage et budget</p>
+            <h5>Adapté à vos besoins</h5>
+            <p>Configuration personnalisée selon votre usage et budget</p>
           </div>
           <div class="col-md-4 text-center">
             <div class="icon-feature">🛡️</div>
-            <h5 style="color: var(--text);">Fiabilité éprouvée</h5>
-            <p style="color: var(--muted);">Tous les composants passent par des tests intensifs avant la livraison.</p>
+            <h5>Fiabilité éprouvée</h5>
+            <p>Tous les composants passent par des tests intensifs avant la livraison.</p>
           </div>
           <div class="col-md-4 text-center">
             <div class="icon-feature">⚡</div>
-            <h5 style="color: var(--text);">Performances optimales</h5>
-            <p style="color: var(--muted);">Optimisation BIOS et système pour des performances maximales</p>
+            <h5>Performances optimales</h5>
+            <p>Optimisation BIOS et système pour des performances maximales</p>
           </div>
         </div>
       </section>
@@ -85,7 +85,7 @@ import { usePageMeta } from '@/composables/usePageMeta'
 usePageMeta(
   'Montage PC sur mesure | Loïc Barthoulot',
   'Assemblage de configurations personnalisées : bureautique, gaming entrée, milieu et haut de gamme. Optimisation BIOS incluse. Sur devis.',
-  { path: '/services/montage-pc' }
+  { path: '/services/montage-pc', image: 'https://images.pexels.com/photos/1029757/pexels-photo-1029757.jpeg?auto=compress&cs=tinysrgb&w=1200' }
 )
 
 const configurations = ref([

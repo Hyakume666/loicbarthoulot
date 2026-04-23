@@ -4,8 +4,8 @@
       <div class="row justify-content-center">
         <div class="col-lg-8">
           <div class="text-center mb-5">
-            <h1 class="display-4 fw-bold" style="color: var(--text) !important;">Me Contacter</h1>
-            <p class="lead" style="color: var(--muted) !important;">
+            <h1 class="display-4 fw-bold">Me Contacter</h1>
+            <p class="lead">
               Une question ? Un projet ? N'hésitez pas à me contacter pour un devis gratuit
             </p>
           </div>
@@ -16,8 +16,8 @@
               <div class="card card-custom contact-form-card h-100">
                 <div class="card-body p-4">
                   <div class="icon-feature">📧</div>
-                  <h5 style="color: var(--text) !important;">Email</h5>
-                  <p style="color: var(--text) !important;">contact@loicbarthoulot.ch</p>
+                  <h5>Email</h5>
+                  <p>contact@loicbarthoulot.ch</p>
                 </div>
               </div>
             </div>
@@ -25,8 +25,8 @@
               <div class="card card-custom contact-form-card h-100">
                 <div class="card-body p-4">
                   <div class="icon-feature">📱</div>
-                  <h5 style="color: var(--text) !important;">Téléphone</h5>
-                  <p style="color: var(--text) !important;">Après un premier contact</p>
+                  <h5>Téléphone</h5>
+                  <p>Après un premier contact</p>
                 </div>
               </div>
             </div>
@@ -37,58 +37,72 @@
             <div class="card-body p-4">
               <h3 class="text-primary-custom mb-4">Formulaire de contact</h3>
               
-              <div v-if="showSuccess" class="alert alert-success" role="alert">
+              <div v-if="showSuccess" class="alert alert-success alert-dismissible" role="alert">
                 <i class="fas fa-check-circle me-2"></i>
                 Votre message a été envoyé avec succès ! Je vous répondrai dans les plus brefs délais.
+                <button type="button" class="btn-close" @click="showSuccess = false" aria-label="Fermer"></button>
               </div>
 
-              <div v-if="showError" class="alert alert-danger" role="alert">
+              <div v-if="showError" class="alert alert-danger alert-dismissible" role="alert">
                 <i class="fas fa-exclamation-circle me-2"></i>
                 Une erreur est survenue lors de l'envoi. Veuillez réessayer.
+                <button type="button" class="btn-close" @click="showError = false" aria-label="Fermer"></button>
               </div>
 
               <form @submit.prevent="submitForm" novalidate>
                 <div class="row g-3">
                   <div class="col-md-6">
-                    <label for="firstName" class="form-label" style="color: var(--text) !important;">Prénom *</label>
+                    <label for="firstName" class="form-label text-color">Prénom *</label>
                     <input
                       type="text"
                       class="form-control"
                       :class="{ 'is-invalid': errors.firstName }"
                       id="firstName"
                       v-model="form.firstName"
+                      aria-required="true"
+                      :aria-invalid="errors.firstName ? true : undefined"
+                      aria-describedby="firstName-error"
                     >
-                    <div class="invalid-feedback">{{ errors.firstName }}</div>
+                    <div class="invalid-feedback" id="firstName-error">{{ errors.firstName }}</div>
                   </div>
                   <div class="col-md-6">
-                    <label for="lastName" class="form-label" style="color: var(--text) !important;">Nom *</label>
+                    <label for="lastName" class="form-label text-color">Nom *</label>
                     <input
                       type="text"
                       class="form-control"
                       :class="{ 'is-invalid': errors.lastName }"
                       id="lastName"
                       v-model="form.lastName"
+                      aria-required="true"
+                      :aria-invalid="errors.lastName ? true : undefined"
+                      aria-describedby="lastName-error"
                     >
-                    <div class="invalid-feedback">{{ errors.lastName }}</div>
+                    <div class="invalid-feedback" id="lastName-error">{{ errors.lastName }}</div>
                   </div>
                   <div class="col-12">
-                    <label for="email" class="form-label" style="color: var(--text) !important;">Email *</label>
+                    <label for="email" class="form-label text-color">Email *</label>
                     <input
                       type="email"
                       class="form-control"
                       :class="{ 'is-invalid': errors.email }"
                       id="email"
                       v-model="form.email"
+                      aria-required="true"
+                      :aria-invalid="errors.email ? true : undefined"
+                      aria-describedby="email-error"
                     >
-                    <div class="invalid-feedback">{{ errors.email }}</div>
+                    <div class="invalid-feedback" id="email-error">{{ errors.email }}</div>
                   </div>
                   <div class="col-12">
-                    <label for="subject" class="form-label" style="color: var(--text) !important;">Sujet *</label>
+                    <label for="subject" class="form-label text-color">Sujet *</label>
                     <select
                       class="form-select"
                       :class="{ 'is-invalid': errors.subject }"
                       id="subject"
                       v-model="form.subject"
+                      aria-required="true"
+                      :aria-invalid="errors.subject ? true : undefined"
+                      aria-describedby="subject-error"
                     >
                       <option value="">Choisissez un sujet</option>
                       <option value="montage">Montage PC</option>
@@ -96,10 +110,10 @@
                       <option value="nettoyage">Nettoyage / Entretien</option>
                       <option value="autre">Autre</option>
                     </select>
-                    <div class="invalid-feedback">{{ errors.subject }}</div>
+                    <div class="invalid-feedback" id="subject-error">{{ errors.subject }}</div>
                   </div>
                   <div class="col-12">
-                    <label for="message" class="form-label" style="color: var(--text) !important;">Message *</label>
+                    <label for="message" class="form-label text-color">Message *</label>
                     <textarea
                       class="form-control"
                       :class="{ 'is-invalid': errors.message }"
@@ -107,8 +121,11 @@
                       rows="5"
                       v-model="form.message"
                       placeholder="Décrivez votre projet ou votre problème..."
+                      aria-required="true"
+                      :aria-invalid="errors.message ? true : undefined"
+                      aria-describedby="message-error"
                     ></textarea>
-                    <div class="invalid-feedback">{{ errors.message }}</div>
+                    <div class="invalid-feedback" id="message-error">{{ errors.message }}</div>
                   </div>
                   <div class="col-12">
                     <button 
@@ -189,7 +206,7 @@ const submitForm = async () => {
     showSuccess.value = true
     setTimeout(() => { showSuccess.value = false }, 5000)
   } catch (error) {
-    console.error('Erreur lors de l\'envoi:', error)
+    void error
     showError.value = true
     setTimeout(() => { showError.value = false }, 5000)
   } finally {

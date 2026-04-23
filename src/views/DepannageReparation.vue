@@ -9,8 +9,8 @@
       </div>
       
       <div class="text-center mb-5">
-        <h1 class="display-4 fw-bold" style="color: var(--text) !important;">Dépannage & Réparation</h1>
-        <p class="lead" style="color: var(--muted) !important;">
+        <h1 class="display-4 fw-bold">Dépannage & Réparation</h1>
+        <p class="lead">
           Diagnostic et réparation de tous types de pannes informatiques
         </p>
       </div>
@@ -24,12 +24,12 @@
                 <div class="icon-feature">🔧</div>
               </div>
               <h3 class="text-primary-custom text-center mb-4">Assistance informatique</h3>
-              <p style="color: var(--text) !important;" class="mb-4">
+              <p class="mb-4">
                 Votre ordinateur ne démarre plus ? Il est lent ou présente des dysfonctionnements ? 
                 Je diagnostique et répare tous types de pannes matérielles et logicielles avec 
                 efficacité et transparence.
               </p>
-              <p style="color: var(--text) !important;">
+              <p>
                 <strong>Temps de réponse rapide :</strong> Joignable 7j/7 pour vos urgences informatiques.
               </p>
             </div>
@@ -56,20 +56,20 @@
                 <div class="col-md-6">
                   <ul class="list-unstyled">
                     <li class="mb-2">
-                      <i class="fas fa-check text-primary-custom me-2"></i><span style="color: var(--text) !important;">Réparation sur place ou en atelier</span>
+                      <i class="fas fa-check text-primary-custom me-2"></i><span>Réparation sur place ou en atelier</span>
                     </li>
                     <li class="mb-2">
-                      <i class="fas fa-check text-primary-custom me-2"></i><span style="color: var(--text) !important;">Récupération de données</span>
+                      <i class="fas fa-check text-primary-custom me-2"></i><span>Récupération de données</span>
                     </li>
                   </ul>
                 </div>
                 <div class="col-md-6">
                   <ul class="list-unstyled">
                     <li class="mb-2">
-                      <i class="fas fa-check text-primary-custom me-2"></i><span style="color: var(--text) !important;">Remplacement de composants</span>
+                      <i class="fas fa-check text-primary-custom me-2"></i><span>Remplacement de composants</span>
                     </li>
                     <li class="mb-2">
-                      <i class="fas fa-check text-primary-custom me-2"></i><span style="color: var(--text) !important;">Tests de stabilité</span>
+                      <i class="fas fa-check text-primary-custom me-2"></i><span>Tests de stabilité</span>
                     </li>
                   </ul>
                 </div>
@@ -80,8 +80,8 @@
 
           <!-- Call to action -->
           <div class="text-center">
-            <h3 class="mb-4" style="color: var(--text) !important;">Votre PC a un problème ?</h3>
-            <p class="mb-4" style="color: var(--muted) !important;">
+            <h3 class="mb-4">Votre PC a un problème ?</h3>
+            <p class="mb-4">
               Contactez-moi pour un diagnostic gratuit et une réparation rapide
             </p>
             <router-link to="/contact" class="btn btn-primary-custom btn-lg">
@@ -100,7 +100,7 @@ import { usePageMeta } from '@/composables/usePageMeta'
 usePageMeta(
   'Dépannage & Réparation PC | Loïc Barthoulot',
   'Diagnostic et réparation de pannes matérielles et logicielles. Récupération de données, remplacement de composants. Joignable 7j/7.',
-  { path: '/services/depannage-reparation' }
+  { path: '/services/depannage-reparation', image: 'https://images.pexels.com/photos/5380664/pexels-photo-5380664.jpeg?auto=compress&cs=tinysrgb&w=1200' }
 )
 
 const typesPannes = ref([

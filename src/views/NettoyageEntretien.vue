@@ -9,8 +9,8 @@
       </div>
       
       <div class="text-center mb-5">
-        <h1 class="display-4 fw-bold" style="color: var(--text) !important;">Nettoyage & Entretien</h1>
-        <p class="lead" style="color: var(--muted) !important;">
+        <h1 class="display-4 fw-bold">Nettoyage & Entretien</h1>
+        <p class="lead">
           Maintenance complète pour optimiser les performances de votre PC
         </p>
       </div>
@@ -24,12 +24,12 @@
                 <div class="icon-feature">🧹</div>
               </div>
               <h3 class="text-primary-custom text-center mb-4">Entretien professionnel de votre PC</h3>
-              <p style="color: var(--text) !important;" class="mb-4">
+              <p class="mb-4">
                 Un PC bien entretenu, c'est un PC qui dure plus longtemps et fonctionne mieux. 
                 Je réalise un nettoyage complet de votre ordinateur, tant au niveau matériel 
                 que logiciel, pour retrouver des performances optimales.
               </p>
-              <p style="color: var(--text) !important;">
+              <p>
                 <strong>Recommandation :</strong> Un entretien tous les 6 à 12 mois selon l'environnement et l'utilisation.
               </p>
             </div>
@@ -54,30 +54,30 @@
               <h3 class="text-primary-custom mb-4">Prestations détaillées</h3>
               <div class="row g-4">
                 <div class="col-md-6">
-                  <h5 class="mb-3" style="color: var(--text) !important;">Nettoyage matériel</h5>
+                  <h5 class="mb-3">Nettoyage matériel</h5>
                   <ul class="list-unstyled">
                     <li class="mb-2">
-                      <i class="fas fa-check text-primary-custom me-2"></i><span style="color: var(--text) !important;">Dépoussiérage complet</span>
+                      <i class="fas fa-check text-primary-custom me-2"></i><span>Dépoussiérage complet</span>
                     </li>
                     <li class="mb-2">
-                      <i class="fas fa-check text-primary-custom me-2"></i><span style="color: var(--text) !important;">Nettoyage ventilateurs</span>
+                      <i class="fas fa-check text-primary-custom me-2"></i><span>Nettoyage ventilateurs</span>
                     </li>
                     <li class="mb-2">
-                      <i class="fas fa-check text-primary-custom me-2"></i><span style="color: var(--text) !important;">Contrôle températures</span>
+                      <i class="fas fa-check text-primary-custom me-2"></i><span>Contrôle températures</span>
                     </li>
                   </ul>
                 </div>
                 <div class="col-md-6">
-                  <h5 class="mb-3" style="color: var(--text) !important;">Optimisation logicielle</h5>
+                  <h5 class="mb-3">Optimisation logicielle</h5>
                   <ul class="list-unstyled">
                     <li class="mb-2">
-                      <i class="fas fa-check text-primary-custom me-2"></i><span style="color: var(--text) !important;">Nettoyage registre Windows</span>
+                      <i class="fas fa-check text-primary-custom me-2"></i><span>Nettoyage registre Windows</span>
                     </li>
                     <li class="mb-2">
-                      <i class="fas fa-check text-primary-custom me-2"></i><span style="color: var(--text) !important;">Suppression fichiers temporaires</span>
+                      <i class="fas fa-check text-primary-custom me-2"></i><span>Suppression fichiers temporaires</span>
                     </li>
                     <li class="mb-2">
-                      <i class="fas fa-check text-primary-custom me-2"></i><span style="color: var(--text) !important;">Mise à jour drivers</span>
+                      <i class="fas fa-check text-primary-custom me-2"></i><span>Mise à jour drivers</span>
                     </li>
                   </ul>
                 </div>
@@ -94,22 +94,22 @@
                   <div class="mb-3">
                     <i class="fas fa-tachometer-alt text-primary-custom" style="font-size: 2.5rem;"></i>
                   </div>
-                  <h5 style="color: var(--text) !important;">Performances</h5>
-                  <p style="color: var(--muted) !important;" class="small">PC plus rapide et réactif</p>
+                  <h5>Performances</h5>
+                  <p class="small">PC plus rapide et réactif</p>
                 </div>
                 <div class="col-md-4 text-center">
                   <div class="mb-3">
                     <i class="fas fa-thermometer-half text-primary-custom" style="font-size: 2.5rem;"></i>
                   </div>
-                  <h5 style="color: var(--text) !important;">Température</h5>
-                  <p style="color: var(--muted) !important;" class="small">Refroidissement optimisé</p>
+                  <h5>Température</h5>
+                  <p class="small">Refroidissement optimisé</p>
                 </div>
                 <div class="col-md-4 text-center">
                   <div class="mb-3">
                     <i class="fas fa-clock text-primary-custom" style="font-size: 2.5rem;"></i>
                   </div>
-                  <h5 style="color: var(--text) !important;">Longévité</h5>
-                  <p style="color: var(--muted) !important;" class="small">Durée de vie prolongée</p>
+                  <h5>Longévité</h5>
+                  <p class="small">Durée de vie prolongée</p>
                 </div>
               </div>
             </div>
@@ -117,8 +117,8 @@
 
           <!-- Call to action -->
           <div class="text-center">
-            <h3 class="mb-4" style="color: var(--text) !important;">Votre PC a besoin d'un bon nettoyage ?</h3>
-            <p style="color: var(--muted) !important;" class="mb-4">
+            <h3 class="mb-4">Votre PC a besoin d'un bon nettoyage ?</h3>
+            <p class="mb-4">
               Redonnez un coup de jeune à votre ordinateur avec un entretien professionnel
             </p>
             <router-link to="/contact" class="btn btn-primary-custom btn-lg">
@@ -137,7 +137,7 @@ import { usePageMeta } from '@/composables/usePageMeta'
 usePageMeta(
   'Nettoyage & Entretien PC | Loïc Barthoulot',
   'Dépoussiérage, nettoyage des ventilateurs, optimisation logicielle et mise à jour des drivers. Redonnez un coup de jeune à votre PC.',
-  { path: '/services/nettoyage-entretien' }
+  { path: '/services/nettoyage-entretien', image: 'https://images.pexels.com/photos/4792728/pexels-photo-4792728.jpeg?auto=compress&cs=tinysrgb&w=1200' }
 )
 
 const typesEntretien = ref([

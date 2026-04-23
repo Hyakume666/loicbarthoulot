@@ -4,8 +4,8 @@
       <div class="row">
         <div class="col-lg-8 mx-auto">
           <div class="text-center mb-5">
-            <h1 class="display-4 fw-bold" style="color: var(--text) !important;">Mon Profil Professionnel</h1>
-            <p class="lead" style="color: var(--muted) !important;">Découvrez mon parcours et mes compétences</p>
+            <h1 class="display-4 fw-bold">Mon Profil Professionnel</h1>
+            <p class="lead">Découvrez mon parcours et mes compétences</p>
           </div>
 
           <!-- Profil -->
@@ -13,19 +13,19 @@
             <div class="card card-custom">
               <div class="card-body p-4">
                 <h3 class="text-primary-custom mb-3">À propos de moi</h3>
-                <p style="color: var(--text) !important;">
+                <p>
                   Étudiant en Informatique de Gestion et passionné d'informatique depuis plus de 10 ans, 
                   je mets mes compétences techniques au service des particuliers et des entreprises. 
                   Spécialisé dans le montage, la réparation et l'optimisation de PC, ainsi que dans 
                   la création de sites web modernes, j'accompagne mes clients avec un service 
                   personnalisé et des conseils adaptés à leurs besoins.
                 </p>
-                <p style="color: var(--text) !important;">
+                <p>
                   Ma formation actuelle en Informatique de Gestion me permet d'apporter une véritable 
                   plus-value : une approche qui allie expertise technique, compréhension des enjeux 
                   métiers et vision stratégique des systèmes d'information.
                 </p>
-                <p style="color: var(--text) !important;">
+                <p>
                   Mon approche combine passion du hardware, savoir-faire technique et vision moderne 
                   du développement web pour offrir des solutions complètes et performantes.
                 </p>
@@ -42,29 +42,29 @@
                 
                 <!-- Langages & Web -->
                 <div class="mb-4">
-                  <h5 class="mb-3" style="color: var(--text) !important;">
+                  <h5 class="mb-3">
                     <i class="fas fa-code me-2 text-primary-custom"></i>Langages & Web
                   </h5>
                   <div class="row g-2">
                     <div class="col-md-6">
                       <ul class="list-unstyled">
-                        <li class="mb-2" style="color: var(--text) !important;">
+                        <li class="mb-2">
                           <i class="fas fa-check text-primary-custom me-2"></i>Java
                         </li>
-                        <li class="mb-2" style="color: var(--text) !important;">
+                        <li class="mb-2">
                           <i class="fas fa-check text-primary-custom me-2"></i>JavaScript (ES6+)
                         </li>
-                        <li class="mb-2" style="color: var(--text) !important;">
+                        <li class="mb-2">
                           <i class="fas fa-check text-primary-custom me-2"></i>HTML / CSS
                         </li>
                       </ul>
                     </div>
                     <div class="col-md-6">
                       <ul class="list-unstyled">
-                        <li class="mb-2" style="color: var(--text) !important;">
+                        <li class="mb-2">
                           <i class="fas fa-check text-primary-custom me-2"></i>SQL
                         </li>
-                        <li class="mb-2" style="color: var(--text) !important;">
+                        <li class="mb-2">
                           <i class="fas fa-check text-primary-custom me-2"></i>Python
                         </li>
                       </ul>
@@ -74,29 +74,29 @@
 
                 <!-- Programmation -->
                 <div class="mb-4">
-                  <h5 class="mb-3" style="color: var(--text) !important;">
+                  <h5 class="mb-3">
                     <i class="fas fa-laptop-code me-2 text-primary-custom"></i>Programmation
                   </h5>
                   <div class="row g-2">
                     <div class="col-md-6">
                       <ul class="list-unstyled">
-                        <li class="mb-2" style="color: var(--text) !important;">
+                        <li class="mb-2">
                           <i class="fas fa-check text-primary-custom me-2"></i>OOP
                         </li>
-                        <li class="mb-2" style="color: var(--text) !important;">
+                        <li class="mb-2">
                           <i class="fas fa-check text-primary-custom me-2"></i>Développement structuré & modulaire
                         </li>
-                        <li class="mb-2" style="color: var(--text) !important;">
+                        <li class="mb-2">
                           <i class="fas fa-check text-primary-custom me-2"></i>Hibernate 6 + JDBC
                         </li>
                       </ul>
                     </div>
                     <div class="col-md-6">
                       <ul class="list-unstyled">
-                        <li class="mb-2" style="color: var(--text) !important;">
+                        <li class="mb-2">
                           <i class="fas fa-check text-primary-custom me-2"></i>Design patterns
                         </li>
-                        <li class="mb-2" style="color: var(--text) !important;">
+                        <li class="mb-2">
                           <i class="fas fa-check text-primary-custom me-2"></i>Architecture logicielle
                         </li>
                       </ul>
@@ -106,26 +106,26 @@
 
                 <!-- Bases de données -->
                 <div class="mb-4">
-                  <h5 class="mb-3" style="color: var(--text) !important;">
+                  <h5 class="mb-3">
                     <i class="fas fa-database me-2 text-primary-custom"></i>Bases de données
                   </h5>
                   <div class="row g-2">
                     <div class="col-md-6">
                       <ul class="list-unstyled">
-                        <li class="mb-2" style="color: var(--text) !important;">
+                        <li class="mb-2">
                           <i class="fas fa-check text-primary-custom me-2"></i>SQL
                         </li>
-                        <li class="mb-2" style="color: var(--text) !important;">
+                        <li class="mb-2">
                           <i class="fas fa-check text-primary-custom me-2"></i>SGBDR typé Oracle
                         </li>
                       </ul>
                     </div>
                     <div class="col-md-6">
                       <ul class="list-unstyled">
-                        <li class="mb-2" style="color: var(--text) !important;">
+                        <li class="mb-2">
                           <i class="fas fa-check text-primary-custom me-2"></i>MERISE
                         </li>
-                        <li class="mb-2" style="color: var(--text) !important;">
+                        <li class="mb-2">
                           <i class="fas fa-check text-primary-custom me-2"></i>UML, BPMN
                         </li>
                       </ul>
@@ -135,20 +135,20 @@
 
                 <!-- Conteneurisation-->
                 <div class="mb-4">
-                  <h5 class="mb-3" style="color: var(--text) !important;">
+                  <h5 class="mb-3">
                     <i class="fas fa-docker me-2 text-primary-custom"></i>Conteneurisation
                   </h5>
                   <div class="row g-2">
                     <div class="col-md-6">
                       <ul class="list-unstyled">
-                        <li class="mb-2" style="color: var(--text) !important;">
+                        <li class="mb-2">
                           <i class="fas fa-check text-primary-custom me-2"></i>Docker (images, volumes, réseaux, multi-stage builds)
                         </li>
                       </ul>
                     </div>
                     <div class="col-md-6">
                       <ul class="list-unstyled">
-                        <li class="mb-2" style="color: var(--text) !important;">
+                        <li class="mb-2">
                           <i class="fas fa-check text-primary-custom me-2"></i>Kubernetes / K3s
                         </li>
                       </ul>
@@ -158,26 +158,26 @@
 
                 <!-- Analyse & Gestion -->
                 <div class="mb-4">
-                  <h5 class="mb-3" style="color: var(--text) !important;">
+                  <h5 class="mb-3">
                     <i class="fas fa-chart-line me-2 text-primary-custom"></i>Analyse & Gestion
                   </h5>
                   <div class="row g-2">
                     <div class="col-md-6">
                       <ul class="list-unstyled">
-                        <li class="mb-2" style="color: var(--text) !important;">
+                        <li class="mb-2">
                           <i class="fas fa-check text-primary-custom me-2"></i>Analyse des besoins
                         </li>
-                        <li class="mb-2" style="color: var(--text) !important;">
+                        <li class="mb-2">
                           <i class="fas fa-check text-primary-custom me-2"></i>Analyse des processus
                         </li>
                       </ul>
                     </div>
                     <div class="col-md-6">
                       <ul class="list-unstyled">
-                        <li class="mb-2" style="color: var(--text) !important;">
+                        <li class="mb-2">
                           <i class="fas fa-check text-primary-custom me-2"></i>Modélisation MER/MR
                         </li>
-                        <li class="mb-2" style="color: var(--text) !important;">
+                        <li class="mb-2">
                           <i class="fas fa-check text-primary-custom me-2"></i>MCD / MLD / MPD
                         </li>
                       </ul>
@@ -200,23 +200,23 @@
                   <div class="row g-2">
                     <div class="col-md-6">
                       <ul class="list-unstyled">
-                        <li class="mb-2" style="color: var(--text) !important;">
+                        <li class="mb-2">
                           <i class="fas fa-check text-primary-custom me-2"></i>Assemblage PC sur mesure
                         </li>
-                        <li class="mb-2" style="color: var(--text) !important;">
+                        <li class="mb-2">
                           <i class="fas fa-check text-primary-custom me-2"></i>Diagnostics et réparation
                         </li>
-                        <li class="mb-2" style="color: var(--text) !important;">
+                        <li class="mb-2">
                           <i class="fas fa-check text-primary-custom me-2"></i>Windows 10/11 + Linux
                         </li>
                       </ul>
                     </div>
                     <div class="col-md-6">
                       <ul class="list-unstyled">
-                        <li class="mb-2" style="color: var(--text) !important;">
+                        <li class="mb-2">
                           <i class="fas fa-check text-primary-custom me-2"></i>Réseau + Infrastructure
                         </li>
-                        <li class="mb-2" style="color: var(--text) !important;">
+                        <li class="mb-2">
                           <i class="fas fa-check text-primary-custom me-2"></i>Virtualisation (VirtualBox/VMWare)
                         </li>
                       </ul>
@@ -236,25 +236,25 @@
                 <div class="timeline">
                   <div class="timeline-item">
                     <div class="d-flex justify-content-between align-items-center mb-2">
-                      <h5 class="mb-0" style="color: var(--text) !important;">Bachelor of Science HES-SO en Informatique de gestion</h5>
+                      <h5 class="mb-0">Bachelor of Science HES-SO en Informatique de gestion</h5>
                       <span class="badge bg-primary">2024 - 2027</span>
                     </div>
-                    <p class="mb-2" style="color: var(--muted) !important;">Business Information Technology</p>
-                    <p style="color: var(--text) !important;" class="mb-2">
+                    <p class="mb-2">Business Information Technology</p>
+                    <p class="mb-2">
                       <strong>Actuellement en 3ème année sur 4</strong> - Formation axée sur l'alliance entre technologies de l'information et gestion d'entreprise.
                     </p>
                     <div class="row g-3 mt-2">
                       <div class="col-md-6">
-                        <p style="color: var(--muted) !important;" class="small mb-1"><strong>Domaines d'études :</strong></p>
-                        <ul class="small" style="color: var(--text) !important;">
+                        <p class="small mb-1"><strong>Domaines d'études :</strong></p>
+                        <ul class="small">
                           <li>Développement logiciel</li>
                           <li>Gestion de projets IT</li>
                           <li>Bases de données</li>
                         </ul>
                       </div>
                       <div class="col-md-6">
-                        <p style="color: var(--muted) !important;" class="small mb-1"><strong>Spécialisations :</strong></p>
-                        <ul class="small" style="color: var(--text) !important;">
+                        <p class="small mb-1"><strong>Spécialisations :</strong></p>
+                        <ul class="small">
                           <li>Systèmes d'information</li>
                           <li>Analyse métier</li>
                           <li>Technologies web</li>
@@ -275,11 +275,11 @@
                 <div class="timeline">
                   <div class="timeline-item">
                     <div class="d-flex justify-content-between align-items-center mb-2">
-                      <h5 class="mb-0" style="color: var(--text) !important;">Services Informatiques Freelance</h5>
+                      <h5 class="mb-0">Services Informatiques Freelance</h5>
                       <span class="badge bg-primary">2020 - Présent</span>
                     </div>
-                    <p class="mb-2" style="color: var(--muted) !important;">Entrepreneur indépendant</p>
-                    <ul style="color: var(--text) !important;">
+                    <p class="mb-2">Entrepreneur indépendant</p>
+                    <ul>
                       <li>Montage et dépannage PC pour particuliers et petites entreprises</li>
                       <li>Création de sites web vitrine modernes et performants</li>
                       <li>Conseil en achat de matériel informatique</li>
@@ -289,11 +289,11 @@
                   </div>
                   <div class="timeline-item">
                     <div class="d-flex justify-content-between align-items-center mb-2">
-                      <h5 class="mb-0" style="color: var(--text) !important;">Technicien Informatique</h5>
+                      <h5 class="mb-0">Technicien Informatique</h5>
                       <span class="badge bg-secondary">2018 - 2020</span>
                     </div>
-                    <p class="mb-2" style="color: var(--muted) !important;">Société de services informatiques</p>
-                    <ul style="color: var(--text) !important;">
+                    <p class="mb-2">Société de services informatiques</p>
+                    <ul>
                       <li>Maintenance du parc informatique d'entreprise</li>
                       <li>Support utilisateur niveau 1 et 2</li>
                       <li>Gestion des incidents et résolution de problèmes</li>
@@ -311,7 +311,7 @@
               <div class="card-body p-4 text-center">
                 <div class="icon-feature">📄</div>
                 <h3 class="text-primary-custom mb-3">CV Complet Disponible</h3>
-                <p style="color: var(--text) !important;" class="mb-4">
+                <p class="mb-4">
                   Vous êtes un employeur ou un potentiel partenaire d'affaires ? 
                   Mon CV détaillé avec formations, certifications et références 
                   est disponible sur demande.
