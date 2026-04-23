@@ -33,8 +33,11 @@
               </h2>
             </div>
 
+            <div class="hero-location fade-in-up delay-2">
+              <i class="fas fa-map-marker-alt me-2"></i>Canton de Neuchâtel, Suisse
+            </div>
 
-            <p class="hero-description fade-in-up delay-2">
+            <p class="hero-description fade-in-up delay-3">
               Étudiant en Informatique de Gestion, passionné d'IT.<br><br>
               Je donne un coup de main aux particuliers et aux petites structures pour monter, dépanner et optimiser leurs PC, automatiser leurs tâches du quotidien, et je conçois aussi des sites web modernes, rapides et parfaitement adaptés à leurs besoins, le tout à des tarifs très accessibles.
             </p>
@@ -238,6 +241,20 @@ usePageMeta(
   }
 }
 
+.hero-location {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+  font-weight: 500;
+  margin-bottom: 2rem;
+  padding: 0.4rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  background: rgba(11, 94, 215, 0.08);
+}
+
 /* Titre professionnel avec design moderne */
 .hero-title-container {
   margin-bottom: 2.5rem;
@@ -378,32 +395,6 @@ usePageMeta(
   line-height: 1.3;
 }
 
-/* Animations */
-.fade-in-up {
-  opacity: 0;
-  transform: translateY(30px);
-  animation: fadeInUp 0.8s ease forwards;
-}
-
-.fade-in-up.delay-1 {
-  animation-delay: 0.2s;
-}
-
-.fade-in-up.delay-2 {
-  animation-delay: 0.4s;
-}
-
-.fade-in-up.delay-3 {
-  animation-delay: 0.6s;
-}
-
-@keyframes fadeInUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
 /* Responsive */
 @media (max-width: 768px) {
   .home-wrapper {
@@ -416,7 +407,7 @@ usePageMeta(
   }
 
   .hero-name {
-    font-size: 2.2rem;
+    font-size: 2rem;
   }
 
   .hero-title {
@@ -431,7 +422,7 @@ usePageMeta(
   .title-line {
     display: block;
     padding: 0;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
   }
 
   .hero-description {
@@ -441,7 +432,6 @@ usePageMeta(
   }
 
   .hero-cta {
-    display: flex;
     flex-direction: column;
     align-items: center;
     gap: 1rem;
@@ -463,62 +453,13 @@ usePageMeta(
   }
 
   .cta-title {
-    font-size: 2rem;
+    font-size: 1.75rem;
     margin-bottom: 1.5rem;
     padding: 0 15px;
   }
 }
 
-@media (max-width: 576px) {
-  .hero-name {
-    font-size: 1.8rem;
-  }
-
-  .title-line {
-    font-size: 1.1rem;
-  }
-
-  .cta-title {
-    font-size: 1.75rem;
-  }
-
-  .hero-cta .btn {
-    width: 100%;
-    max-width: 260px;
-    padding: 12px 20px;
-    font-size: 1rem;
-  }
-}
-
-/* Media queries spécifiques pour iPhone, Galaxy, Pixel */
-@media (max-width: 430px) {
-  .hero-section {
-    padding: 80px 0 50px 0;
-  }
-
-  .hero-cta {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-    padding: 0 15px;
-  }
-
-  .hero-cta .btn {
-    width: 100%;
-    max-width: 250px;
-    margin: 0 auto;
-    display: block;
-    text-align: center;
-  }
-
-  .final-cta-section {
-    margin-bottom: 60px;
-  }
-}
-
-/* Media query ultra-spécifique pour les très petits écrans */
-@media (max-width: 390px) {
+@media (max-width: 480px) {
   .hero-name {
     font-size: 1.6rem;
   }
@@ -527,28 +468,10 @@ usePageMeta(
     font-size: 1rem;
   }
 
-  .hero-cta {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-    width: 100%;
-    padding: 0 10px;
-  }
-
   .hero-cta .btn {
-    width: 100%;
-    max-width: 240px;
-    margin: 0 auto;
-    display: block;
-    text-align: center;
+    max-width: 250px;
     padding: 12px 16px;
     font-size: 0.95rem;
-  }
-
-  .final-cta-section {
-    margin-bottom: 60px;
   }
 }
 </style>

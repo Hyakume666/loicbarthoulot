@@ -33,6 +33,14 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--text);
 }
 
+p, li, small {
+  color: var(--text);
+}
+
+.lead {
+  color: var(--muted);
+}
+
 .bg-dark-custom {
   background-color: var(--bg) !important;
 }
@@ -231,6 +239,7 @@ h1, h2, h3, h4, h5, h6 {
 .card-custom .card-body {
   background: linear-gradient(135deg, var(--surface) 0%, rgba(21, 26, 31, 0.8) 100%);
   position: relative;
+  color: var(--text);
 }
 
 .card-custom .card-title {
@@ -265,6 +274,11 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 1.25rem;
   font-weight: 700;
   text-shadow: 0 0 10px rgba(11, 94, 215, 0.5);
+}
+
+.card-img-service {
+  height: 200px;
+  object-fit: cover;
 }
 
 .service-card-clickable {

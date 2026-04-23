@@ -15,7 +15,7 @@
             <div class="col-md-4 text-center">
               <div class="card card-custom contact-form-card h-100">
                 <div class="card-body p-4">
-                  <div class="icon-feature">📧</div>
+                  <div class="icon-feature"><i class="fas fa-envelope"></i></div>
                   <h5>Email</h5>
                   <p>contact@loicbarthoulot.ch</p>
                 </div>
@@ -24,7 +24,7 @@
             <div class="col-md-3 text-center">
               <div class="card card-custom contact-form-card h-100">
                 <div class="card-body p-4">
-                  <div class="icon-feature">📱</div>
+                  <div class="icon-feature"><i class="fas fa-mobile-alt"></i></div>
                   <h5>Téléphone</h5>
                   <p>Après un premier contact</p>
                 </div>

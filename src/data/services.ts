@@ -4,6 +4,7 @@ export interface Service {
   description: string
   price: string
   image: string
+  icon: string
   link: string
 }
 
@@ -13,7 +14,8 @@ export const services: Service[] = [
     title: 'Montage de PC sur mesure',
     description: 'Assemblage complet de votre configuration personnalisée selon vos besoins et votre budget.',
     price: 'Sur devis',
-    image: 'https://images.pexels.com/photos/1029757/pexels-photo-1029757.jpeg?auto=compress&cs=tinysrgb&w=600',
+    image: '/images/montage-pc.jpg',
+    icon: 'fas fa-desktop',
     link: '/services/montage-pc'
   },
   {
@@ -21,7 +23,8 @@ export const services: Service[] = [
     title: 'Dépannage & réparation',
     description: 'Diagnostic et réparation de pannes matérielles et logicielles.',
     price: 'Sur devis',
-    image: 'https://images.pexels.com/photos/5380664/pexels-photo-5380664.jpeg?auto=compress&cs=tinysrgb&w=600',
+    image: '/images/depannage.jpg',
+    icon: 'fas fa-wrench',
     link: '/services/depannage-reparation'
   },
   {
@@ -29,7 +32,8 @@ export const services: Service[] = [
     title: 'Nettoyage et entretien',
     description: 'Nettoyage complet de votre ordinateur (poussière, ventilateurs), maintenance logicielle et optimisation des performances.',
     price: 'Sur devis',
-    image: 'https://images.pexels.com/photos/4792728/pexels-photo-4792728.jpeg?auto=compress&cs=tinysrgb&w=600',
+    image: '/images/nettoyage.jpg',
+    icon: 'fas fa-broom',
     link: '/services/nettoyage-entretien'
   },
   {
@@ -37,7 +41,8 @@ export const services: Service[] = [
     title: 'Création de site web',
     description: 'Site vitrine performant et responsive avec SEO de base, design moderne, intégration formulaire de contact et déploiement inclus.',
     price: 'Sur devis',
-    image: 'https://images.pexels.com/photos/270348/pexels-photo-270348.jpeg?auto=compress&cs=tinysrgb&w=600',
+    image: '/images/creation-site-web.jpg',
+    icon: 'fas fa-code',
     link: '/services/creation-site-web'
   },
   {
@@ -45,7 +50,8 @@ export const services: Service[] = [
     title: 'Automatisation IA pour indépendants & PME',
     description: "Gagne des heures chaque semaine en automatisant tes tâches répétitives avec l'IA, sans devoir changer d'outils ni réinventer ton business.",
     price: 'Sur devis',
-    image: 'https://images.pexels.com/photos/9028873/pexels-photo-9028873.jpeg',
+    image: '/images/automatisation-ia.jpg',
+    icon: 'fas fa-robot',
     link: '/services/automatisation-ia'
   }
 ]
