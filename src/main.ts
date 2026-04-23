@@ -1,8 +1,8 @@
 import { ViteSSG } from 'vite-ssg'
 import App from './App.vue'
 import '@fontsource-variable/inter'
-import './style.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
+import './style.css'
 
 import Home from './views/Home.vue'
 import NotFound from './views/NotFound.vue'
