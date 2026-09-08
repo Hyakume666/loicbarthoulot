@@ -1,155 +1,57 @@
 <template>
-  <header class="bandeau" :class="{ 'bandeau--sur-bloc': surBloc }">
-    <div class="contenu bandeau__rangee">
-      <router-link to="/" class="bandeau__marque" aria-label="Loïc Barthoulot, accueil">
+  <nav class="navbar navbar-expand-lg navbar-site sticky-top" aria-label="Navigation principale">
+    <div class="container">
+      <router-link to="/" class="navbar-brand d-flex align-items-center gap-2" aria-label="Loïc Barthoulot, accueil">
         <picture>
           <source :srcset="logoWebp" type="image/webp">
-          <img :src="logoPng" alt="" width="40" height="40">
+          <img :src="logoPng" alt="" width="36" height="36" class="rounded-1 bg-white p-1">
         </picture>
+        <span class="fw-semibold fs-6 d-none d-sm-inline">Loïc Barthoulot</span>
       </router-link>
 
       <button
-        class="bandeau__bascule"
+        class="navbar-toggler border-0 px-2"
         type="button"
-        :aria-expanded="ouvert"
+        data-bs-toggle="collapse"
+        data-bs-target="#navigation"
         aria-controls="navigation"
-        @click="ouvert = !ouvert"
+        :aria-expanded="false"
+        aria-label="Ouvrir le menu"
       >
-        {{ ouvert ? 'Fermer' : 'Menu' }}
+        <span class="navbar-toggler-icon"></span>
       </button>
 
-      <nav id="navigation" class="bandeau__nav" :class="{ 'est-ouvert': ouvert }">
-        <router-link to="/services">Ce que je fais</router-link>
-        <router-link to="/cv">Parcours</router-link>
-        <router-link to="/contact">Contact</router-link>
-      </nav>
+      <div id="navigation" class="collapse navbar-collapse">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-4 mt-3 mt-lg-0">
+          <li class="nav-item">
+            <router-link to="/services" class="nav-link">Ce que je fais</router-link>
+          </li>
+          <li class="nav-item">
+            <router-link to="/cv" class="nav-link">Parcours</router-link>
+          </li>
+          <li class="nav-item mt-2 mt-lg-0">
+            <router-link to="/contact" class="btn btn-primary btn-sm px-3">
+              Me contacter
+            </router-link>
+          </li>
+        </ul>
+      </div>
     </div>
-  </header>
+  </nav>
 </template>
 
 <script setup lang="ts">
-import { ref, watch } from 'vue'
+import { watch } from 'vue'
 import { useRoute } from 'vue-router'
-
-defineProps<{ surBloc: boolean }>()
-
-const ouvert = ref(false)
-const route = useRoute()
 
 const logoWebp = import.meta.env.BASE_URL + 'logo.webp'
 const logoPng = import.meta.env.BASE_URL + 'logo.png'
 
-watch(() => route.path, () => { ouvert.value = false })
+const route = useRoute()
+
+// Referme le menu mobile après une navigation.
+watch(() => route.path, () => {
+  const menu = document.getElementById('navigation')
+  menu?.classList.remove('show')
+})
 </script>
-
-<style scoped>
-.bandeau {
-  position: relative;
-  z-index: 10;
-  background-color: var(--craie);
-  border-bottom: 1px solid var(--trait);
-}
-
-/* Sur l'accueil, l'en-tête se pose sur le bloc outremer : il n'a pas de
-   fond propre et hérite des rôles de couleur du bloc. */
-.bandeau--sur-bloc {
-  --texte: var(--blanc);
-  --texte-faible: #b9bce0;
-  --trait: rgb(255 255 255 / 0.22);
-  --focus: var(--or);
-  position: absolute;
-  inset-inline: 0;
-  background-color: transparent;
-  border-bottom: 0;
-  color: var(--texte);
-}
-
-.bandeau__rangee {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: var(--e-4);
-  padding-block: var(--e-4);
-}
-
-/* Le monogramme est un dégradé bleu-gris : il a besoin d'une réserve claire
-   pour rester lisible sur l'outremer comme sur la craie. */
-.bandeau__marque {
-  display: block;
-  padding: var(--e-1);
-  background-color: var(--blanc);
-  line-height: 0;
-}
-
-.bandeau__marque img {
-  width: 40px;
-  height: 40px;
-}
-
-.bandeau__nav {
-  display: flex;
-  gap: var(--e-5);
-  font-size: var(--pas-0);
-}
-
-.bandeau__nav a {
-  color: var(--texte-faible);
-  text-decoration: none;
-  padding-block: var(--e-1);
-  border-bottom: 2px solid transparent;
-  transition: color var(--duree) ease, border-color var(--duree) ease;
-}
-
-.bandeau__nav a:hover {
-  color: var(--texte);
-}
-
-.bandeau__nav a.router-link-active {
-  color: var(--texte);
-  border-bottom-color: var(--accent);
-}
-
-.bandeau__bascule {
-  display: none;
-  padding: var(--e-2) var(--e-3);
-  background: transparent;
-  border: 1px solid var(--trait);
-  border-radius: var(--rayon);
-  font-size: var(--pas-0);
-  color: var(--texte);
-  cursor: pointer;
-}
-
-@media (max-width: 47.999rem) {
-  .bandeau__bascule {
-    display: block;
-  }
-
-  .bandeau__nav {
-    display: none;
-    flex-direction: column;
-    gap: 0;
-    flex-basis: 100%;
-    border-top: 1px solid var(--trait);
-    margin-top: var(--e-4);
-  }
-
-  .bandeau__nav.est-ouvert {
-    display: flex;
-  }
-
-  .bandeau__nav a {
-    padding-block: var(--e-4);
-    border-bottom: 1px solid var(--trait);
-  }
-
-  .bandeau__nav a.router-link-active {
-    border-bottom-color: var(--trait);
-    color: var(--accent);
-  }
-
-  .bandeau__rangee {
-    flex-wrap: wrap;
-  }
-}
-</style>

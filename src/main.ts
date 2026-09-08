@@ -1,7 +1,7 @@
 import { ViteSSG } from 'vite-ssg'
 import App from './App.vue'
-import '@fontsource-variable/archivo/wdth.css'
-import './style.css'
+import '@fontsource-variable/inter'
+import './styles/main.scss'
 
 import Home from './views/Home.vue'
 import NotFound from './views/NotFound.vue'
@@ -44,6 +44,8 @@ export const createApp = ViteSSG(
   },
   ({ isClient }) => {
     if (isClient) {
+      // Collapse de la navbar. Seul composant JS de Bootstrap utilisé.
+      import('bootstrap/js/dist/collapse')
       const redirect = sessionStorage.getItem('spa-redirect')
       if (redirect) {
         sessionStorage.removeItem('spa-redirect')
