@@ -11,6 +11,8 @@ import CV from './views/CV.vue'
 import Contact from './views/Contact.vue'
 import AutomatisationIa from './views/AutomatisationIa.vue'
 import SupportMateriel from './views/SupportMateriel.vue'
+import MentionsLegales from './views/MentionsLegales.vue'
+import Confidentialite from './views/Confidentialite.vue'
 
 const routes = [
   { path: '/', name: 'Home', component: Home },
@@ -26,6 +28,8 @@ const routes = [
 
   { path: '/cv', name: 'CV', component: CV },
   { path: '/contact', name: 'Contact', component: Contact },
+  { path: '/mentions-legales', name: 'MentionsLegales', component: MentionsLegales },
+  { path: '/confidentialite', name: 'Confidentialite', component: Confidentialite },
   { path: '/:pathMatch(.*)*', name: 'NotFound', component: NotFound }
 ]
 

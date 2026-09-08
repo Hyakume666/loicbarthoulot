@@ -7,6 +7,8 @@
         <router-link to="/services">Ce que je fais</router-link>
         <router-link to="/cv">Parcours</router-link>
         <router-link to="/contact">Contact</router-link>
+        <router-link to="/mentions-legales">Mentions légales</router-link>
+        <router-link to="/confidentialite">Confidentialité</router-link>
         <a
           href="https://www.linkedin.com/in/loic-barthoulot/"
           target="_blank"
