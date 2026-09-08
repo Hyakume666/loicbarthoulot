@@ -1,51 +1,49 @@
 <template>
-  <div class="notfound-wrapper">
-    <div class="container text-center">
-      <div class="notfound-code">404</div>
-      <h1 class="notfound-title">Page introuvable</h1>
-      <p class="notfound-desc">Cette page n'existe pas ou a été déplacée.</p>
-      <router-link to="/" class="btn btn-primary-custom btn-lg">
-        <i class="fas fa-home me-2"></i>Retour à l'accueil
-      </router-link>
+  <section class="bloc bloc--erreur">
+    <div class="contenu">
+      <p class="code">404</p>
+      <h1 class="bloc__titre">Cette page n'existe pas.</h1>
+      <p class="bloc__texte">
+        Elle a peut-être été déplacée, ou l'adresse comporte une erreur.
+      </p>
+      <p class="retour">
+        <router-link to="/" class="bouton">Retour à l'accueil</router-link>
+      </p>
     </div>
-  </div>
+  </section>
 </template>
 
 <script setup lang="ts">
 import { usePageMeta } from '@/composables/usePageMeta'
-usePageMeta('Page introuvable | Loïc Barthoulot', '')
+usePageMeta(
+  'Page introuvable | Loïc Barthoulot',
+  'Cette page n\'existe pas ou a été déplacée.'
+)
 </script>
 
 <style scoped>
-.notfound-wrapper {
-  min-height: 100vh;
+.bloc--erreur {
+  min-height: 70dvh;
   display: flex;
   align-items: center;
-  justify-content: center;
-  background-color: var(--bg);
 }
 
-.notfound-code {
-  font-size: 8rem;
-  font-weight: 700;
-  line-height: 1;
-  background: linear-gradient(135deg, var(--primary), #4f46e5);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  margin-bottom: 1rem;
+.code {
+  font-size: var(--pas-0);
+  color: var(--texte-faible);
+  margin-bottom: var(--e-4);
 }
 
-.notfound-title {
-  font-size: 2rem;
-  font-weight: 600;
-  color: var(--text);
-  margin-bottom: 1rem;
+.bloc--erreur .bloc__titre {
+  font-size: clamp(2rem, 6vw, 4rem);
+  max-width: 20ch;
 }
 
-.notfound-desc {
-  color: var(--muted);
-  font-size: 1.1rem;
-  margin-bottom: 2rem;
+.bloc__texte {
+  margin-top: var(--e-5);
+}
+
+.retour {
+  margin-top: var(--e-7);
 }
 </style>
