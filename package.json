@@ -1,5 +1,5 @@
 {
-  "name": "vite-vue-typescript-starter",
+  "name": "loicbarthoulot-ch",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -12,7 +12,7 @@
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
     "@fontsource-variable/inter": "^5.2.8",
-    "@popperjs/core": "^2.11.8",
+    "@unhead/vue": "^2.1.13",
     "bootstrap": "^5.3.8",
     "vue": "^3.4.38",
     "vue-router": "^4.5.1"
