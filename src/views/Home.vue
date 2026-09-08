@@ -2,8 +2,8 @@
   <!-- Hero -->
   <section class="hero hero--accueil">
     <div class="container">
-      <div class="row gy-5 gx-4 align-items-center">
-        <div class="col-lg-7">
+      <div class="row">
+        <div class="col-lg-11 col-xl-10">
           <p class="surtitre">Informatique de gestion — Neuchâtel</p>
           <h1 class="hero__titre mb-4">
             Je m'occupe de l'informatique
@@ -11,7 +11,7 @@
           </h1>
           <p class="hero__texte mb-4">
             Du site web au poste de travail, en passant par la sécurité et
-            l'automatisation de ce qui se répète.
+            l'automatisation de ce qui se répète. Indépendant depuis 2023.
           </p>
           <div class="d-flex flex-wrap gap-3">
             <router-link to="/services" class="btn btn-primary">
@@ -20,31 +20,6 @@
             <router-link to="/cv" class="btn btn-outline-light">
               Mon parcours
             </router-link>
-          </div>
-        </div>
-
-        <div class="col-lg-5">
-          <div class="fiche">
-            <div class="fiche__ligne">
-              <span class="fiche__cle">Basé à</span>
-              <span class="fiche__valeur">Neuchâtel, Suisse romande</span>
-            </div>
-            <div class="fiche__ligne">
-              <span class="fiche__cle">Indépendant depuis</span>
-              <span class="fiche__valeur">2023</span>
-            </div>
-            <div class="fiche__ligne">
-              <span class="fiche__cle">Formation</span>
-              <span class="fiche__valeur">
-                Bachelor HES-SO informatique de gestion, dernière année
-              </span>
-            </div>
-            <div class="fiche__ligne">
-              <span class="fiche__cle">Écrire</span>
-              <span class="fiche__valeur">
-                <a href="mailto:contact@loicbarthoulot.ch">contact@loicbarthoulot.ch</a>
-              </span>
-            </div>
           </div>
         </div>
       </div>

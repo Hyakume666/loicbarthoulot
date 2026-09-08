@@ -242,10 +242,22 @@ p {
 }
 
 // L'accueil respire davantage, les pages intérieures entrent plus vite
-// dans le sujet.
+// dans le sujet. Le titre y occupe la largeur plutôt que de laisser une
+// colonne vide à côté : c'est le texte qui remplit l'espace, pas un
+// encadré de faits déjà écrits ailleurs.
 .hero--accueil {
   @include media-breakpoint-up(lg) {
     padding-block: 8.5rem 7rem;
+  }
+
+  .hero__titre {
+    font-size: clamp(2.25rem, 5.6vw, 4rem);
+    max-width: 22ch;
+  }
+
+  .hero__texte {
+    font-size: 1.25rem;
+    max-width: 58ch;
   }
 }
 
