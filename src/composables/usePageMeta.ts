@@ -2,7 +2,9 @@ import { useHead } from '@unhead/vue'
 
 const SITE_URL = 'https://loicbarthoulot.ch'
 const SITE_NAME = 'Loïc Barthoulot'
-const DEFAULT_IMAGE = `${SITE_URL}/logo.png`
+// Composée à partir du bloc outremer, au format attendu par les réseaux
+// sociaux (1200 × 630). logo.png reste la favicon.
+const DEFAULT_IMAGE = `${SITE_URL}/og.png`
 
 export interface PageMetaOptions {
   path?: string
@@ -30,6 +32,9 @@ export function usePageMeta(
       { property: 'og:type', content: type },
       { property: 'og:url', content: url },
       { property: 'og:image', content: image },
+      { property: 'og:image:width', content: '1200' },
+      { property: 'og:image:height', content: '630' },
+      { property: 'og:image:alt', content: 'Loïc Barthoulot — des applications métier pour des PME romandes' },
       { property: 'og:site_name', content: SITE_NAME },
       { property: 'og:locale', content: 'fr_CH' },
       { name: 'twitter:card', content: 'summary_large_image' },
