@@ -11,7 +11,7 @@
           </h1>
           <p class="hero__texte mb-4">
             Du site web au poste de travail, en passant par la sécurité et
-            l'automatisation de ce qui se répète. Indépendant depuis 2023.
+            l'automatisation de ce qui se répète.
           </p>
           <div class="d-flex flex-wrap gap-3">
             <router-link to="/services" class="btn btn-primary">
