@@ -1,21 +1,37 @@
 <template>
+  <section class="hero hero--compact">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8">
+          <p class="surtitre">Contact</p>
+          <h1 class="hero__titre mb-3">Me contacter</h1>
+          <p class="hero__texte mb-0">
+            Décrivez votre projet ou votre problème. Je réponds par écrit.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section class="section">
     <div class="container">
       <div class="row gy-5 gx-4">
         <div class="col-lg-5">
-          <p class="surtitre">Contact</p>
-          <h1 class="mb-3">Me contacter</h1>
-          <p class="lead text-body-secondary mb-4">
-            Décrivez votre projet ou votre problème. Je réponds par écrit.
-          </p>
-
-          <div class="panneau">
-            <h2 class="h6 text-body-secondary mb-2">Courriel</h2>
-            <p class="mb-4">
-              <a href="mailto:contact@loicbarthoulot.ch">contact@loicbarthoulot.ch</a>
-            </p>
-            <h2 class="h6 text-body-secondary mb-2">Zone d'intervention</h2>
-            <p class="mb-0">Neuchâtel et Suisse romande</p>
+          <div class="fiche">
+            <div class="fiche__ligne">
+              <span class="fiche__cle">Courriel</span>
+              <span class="fiche__valeur">
+                <a href="mailto:contact@loicbarthoulot.ch">contact@loicbarthoulot.ch</a>
+              </span>
+            </div>
+            <div class="fiche__ligne">
+              <span class="fiche__cle">Zone d'intervention</span>
+              <span class="fiche__valeur">Neuchâtel et Suisse romande</span>
+            </div>
+            <div class="fiche__ligne">
+              <span class="fiche__cle">Délai de réponse</span>
+              <span class="fiche__valeur">Par écrit, sous quelques jours</span>
+            </div>
           </div>
         </div>
 

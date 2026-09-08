@@ -165,10 +165,28 @@ p {
 // --- Sections pleine largeur, alternées ---------------------------------
 
 .section {
-  padding-block: 4.5rem;
+  padding-block: 4rem;
 
   @include media-breakpoint-up(md) {
-    padding-block: 6.5rem;
+    padding-block: 5.5rem;
+  }
+}
+
+// Le rythme vertical se joue sur trois valeurs, pas une seule : sans écart
+// entre les sections, rien ne signale ce qui compte.
+.section--dense {
+  padding-block: 3rem;
+
+  @include media-breakpoint-up(md) {
+    padding-block: 4rem;
+  }
+}
+
+.section--ample {
+  padding-block: 5rem;
+
+  @include media-breakpoint-up(md) {
+    padding-block: 7.5rem;
   }
 }
 
@@ -190,9 +208,11 @@ p {
 
 // --- Hero ---------------------------------------------------------------
 
+// Toutes les pages s'ouvrent sur un hero, pas seulement l'accueil : sans
+// lui, une page intérieure démarrait sur 104 px de vide.
 .hero {
   position: relative;
-  padding-block: 7rem 5rem;
+  padding-block: 5rem 4rem;
   overflow: hidden;
   background:
     radial-gradient(90rem 40rem at 15% -10%, rgba(61, 123, 255, 0.16), transparent 60%),
@@ -200,7 +220,43 @@ p {
   border-bottom: 1px solid $bordure;
 
   @include media-breakpoint-up(lg) {
-    padding-block: 9rem 6.5rem;
+    padding-block: 7rem 5.5rem;
+  }
+}
+
+// L'accueil respire davantage, les pages intérieures entrent plus vite
+// dans le sujet.
+.hero--accueil {
+  @include media-breakpoint-up(lg) {
+    padding-block: 8.5rem 7rem;
+  }
+}
+
+.hero--compact {
+  padding-block: 3.5rem 3rem;
+
+  @include media-breakpoint-up(lg) {
+    padding-block: 5rem 4rem;
+  }
+}
+
+// La 404 n'a rien après elle : sans hauteur minimale, une bande vide
+// s'ouvrait entre le hero et le pied de page.
+.hero--pleine-page {
+  display: flex;
+  align-items: center;
+  min-height: calc(100dvh - 12rem);
+}
+
+.hero__retour {
+  display: inline-block;
+  margin-bottom: 1.75rem;
+  font-size: 0.875rem;
+  color: $sourdine;
+  text-decoration: none;
+
+  &:hover {
+    color: $encre;
   }
 }
 
@@ -208,7 +264,12 @@ p {
   font-size: clamp(2.25rem, 5vw, 3.5rem);
   font-weight: 680;
   line-height: 1.1;
-  max-width: 18ch;
+  max-width: 20ch;
+}
+
+.hero--compact .hero__titre {
+  font-size: clamp(1.875rem, 3.5vw, 2.75rem);
+  max-width: 24ch;
 }
 
 .hero__accent {
@@ -218,7 +279,73 @@ p {
 .hero__texte {
   color: $sourdine;
   font-size: 1.125rem;
-  max-width: 52ch;
+  max-width: 54ch;
+}
+
+// --- Fiche d'identité ---------------------------------------------------
+// Occupe la colonne de droite du hero d'accueil. Sans elle, les deux tiers
+// droits de l'écran restaient vides sur toutes les sections.
+
+.fiche {
+  background-color: rgba(18, 22, 28, 0.72);
+  border: 1px solid $bordure;
+  border-radius: $border-radius-lg;
+  padding: 1.75rem;
+  backdrop-filter: blur(6px);
+}
+
+.fiche__ligne {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.15rem 1rem;
+  justify-content: space-between;
+  align-items: baseline;
+  padding-block: 0.75rem;
+  border-top: 1px solid $bordure;
+
+  &:first-child {
+    border-top: 0;
+    padding-top: 0;
+  }
+
+  &:last-child {
+    padding-bottom: 0;
+  }
+}
+
+.fiche__cle {
+  font-size: 0.8125rem;
+  color: $sourdine;
+}
+
+.fiche__valeur {
+  font-size: 0.9375rem;
+  font-weight: 500;
+  text-align: right;
+}
+
+// --- Texte suivi (pages légales) ----------------------------------------
+// Un texte juridique a besoin de titres et de filets, pas de neuf boîtes
+// identiques.
+
+.bloc-legal {
+  padding-block: 1.75rem;
+  border-top: 1px solid $bordure;
+
+  &:first-of-type {
+    border-top: 0;
+    padding-top: 0;
+  }
+
+  p + p,
+  p + ul,
+  ul + p {
+    margin-top: 1rem;
+  }
+
+  p {
+    color: $sourdine;
+  }
 }
 
 // --- Disponibilité ------------------------------------------------------

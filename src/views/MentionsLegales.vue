@@ -1,13 +1,20 @@
 <template>
-  <section class="section">
+  <section class="hero hero--compact">
     <div class="container">
-      <header class="mb-5 mesure-texte">
-        <h1>Mentions légales</h1>
-        <p class="small text-body-secondary">Dernière mise à jour : 8 septembre 2026</p>
-      </header>
+      <div class="row">
+        <div class="col-lg-8">
+          <p class="surtitre">Informations légales</p>
+          <h1 class="hero__titre mb-3">Mentions légales</h1>
+          <p class="hero__texte mb-0">Dernière mise à jour : 8 septembre 2026</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <section class="section section--dense">
+    <div class="container">
       <div class="mesure-texte">
-        <section class="panneau mb-4">
+        <section class="bloc-legal">
           <h2 class="h5 mb-3">Éditeur du site</h2>
           <p>
             Loïc Barthoulot, prestataire informatique indépendant, canton de
@@ -24,12 +31,12 @@
                <p>Adresse : rue, NPA, localité</p> -->
         </section>
 
-        <section class="panneau mb-4">
+        <section class="bloc-legal">
           <h2 class="h5 mb-3">Responsable de la publication</h2>
           <p>Loïc Barthoulot.</p>
         </section>
 
-        <section class="panneau mb-4">
+        <section class="bloc-legal">
           <h2 class="h5 mb-3">Hébergement</h2>
           <p>
             Le site est hébergé par GitHub Pages, service de GitHub, Inc.,
@@ -43,7 +50,7 @@
           </p>
         </section>
 
-        <section class="panneau mb-4">
+        <section class="bloc-legal">
           <h2 class="h5 mb-3">Propriété intellectuelle</h2>
           <p>
             Les textes, la mise en page et le code de ce site sont l'œuvre de
@@ -56,7 +63,7 @@
           </p>
         </section>
 
-        <section class="panneau mb-4">
+        <section class="bloc-legal">
           <h2 class="h5 mb-3">Responsabilité</h2>
           <p>
             Les informations publiées ici sont données à titre indicatif et
@@ -70,7 +77,7 @@
           </p>
         </section>
 
-        <section class="panneau mb-4">
+        <section class="bloc-legal">
           <h2 class="h5 mb-3">Droit applicable</h2>
           <p>
             Le droit suisse s'applique. Le for est au canton de Neuchâtel,

@@ -1,23 +1,24 @@
 <template>
-  <section class="section">
+  <section class="hero hero--compact">
     <div class="container">
-      <p class="mb-4">
-        <router-link to="/services" class="text-body-secondary small text-decoration-none">
-          ← Retour aux prestations
-        </router-link>
-      </p>
-
-      <div class="row mb-5">
+      <router-link to="/services" class="hero__retour">
+        ← Retour aux prestations
+      </router-link>
+      <div class="row">
         <div class="col-lg-8">
           <p class="surtitre">Digitalisation de processus</p>
-          <h1 class="mb-3">Supprimer la ressaisie et les écarts qu'elle entraîne</h1>
-          <p class="lead text-body-secondary mb-0">
+          <h1 class="hero__titre mb-3">Supprimer la ressaisie et les écarts qu'elle entraîne</h1>
+          <p class="hero__texte mb-0">
             J'analyse ce qui se fait à la main dans votre entreprise, puis
             j'automatise ce qui est répétitif.
           </p>
         </div>
       </div>
+    </div>
+  </section>
 
+  <section class="section">
+    <div class="container">
       <div class="row g-4 mb-4">
         <div class="col-lg-7">
           <div class="panneau h-100">

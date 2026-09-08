@@ -1,17 +1,21 @@
 <template>
-  <section class="section">
+  <section class="hero hero--compact">
     <div class="container">
-      <div class="row mb-5">
+      <div class="row">
         <div class="col-lg-8">
           <p class="surtitre">Prestations</p>
-          <h1 class="mb-3">Ce que je fais</h1>
-          <p class="lead text-body-secondary mb-0">
+          <h1 class="hero__titre mb-3">Ce que je fais</h1>
+          <p class="hero__texte mb-0">
             Sites web, digitalisation de processus, sécurité et support
             informatique, pour des PME de Suisse romande.
           </p>
         </div>
       </div>
+    </div>
+  </section>
 
+  <section class="section">
+    <div class="container">
       <div class="row g-4">
         <div class="col-lg-6">
           <router-link to="/services/creation-site-web" class="carte-lien">
@@ -70,8 +74,16 @@
         </div>
       </div>
 
-      <div class="row g-4">
-        <div class="col-md-6">
+      <div class="row g-4 g-lg-5">
+        <div class="col-lg-4">
+          <h3 class="h5 mb-3">On parle d'abord de votre métier</h3>
+          <p class="text-body-secondary mb-0">
+            Avant l'informatique, j'ai fait un CFC d'employé de commerce.
+            Comptabilité, processus, contraintes d'organisation : on en discute
+            sans passer par un traducteur.
+          </p>
+        </div>
+        <div class="col-lg-4">
           <h3 class="h5 mb-3">L'analyse avant le développement</h3>
           <p class="text-body-secondary mb-0">
             Je commence par comprendre comment votre entreprise travaille.
@@ -79,7 +91,7 @@
             l'inverse.
           </p>
         </div>
-        <div class="col-md-6">
+        <div class="col-lg-4">
           <h3 class="h5 mb-3">Un seul interlocuteur</h3>
           <p class="text-body-secondary mb-0">
             Vous parlez à la personne qui analyse le besoin, développe l'outil

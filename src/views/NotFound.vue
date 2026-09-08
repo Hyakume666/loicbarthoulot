@@ -1,5 +1,5 @@
 <template>
-  <section class="hero">
+  <section class="hero hero--pleine-page">
     <div class="container">
       <div class="row">
         <div class="col-lg-7">

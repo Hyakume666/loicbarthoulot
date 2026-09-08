@@ -1,18 +1,27 @@
 <template>
-  <section class="section">
+  <section class="hero hero--compact">
     <div class="container">
-      <header class="mb-5 mesure-texte">
-        <h1>Politique de confidentialité</h1>
-        <p class="lead text-body-secondary">
-          Ce site ne dépose aucun cookie, n'utilise aucun outil de mesure
-          d'audience et ne fait aucune requête vers un service tiers au
-          chargement des pages.
-        </p>
-        <p class="small text-body-secondary">Dernière mise à jour : 8 septembre 2026</p>
-      </header>
+      <div class="row">
+        <div class="col-lg-8">
+          <p class="surtitre">Informations légales</p>
+          <h1 class="hero__titre mb-3">Politique de confidentialité</h1>
+          <p class="hero__texte mb-2">
+            Ce site ne dépose aucun cookie, n'utilise aucun outil de mesure
+            d'audience et ne fait aucune requête vers un service tiers au
+            chargement des pages.
+          </p>
+          <p class="small text-body-secondary mb-0">
+            Dernière mise à jour : 8 septembre 2026
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <section class="section section--dense">
+    <div class="container">
       <div class="mesure-texte">
-        <section class="panneau mb-4">
+        <section class="bloc-legal">
           <h2 class="h5 mb-3">Responsable du traitement</h2>
           <p>
             Loïc Barthoulot, canton de Neuchâtel, Suisse.
@@ -25,7 +34,7 @@
           </p>
         </section>
 
-        <section class="panneau mb-4">
+        <section class="bloc-legal">
           <h2 class="h5 mb-3">Données que vous transmettez</h2>
           <p>
             Le formulaire de contact collecte quatre éléments, plus votre
@@ -45,7 +54,7 @@
           </p>
         </section>
 
-        <section class="panneau mb-4">
+        <section class="bloc-legal">
           <h2 class="h5 mb-3">Prestataires techniques</h2>
           <p>
             <strong>Envoi du formulaire.</strong> Le message est transmis par
@@ -71,7 +80,7 @@
           </p>
         </section>
 
-        <section class="panneau mb-4">
+        <section class="bloc-legal">
           <h2 class="h5 mb-3">Durée de conservation</h2>
           <p>
             Les messages sont conservés dans ma messagerie aussi longtemps que
@@ -80,7 +89,7 @@
           </p>
         </section>
 
-        <section class="panneau mb-4">
+        <section class="bloc-legal">
           <h2 class="h5 mb-3">Cookies et stockage local</h2>
           <p>
             Le site ne dépose aucun cookie et n'utilise aucun outil de mesure
@@ -95,7 +104,7 @@
           </p>
         </section>
 
-        <section class="panneau mb-4">
+        <section class="bloc-legal">
           <h2 class="h5 mb-3">Requêtes vers des tiers</h2>
           <p>
             Les polices de caractères, les images et les scripts sont servis
@@ -109,7 +118,7 @@
           </p>
         </section>
 
-        <section class="panneau mb-4">
+        <section class="bloc-legal">
           <h2 class="h5 mb-3">Vos droits</h2>
           <p>
             Vous pouvez demander l'accès à vos données, leur rectification,
@@ -123,7 +132,7 @@
           </p>
         </section>
 
-        <section class="panneau mb-4">
+        <section class="bloc-legal">
           <h2 class="h5 mb-3">Sécurité</h2>
           <p>
             Le site est servi exclusivement en HTTPS. L'envoi du formulaire
@@ -131,7 +140,7 @@
           </p>
         </section>
 
-        <section class="panneau mb-4">
+        <section class="bloc-legal">
           <h2 class="h5 mb-3">Modifications</h2>
           <p>
             Cette politique peut évoluer si les outils du site changent. La

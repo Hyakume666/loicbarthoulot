@@ -1,24 +1,25 @@
 <template>
-  <section class="section">
+  <section class="hero hero--compact">
     <div class="container">
-      <p class="mb-4">
-        <router-link to="/services" class="text-body-secondary small text-decoration-none">
-          ← Retour aux prestations
-        </router-link>
-      </p>
-
-      <div class="row mb-5">
+      <router-link to="/services" class="hero__retour">
+        ← Retour aux prestations
+      </router-link>
+      <div class="row">
         <div class="col-lg-8">
           <p class="surtitre">Sécurité et supervision</p>
-          <h1 class="mb-3">Savoir ce qui se passe sur vos postes</h1>
-          <p class="lead text-body-secondary mb-0">
+          <h1 class="hero__titre mb-3">Savoir ce qui se passe sur vos postes</h1>
+          <p class="hero__texte mb-0">
             Une protection installée ne sert à rien si personne ne regarde ce
             qu'elle remonte. Prestation assurée en partenariat avec PC-Shop
             Informatique.
           </p>
         </div>
       </div>
+    </div>
+  </section>
 
+  <section class="section">
+    <div class="container">
       <div class="row g-4 mb-4">
         <div class="col-lg-7">
           <div class="panneau h-100">
@@ -57,8 +58,8 @@
       <div class="row g-4">
         <div class="col-md-6">
           <div class="panneau h-100">
-            <h3 class="h6 mb-2">Pourquoi ça compte pour une PME</h3>
-            <p class="small text-body-secondary mb-0">
+            <h2 class="h5 mb-3">Pourquoi ça compte pour une PME</h2>
+            <p class="text-body-secondary mb-0">
               La plupart des petites structures ont un antivirus et personne
               pour lire ce qu'il signale. Une alerte non traitée est une alerte
               inutile.
@@ -67,8 +68,8 @@
         </div>
         <div class="col-md-6">
           <div class="panneau h-100">
-            <h3 class="h6 mb-2">Le cadre légal suit</h3>
-            <p class="small text-body-secondary mb-0">
+            <h2 class="h5 mb-3">Le cadre légal suit</h2>
+            <p class="text-body-secondary mb-0">
               La protection des données et la gouvernance de la sécurité font
               partie de mon cursus. Un incident sur des données de clients a
               aussi des conséquences juridiques.

@@ -1,9 +1,9 @@
 <template>
   <!-- Hero -->
-  <section class="hero">
+  <section class="hero hero--accueil">
     <div class="container">
-      <div class="row">
-        <div class="col-lg-9">
+      <div class="row gy-5 gx-4 align-items-center">
+        <div class="col-lg-7">
           <p class="surtitre">Informatique de gestion — Neuchâtel</p>
           <h1 class="hero__titre mb-4">
             Je m'occupe de l'informatique
@@ -20,6 +20,31 @@
             <router-link to="/cv" class="btn btn-outline-light">
               Mon parcours
             </router-link>
+          </div>
+        </div>
+
+        <div class="col-lg-5">
+          <div class="fiche">
+            <div class="fiche__ligne">
+              <span class="fiche__cle">Basé à</span>
+              <span class="fiche__valeur">Neuchâtel, Suisse romande</span>
+            </div>
+            <div class="fiche__ligne">
+              <span class="fiche__cle">Indépendant depuis</span>
+              <span class="fiche__valeur">2023</span>
+            </div>
+            <div class="fiche__ligne">
+              <span class="fiche__cle">Formation</span>
+              <span class="fiche__valeur">
+                Bachelor HES-SO informatique de gestion, dernière année
+              </span>
+            </div>
+            <div class="fiche__ligne">
+              <span class="fiche__cle">Écrire</span>
+              <span class="fiche__valeur">
+                <a href="mailto:contact@loicbarthoulot.ch">contact@loicbarthoulot.ch</a>
+              </span>
+            </div>
           </div>
         </div>
       </div>
@@ -89,7 +114,7 @@
   </section>
 
   <!-- Le différenciateur -->
-  <section class="section section--surface">
+  <section class="section section--ample section--surface">
     <div class="container">
       <div class="row gy-5 gx-4 align-items-center">
         <div class="col-lg-6">
@@ -128,15 +153,17 @@
   </section>
 
   <!-- Contact -->
-  <section class="section">
+  <section class="section section--dense">
     <div class="container">
-      <div class="row">
+      <div class="row gy-4 gx-4 align-items-center">
         <div class="col-lg-7">
           <p class="surtitre">Contact</p>
           <h2 class="mb-3">Un projet ou une question ?</h2>
-          <p class="section__intro mb-4">
+          <p class="section__intro mb-0">
             Décrivez-moi votre situation. Je réponds par écrit.
           </p>
+        </div>
+        <div class="col-lg-5 text-lg-end">
           <router-link to="/contact" class="btn btn-primary">
             Me contacter
           </router-link>

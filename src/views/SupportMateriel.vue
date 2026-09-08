@@ -1,23 +1,24 @@
 <template>
-  <section class="section">
+  <section class="hero hero--compact">
     <div class="container">
-      <p class="mb-4">
-        <router-link to="/services" class="text-body-secondary small text-decoration-none">
-          ← Retour aux prestations
-        </router-link>
-      </p>
-
-      <div class="row mb-5">
+      <router-link to="/services" class="hero__retour">
+        ← Retour aux prestations
+      </router-link>
+      <div class="row">
         <div class="col-lg-8">
           <p class="surtitre">Support et matériel</p>
-          <h1 class="mb-3">Postes de travail, dépannage et entretien</h1>
-          <p class="lead text-body-secondary mb-0">
+          <h1 class="hero__titre mb-3">Postes de travail, dépannage et entretien</h1>
+          <p class="hero__texte mb-0">
             Pour les particuliers comme pour les PME, sur Neuchâtel et la
             Suisse romande.
           </p>
         </div>
       </div>
+    </div>
+  </section>
 
+  <section class="section">
+    <div class="container">
       <div class="row g-4">
         <div class="col-lg-4">
           <div class="panneau h-100">
