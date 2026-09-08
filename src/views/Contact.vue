@@ -1,155 +1,143 @@
 <template>
-  <div class="section-padding" style="min-height: 100vh;">
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-lg-8">
-          <div class="text-center mb-5">
-            <h1 class="display-4 fw-bold">Me contacter</h1>
-            <p class="lead">
-              Décrivez votre projet ou votre problème. Je réponds par écrit.
-            </p>
-          </div>
+  <section class="section">
+    <div class="contenu">
+      <header class="tete">
+        <h1>Me contacter</h1>
+        <p class="tete__intro">
+          Décrivez votre projet ou votre problème. Je réponds par écrit.
+        </p>
+      </header>
 
-          <!-- Informations de contact -->
-          <div class="row g-4 mb-5 justify-content-center">
-            <div class="col-md-4 text-center">
-              <div class="card card-custom contact-form-card h-100">
-                <div class="card-body p-4">
-                  <div class="icon-feature"><i class="fas fa-envelope"></i></div>
-                  <h5>Email</h5>
-                  <p>contact@loicbarthoulot.ch</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4 text-center">
-              <div class="card card-custom contact-form-card h-100">
-                <div class="card-body p-4">
-                  <div class="icon-feature"><i class="fas fa-map-marker-alt"></i></div>
-                  <h5>Zone d'intervention</h5>
-                  <p>Neuchâtel et Suisse romande</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Formulaire de contact -->
-          <div class="card card-custom contact-form-card">
-            <div class="card-body p-4">
-              <h3 class="text-primary-custom mb-4">Formulaire de contact</h3>
-              
-              <div v-if="showSuccess" class="alert alert-success alert-dismissible" role="alert">
-                <i class="fas fa-check-circle me-2"></i>
-                Votre message a été envoyé avec succès ! Je vous répondrai dans les plus brefs délais.
-                <button type="button" class="btn-close" @click="showSuccess = false" aria-label="Fermer"></button>
-              </div>
-
-              <div v-if="showError" class="alert alert-danger alert-dismissible" role="alert">
-                <i class="fas fa-exclamation-circle me-2"></i>
-                Une erreur est survenue lors de l'envoi. Veuillez réessayer.
-                <button type="button" class="btn-close" @click="showError = false" aria-label="Fermer"></button>
-              </div>
-
-              <form @submit.prevent="submitForm" novalidate>
-                <div class="row g-3">
-                  <div class="col-md-6">
-                    <label for="firstName" class="form-label text-color">Prénom *</label>
-                    <input
-                      type="text"
-                      class="form-control"
-                      :class="{ 'is-invalid': errors.firstName }"
-                      id="firstName"
-                      v-model="form.firstName"
-                      aria-required="true"
-                      :aria-invalid="errors.firstName ? true : undefined"
-                      aria-describedby="firstName-error"
-                    >
-                    <div class="invalid-feedback" id="firstName-error">{{ errors.firstName }}</div>
-                  </div>
-                  <div class="col-md-6">
-                    <label for="lastName" class="form-label text-color">Nom *</label>
-                    <input
-                      type="text"
-                      class="form-control"
-                      :class="{ 'is-invalid': errors.lastName }"
-                      id="lastName"
-                      v-model="form.lastName"
-                      aria-required="true"
-                      :aria-invalid="errors.lastName ? true : undefined"
-                      aria-describedby="lastName-error"
-                    >
-                    <div class="invalid-feedback" id="lastName-error">{{ errors.lastName }}</div>
-                  </div>
-                  <div class="col-12">
-                    <label for="email" class="form-label text-color">Email *</label>
-                    <input
-                      type="email"
-                      class="form-control"
-                      :class="{ 'is-invalid': errors.email }"
-                      id="email"
-                      v-model="form.email"
-                      aria-required="true"
-                      :aria-invalid="errors.email ? true : undefined"
-                      aria-describedby="email-error"
-                    >
-                    <div class="invalid-feedback" id="email-error">{{ errors.email }}</div>
-                  </div>
-                  <div class="col-12">
-                    <label for="subject" class="form-label text-color">Sujet *</label>
-                    <select
-                      class="form-select"
-                      :class="{ 'is-invalid': errors.subject }"
-                      id="subject"
-                      v-model="form.subject"
-                      aria-required="true"
-                      :aria-invalid="errors.subject ? true : undefined"
-                      aria-describedby="subject-error"
-                    >
-                      <option value="">Choisissez un sujet</option>
-                      <option value="application-metier">Application métier</option>
-                      <option value="processus">Digitalisation de processus</option>
-                      <option value="site-web">Site web</option>
-                      <option value="support-materiel">Support et matériel</option>
-                      <option value="autre">Autre</option>
-                    </select>
-                    <div class="invalid-feedback" id="subject-error">{{ errors.subject }}</div>
-                  </div>
-                  <div class="col-12">
-                    <label for="message" class="form-label text-color">Message *</label>
-                    <textarea
-                      class="form-control"
-                      :class="{ 'is-invalid': errors.message }"
-                      id="message"
-                      rows="5"
-                      v-model="form.message"
-                      placeholder="Décrivez votre projet ou votre problème..."
-                      aria-required="true"
-                      :aria-invalid="errors.message ? true : undefined"
-                      aria-describedby="message-error"
-                    ></textarea>
-                    <div class="invalid-feedback" id="message-error">{{ errors.message }}</div>
-                  </div>
-                  <div class="col-12">
-                    <button 
-                      type="submit" 
-                      class="btn btn-primary-custom btn-lg"
-                      :disabled="isSubmitting"
-                    >
-                      <span v-if="isSubmitting">
-                        <i class="fas fa-spinner fa-spin me-2"></i>Envoi en cours...
-                      </span>
-                      <span v-else>
-                        <i class="fas fa-paper-plane me-2"></i>Envoyer le message
-                      </span>
-                    </button>
-                  </div>
-                </div>
-              </form>
-            </div>
-          </div>
+      <div class="coordonnees">
+        <div>
+          <h2 class="coordonnees__titre">Courriel</h2>
+          <p><a href="mailto:contact@loicbarthoulot.ch">contact@loicbarthoulot.ch</a></p>
+        </div>
+        <div>
+          <h2 class="coordonnees__titre">Zone d'intervention</h2>
+          <p>Neuchâtel et Suisse romande</p>
         </div>
       </div>
     </div>
-  </div>
+  </section>
+
+  <section class="section section--net">
+    <div class="contenu">
+      <h2 class="formulaire__titre">Formulaire</h2>
+
+      <div aria-live="polite">
+        <p v-if="showSuccess" class="avis">
+          Votre message a été envoyé. Je vous réponds dès que possible.
+        </p>
+        <p v-if="showError" class="avis avis--erreur">
+          L'envoi a échoué. Réessayez, ou écrivez directement à
+          contact@loicbarthoulot.ch.
+        </p>
+      </div>
+
+      <form class="formulaire" @submit.prevent="submitForm" novalidate>
+        <div class="colonnes colonnes--2">
+          <div class="champ-groupe">
+            <label for="firstName" class="champ-libelle">Prénom</label>
+            <input
+              id="firstName"
+              class="champ"
+              type="text"
+              v-model="form.firstName"
+              required
+              aria-required="true"
+              :aria-invalid="errors.firstName ? true : undefined"
+              aria-describedby="firstName-error"
+            >
+            <p v-if="errors.firstName" id="firstName-error" class="champ-erreur">
+              {{ errors.firstName }}
+            </p>
+          </div>
+
+          <div class="champ-groupe">
+            <label for="lastName" class="champ-libelle">Nom</label>
+            <input
+              id="lastName"
+              class="champ"
+              type="text"
+              v-model="form.lastName"
+              required
+              aria-required="true"
+              :aria-invalid="errors.lastName ? true : undefined"
+              aria-describedby="lastName-error"
+            >
+            <p v-if="errors.lastName" id="lastName-error" class="champ-erreur">
+              {{ errors.lastName }}
+            </p>
+          </div>
+        </div>
+
+        <div class="champ-groupe">
+          <label for="email" class="champ-libelle">Adresse électronique</label>
+          <input
+            id="email"
+            class="champ"
+            type="email"
+            v-model="form.email"
+            required
+            aria-required="true"
+            :aria-invalid="errors.email ? true : undefined"
+            aria-describedby="email-error"
+          >
+          <p v-if="errors.email" id="email-error" class="champ-erreur">
+            {{ errors.email }}
+          </p>
+        </div>
+
+        <div class="champ-groupe">
+          <label for="subject" class="champ-libelle">Sujet</label>
+          <select
+            id="subject"
+            class="champ"
+            v-model="form.subject"
+            required
+            aria-required="true"
+            :aria-invalid="errors.subject ? true : undefined"
+            aria-describedby="subject-error"
+          >
+            <option value="">Choisissez un sujet</option>
+            <option value="application-metier">Application métier</option>
+            <option value="processus">Digitalisation de processus</option>
+            <option value="site-web">Site web</option>
+            <option value="support-materiel">Support et matériel</option>
+            <option value="autre">Autre</option>
+          </select>
+          <p v-if="errors.subject" id="subject-error" class="champ-erreur">
+            {{ errors.subject }}
+          </p>
+        </div>
+
+        <div class="champ-groupe">
+          <label for="message" class="champ-libelle">Message</label>
+          <textarea
+            id="message"
+            class="champ"
+            rows="6"
+            v-model="form.message"
+            placeholder="Décrivez votre projet ou votre problème."
+            required
+            aria-required="true"
+            :aria-invalid="errors.message ? true : undefined"
+            aria-describedby="message-error"
+          ></textarea>
+          <p v-if="errors.message" id="message-error" class="champ-erreur">
+            {{ errors.message }}
+          </p>
+        </div>
+
+        <div>
+          <button type="submit" class="bouton" :disabled="isSubmitting">
+            {{ isSubmitting ? 'Envoi en cours…' : 'Envoyer le message' }}
+          </button>
+        </div>
+      </form>
+    </div>
+  </section>
 </template>
 
 <script setup lang="ts">
@@ -158,7 +146,7 @@ import { usePageMeta } from '@/composables/usePageMeta'
 import emailjs from '@emailjs/browser'
 
 usePageMeta(
-  'Contact | Loïc Barthoulot',
+  'Me contacter | Loïc Barthoulot',
   'Contactez Loïc Barthoulot au sujet d\'une application métier, d\'un processus à digitaliser, d\'un site web ou d\'un poste de travail.',
   { path: '/contact' }
 )
@@ -178,18 +166,19 @@ const validate = (): boolean => {
   errors.value = emptyErrors()
   if (!form.value.firstName.trim()) errors.value.firstName = 'Le prénom est requis.'
   if (!form.value.lastName.trim()) errors.value.lastName = 'Le nom est requis.'
-  if (!form.value.email.trim()) errors.value.email = 'L\'adresse email est requise.'
-  else if (!EMAIL_RE.test(form.value.email)) errors.value.email = 'Adresse email invalide.'
-  if (!form.value.subject) errors.value.subject = 'Veuillez choisir un sujet.'
+  if (!form.value.email.trim()) errors.value.email = 'L\'adresse est requise.'
+  else if (!EMAIL_RE.test(form.value.email)) errors.value.email = 'Adresse invalide.'
+  if (!form.value.subject) errors.value.subject = 'Choisissez un sujet.'
   if (!form.value.message.trim()) errors.value.message = 'Le message est requis.'
   else if (form.value.message.trim().length < 10) errors.value.message = 'Le message doit contenir au moins 10 caractères.'
   return Object.values(errors.value).every(e => !e)
 }
 
 const submitForm = async () => {
+  showSuccess.value = false
+  showError.value = false
   if (!validate()) return
   isSubmitting.value = true
-  showError.value = false
 
   try {
     await emailjs.send(
@@ -205,11 +194,9 @@ const submitForm = async () => {
     )
     form.value = emptyForm()
     showSuccess.value = true
-    setTimeout(() => { showSuccess.value = false }, 5000)
   } catch (error) {
     void error
     showError.value = true
-    setTimeout(() => { showError.value = false }, 5000)
   } finally {
     isSubmitting.value = false
   }
@@ -217,27 +204,55 @@ const submitForm = async () => {
 </script>
 
 <style scoped>
-.form-control, .form-select {
-  background-color: var(--surface) !important;
-  border-color: var(--border) !important;
-  color: var(--text) !important;
+.tete {
+  margin-bottom: var(--e-7);
 }
 
-.form-control:focus, .form-select:focus {
-  background-color: var(--surface) !important;
-  border-color: var(--primary) !important;
-  color: var(--text) !important;
-  box-shadow: 0 0 0 0.2rem rgba(11, 94, 215, 0.25) !important;
+.tete__intro {
+  margin-top: var(--e-4);
+  font-size: var(--pas-2);
+  color: var(--texte-faible);
+  max-width: 42ch;
 }
 
-.form-control::placeholder {
-  color: var(--muted) !important;
+.coordonnees {
+  display: grid;
+  gap: var(--e-5) var(--e-8);
+  border-top: 1px solid var(--trait);
+  padding-top: var(--e-5);
 }
 
-.btn-primary-custom {
-  background-color: #0d6efd; /* Bleu Bootstrap par défaut */
-  color: #fff;
-  border: none;
-  transition: all 0.3s ease;
+@media (min-width: 48rem) {
+  .coordonnees {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.coordonnees__titre {
+  font-size: var(--pas-0);
+  font-weight: 500;
+  color: var(--texte-faible);
+  margin-bottom: var(--e-2);
+}
+
+.section--net {
+  background-color: var(--blanc);
+  border-top: 1px solid var(--trait);
+}
+
+.formulaire__titre {
+  margin-bottom: var(--e-6);
+}
+
+.formulaire {
+  display: flex;
+  flex-direction: column;
+  gap: var(--e-5);
+  max-width: 40rem;
+}
+
+.avis {
+  margin-bottom: var(--e-5);
+  max-width: 40rem;
 }
 </style>
