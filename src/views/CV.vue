@@ -4,220 +4,241 @@
       <div class="row">
         <div class="col-lg-8 mx-auto">
           <div class="text-center mb-5">
-            <h1 class="display-4 fw-bold">Mon Profil Professionnel</h1>
-            <p class="lead">Découvrez mon parcours et mes compétences</p>
+            <h1 class="display-4 fw-bold">Mon parcours</h1>
+            <p class="lead">
+              Applications métier, sites web et infrastructure pour PME romandes
+            </p>
           </div>
 
           <!-- Profil -->
           <section class="mb-5">
             <div class="card card-custom">
               <div class="card-body p-4">
-                <h3 class="text-primary-custom mb-3">À propos de moi</h3>
+                <h3 class="text-primary-custom mb-3">À propos</h3>
                 <p>
-                  Étudiant en Informatique de Gestion et passionné d'informatique depuis plus de 10 ans, 
-                  je mets mes compétences techniques au service des particuliers et des entreprises. 
-                  Spécialisé dans le montage, la réparation et l'optimisation de PC, ainsi que dans 
-                  la création de sites web modernes, j'accompagne mes clients avec un service 
-                  personnalisé et des conseils adaptés à leurs besoins.
+                  Je suis en dernière année de Bachelor HES-SO en informatique de gestion
+                  à la HE-Arc, à Neuchâtel. Mon travail consiste à comprendre comment une
+                  entreprise fonctionne, puis à construire l'outil qui lui fait gagner du
+                  temps : application métier, automatisation d'un processus, site web ou
+                  reprise d'une infrastructure existante.
                 </p>
                 <p>
-                  Ma formation actuelle en Informatique de Gestion me permet d'apporter une véritable 
-                  plus-value : une approche qui allie expertise technique, compréhension des enjeux 
-                  métiers et vision stratégique des systèmes d'information.
+                  Mon parcours est passé par un CFC d'employé de commerce avant l'informatique.
+                  C'est ce qui me permet de parler comptabilité, processus et contraintes
+                  d'organisation avec un client, pas seulement technique.
                 </p>
                 <p>
-                  Mon approche combine passion du hardware, savoir-faire technique et vision moderne 
-                  du développement web pour offrir des solutions complètes et performantes.
+                  En parallèle de mes études, j'interviens en prestation indépendante pour
+                  PC-Shop Informatique sur la sécurité opérationnelle de leur parc client,
+                  et je réalise des mandats de développement web pour mes propres clients.
                 </p>
               </div>
             </div>
           </section>
 
+          <!-- Expériences -->
+          <section class="mb-5">
+            <div class="card card-custom">
+              <div class="card-body p-4">
+                <h3 class="text-primary-custom mb-4">Expérience</h3>
+                <div class="timeline">
+
+                  <div class="timeline-item">
+                    <div class="d-flex justify-content-between align-items-center mb-2">
+                      <h5 class="mb-0">Développement web &amp; prestations informatiques</h5>
+                      <span class="badge bg-primary">2023 – aujourd'hui</span>
+                    </div>
+                    <p class="mb-2">Activité indépendante — loicbarthoulot.ch</p>
+                    <ul>
+                      <li>Conception et développement de sites web sur mesure (Vue 3 / TypeScript, WordPress)</li>
+                      <li>Analyse du besoin client et cadrage avant développement</li>
+                      <li>Assemblage, diagnostic et remise en état de postes de travail</li>
+                      <li>Conseil en choix de matériel et accompagnement des utilisateurs</li>
+                    </ul>
+                  </div>
+
+                  <div class="timeline-item">
+                    <div class="d-flex justify-content-between align-items-center mb-2">
+                      <h5 class="mb-0">Prestataire IT — sécurité opérationnelle</h5>
+                      <span class="badge bg-primary">07/2023 – aujourd'hui</span>
+                    </div>
+                    <p class="mb-2">PC-Shop Informatique, Corcelles-Cormondrèche — mandat indépendant</p>
+                    <ul>
+                      <li>Administration de la console XDR (Trend Micro) sur le parc client de l'entreprise</li>
+                      <li>Surveillance des détections, qualification et traitement des alertes</li>
+                      <li>Suivi de l'état de protection des postes et remontée des cas nécessitant une intervention</li>
+                    </ul>
+                  </div>
+
+                  <div class="timeline-item">
+                    <div class="d-flex justify-content-between align-items-center mb-2">
+                      <h5 class="mb-0">Hotline — service informatique</h5>
+                      <span class="badge bg-primary">2026 – 2027</span>
+                    </div>
+                    <p class="mb-0">
+                      HE-Arc, Neuchâtel — support de premier niveau aux étudiants et au personnel,
+                      en parallèle du cursus.
+                    </p>
+                  </div>
+
+                  <div class="timeline-item">
+                    <div class="d-flex justify-content-between align-items-center mb-2">
+                      <h5 class="mb-0">Stagiaire en informatique</h5>
+                      <span class="badge bg-secondary">08/2020 – 08/2021</span>
+                    </div>
+                    <p class="mb-2">PC-Shop Informatique, Corcelles-Cormondrèche</p>
+                    <ul>
+                      <li>Installation et configuration de postes de travail</li>
+                      <li>Diagnostic et réparation matérielle et logicielle</li>
+                      <li>Support utilisateur et suivi des interventions</li>
+                    </ul>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </section>
 
           <!-- Compétences -->
           <section class="mb-5">
             <div class="card card-custom">
               <div class="card-body p-4">
-                <h3 class="text-primary-custom mb-4">Compétences Techniques</h3>
-                
-                <!-- Langages & Web -->
+                <h3 class="text-primary-custom mb-4">Compétences</h3>
+
+                <!-- Analyse & processus métier -->
                 <div class="mb-4">
-                  <h5 class="mb-3">
-                    <i class="fas fa-code me-2 text-primary-custom"></i>Langages & Web
+                  <h5 class="mb-2">
+                    <i class="fas fa-chart-line me-2 text-primary-custom"></i>Analyse et processus métier
                   </h5>
+                  <p class="text-muted small mb-3">
+                    Traduire un fonctionnement d'entreprise en système utilisable.
+                  </p>
                   <div class="row g-2">
                     <div class="col-md-6">
                       <ul class="list-unstyled">
                         <li class="mb-2">
-                          <i class="fas fa-check text-primary-custom me-2"></i>Java
+                          <i class="fas fa-check text-primary-custom me-2"></i>Analyse des besoins et des processus métiers
                         </li>
                         <li class="mb-2">
-                          <i class="fas fa-check text-primary-custom me-2"></i>JavaScript (ES6+)
+                          <i class="fas fa-check text-primary-custom me-2"></i>Modélisation BPMN et UML
                         </li>
                         <li class="mb-2">
-                          <i class="fas fa-check text-primary-custom me-2"></i>HTML / CSS
+                          <i class="fas fa-check text-primary-custom me-2"></i>Gestion documentaire (GED)
                         </li>
                       </ul>
                     </div>
                     <div class="col-md-6">
                       <ul class="list-unstyled">
                         <li class="mb-2">
-                          <i class="fas fa-check text-primary-custom me-2"></i>SQL
+                          <i class="fas fa-check text-primary-custom me-2"></i>Conception de données : MERISE, MCD / MLD / MPD
                         </li>
                         <li class="mb-2">
-                          <i class="fas fa-check text-primary-custom me-2"></i>Python
+                          <i class="fas fa-check text-primary-custom me-2"></i>Progiciels de gestion intégrés (ERP)
+                        </li>
+                        <li class="mb-2">
+                          <i class="fas fa-check text-primary-custom me-2"></i>Conduite de projet et méthodes agiles
                         </li>
                       </ul>
                     </div>
                   </div>
                 </div>
 
-                <!-- Programmation -->
+                <!-- Développement -->
                 <div class="mb-4">
-                  <h5 class="mb-3">
-                    <i class="fas fa-laptop-code me-2 text-primary-custom"></i>Programmation
+                  <h5 class="mb-2">
+                    <i class="fas fa-code me-2 text-primary-custom"></i>Développement
                   </h5>
+                  <p class="text-muted small mb-3">
+                    Applications métier, interfaces web et bases de données.
+                  </p>
                   <div class="row g-2">
                     <div class="col-md-6">
                       <ul class="list-unstyled">
                         <li class="mb-2">
-                          <i class="fas fa-check text-primary-custom me-2"></i>OOP
+                          <i class="fas fa-check text-primary-custom me-2"></i>Java — POO, Hibernate 6, JDBC
                         </li>
                         <li class="mb-2">
-                          <i class="fas fa-check text-primary-custom me-2"></i>Développement structuré & modulaire
+                          <i class="fas fa-check text-primary-custom me-2"></i>JavaScript / TypeScript, Vue 3
                         </li>
                         <li class="mb-2">
-                          <i class="fas fa-check text-primary-custom me-2"></i>Hibernate 6 + JDBC
+                          <i class="fas fa-check text-primary-custom me-2"></i>HTML / CSS, intégration responsive
                         </li>
                       </ul>
                     </div>
                     <div class="col-md-6">
                       <ul class="list-unstyled">
                         <li class="mb-2">
-                          <i class="fas fa-check text-primary-custom me-2"></i>Design patterns
+                          <i class="fas fa-check text-primary-custom me-2"></i>SQL et Oracle — requêtes avancées, PL/SQL, XML
                         </li>
                         <li class="mb-2">
-                          <i class="fas fa-check text-primary-custom me-2"></i>Architecture logicielle
+                          <i class="fas fa-check text-primary-custom me-2"></i>Architecture logicielle et design patterns
+                        </li>
+                        <li class="mb-2">
+                          <i class="fas fa-check text-primary-custom me-2"></i>Conception d'interface et expérience utilisateur
                         </li>
                       </ul>
                     </div>
                   </div>
                 </div>
 
-                <!-- Bases de données -->
+                <!-- Infrastructure & sécurité -->
                 <div class="mb-4">
-                  <h5 class="mb-3">
-                    <i class="fas fa-database me-2 text-primary-custom"></i>Bases de données
+                  <h5 class="mb-2">
+                    <i class="fas fa-shield-halved me-2 text-primary-custom"></i>Infrastructure et sécurité
                   </h5>
+                  <p class="text-muted small mb-3">
+                    Déployer, faire tourner et protéger ce qui est en production.
+                  </p>
                   <div class="row g-2">
                     <div class="col-md-6">
                       <ul class="list-unstyled">
                         <li class="mb-2">
-                          <i class="fas fa-check text-primary-custom me-2"></i>SQL
+                          <i class="fas fa-check text-primary-custom me-2"></i>Détection et réponse (XDR / EDR) en environnement client
                         </li>
                         <li class="mb-2">
-                          <i class="fas fa-check text-primary-custom me-2"></i>SGBDR typé Oracle
+                          <i class="fas fa-check text-primary-custom me-2"></i>Gouvernance de la sécurité des SI
+                        </li>
+                        <li class="mb-2">
+                          <i class="fas fa-check text-primary-custom me-2"></i>Docker — images, volumes, réseaux, multi-stage builds
                         </li>
                       </ul>
                     </div>
                     <div class="col-md-6">
                       <ul class="list-unstyled">
                         <li class="mb-2">
-                          <i class="fas fa-check text-primary-custom me-2"></i>MERISE
+                          <i class="fas fa-check text-primary-custom me-2"></i>Windows 10 / 11 et Linux
                         </li>
                         <li class="mb-2">
-                          <i class="fas fa-check text-primary-custom me-2"></i>UML, BPMN
+                          <i class="fas fa-check text-primary-custom me-2"></i>Réseaux locaux et infrastructure
+                        </li>
+                        <li class="mb-2">
+                          <i class="fas fa-check text-primary-custom me-2"></i>Virtualisation (VMware, VirtualBox), notions Kubernetes / K3s
                         </li>
                       </ul>
                     </div>
                   </div>
                 </div>
 
-                <!-- Conteneurisation-->
-                <div class="mb-4">
-                  <h5 class="mb-3">
-                    <i class="fas fa-docker me-2 text-primary-custom"></i>Conteneurisation
+                <!-- Conformité -->
+                <div>
+                  <h5 class="mb-2">
+                    <i class="fas fa-scale-balanced me-2 text-primary-custom"></i>Conformité et cadre légal
                   </h5>
+                  <p class="text-muted small mb-3">
+                    Utile dès qu'un site ou une application traite des données de clients.
+                  </p>
                   <div class="row g-2">
                     <div class="col-md-6">
                       <ul class="list-unstyled">
                         <li class="mb-2">
-                          <i class="fas fa-check text-primary-custom me-2"></i>Docker (images, volumes, réseaux, multi-stage builds)
+                          <i class="fas fa-check text-primary-custom me-2"></i>Protection des données : nLPD et RGPD
                         </li>
                       </ul>
                     </div>
                     <div class="col-md-6">
                       <ul class="list-unstyled">
                         <li class="mb-2">
-                          <i class="fas fa-check text-primary-custom me-2"></i>Kubernetes / K3s
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Analyse & Gestion -->
-                <div class="mb-4">
-                  <h5 class="mb-3">
-                    <i class="fas fa-chart-line me-2 text-primary-custom"></i>Analyse & Gestion
-                  </h5>
-                  <div class="row g-2">
-                    <div class="col-md-6">
-                      <ul class="list-unstyled">
-                        <li class="mb-2">
-                          <i class="fas fa-check text-primary-custom me-2"></i>Analyse des besoins
-                        </li>
-                        <li class="mb-2">
-                          <i class="fas fa-check text-primary-custom me-2"></i>Analyse des processus
-                        </li>
-                      </ul>
-                    </div>
-                    <div class="col-md-6">
-                      <ul class="list-unstyled">
-                        <li class="mb-2">
-                          <i class="fas fa-check text-primary-custom me-2"></i>Modélisation MER/MR
-                        </li>
-                        <li class="mb-2">
-                          <i class="fas fa-check text-primary-custom me-2"></i>MCD / MLD / MPD
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-
-              </div>
-            </div>
-          </section>
-
-          <!-- Hardware & Systèmes -->
-          <section class="mb-5">
-            <div class="card card-custom">
-              <div class="card-body p-4">
-                <h3 class="text-primary-custom mb-4">Hardware & Systèmes</h3>
-                
-                <!-- Hardware -->
-                <div class="mb-4">
-                  <div class="row g-2">
-                    <div class="col-md-6">
-                      <ul class="list-unstyled">
-                        <li class="mb-2">
-                          <i class="fas fa-check text-primary-custom me-2"></i>Assemblage PC sur mesure
-                        </li>
-                        <li class="mb-2">
-                          <i class="fas fa-check text-primary-custom me-2"></i>Diagnostics et réparation
-                        </li>
-                        <li class="mb-2">
-                          <i class="fas fa-check text-primary-custom me-2"></i>Windows 10/11 + Linux
-                        </li>
-                      </ul>
-                    </div>
-                    <div class="col-md-6">
-                      <ul class="list-unstyled">
-                        <li class="mb-2">
-                          <i class="fas fa-check text-primary-custom me-2"></i>Réseau + Infrastructure
-                        </li>
-                        <li class="mb-2">
-                          <i class="fas fa-check text-primary-custom me-2"></i>Virtualisation (VirtualBox/VMWare)
+                          <i class="fas fa-check text-primary-custom me-2"></i>Numérique responsable et éthique des technologies
                         </li>
                       </ul>
                     </div>
@@ -234,104 +255,93 @@
               <div class="card-body p-4">
                 <h3 class="text-primary-custom mb-4">Formation</h3>
                 <div class="timeline">
+
                   <div class="timeline-item">
                     <div class="d-flex justify-content-between align-items-center mb-2">
-                      <h5 class="mb-0">Bachelor of Science HES-SO en Informatique de gestion</h5>
-                      <span class="badge bg-primary">2024 - 2027</span>
+                      <h5 class="mb-0">Bachelor of Science HES-SO en informatique de gestion</h5>
+                      <span class="badge bg-primary">2023 – 2027</span>
                     </div>
-                    <p class="mb-2">Business Information Technology</p>
-                    <p class="mb-2">
-                      <strong>Actuellement en 3ème année sur 4</strong> - Formation axée sur l'alliance entre technologies de l'information et gestion d'entreprise.
-                    </p>
+                    <p class="mb-2">HE-Arc Gestion, Neuchâtel — cursus à temps partiel, dernière année en cours</p>
                     <div class="row g-3 mt-2">
                       <div class="col-md-6">
-                        <p class="small mb-1"><strong>Domaines d'études :</strong></p>
+                        <p class="small mb-1"><strong>Axes principaux</strong></p>
                         <ul class="small">
-                          <li>Développement logiciel</li>
-                          <li>Gestion de projets IT</li>
-                          <li>Bases de données</li>
+                          <li>Développement logiciel et technologies web</li>
+                          <li>Bases de données et modélisation</li>
+                          <li>Analyse métier et urbanisation des SI</li>
                         </ul>
                       </div>
                       <div class="col-md-6">
-                        <p class="small mb-1"><strong>Spécialisations :</strong></p>
+                        <p class="small mb-1"><strong>Également étudiés</strong></p>
                         <ul class="small">
-                          <li>Systèmes d'information</li>
-                          <li>Analyse métier</li>
-                          <li>Technologies web</li>
+                          <li>Sécurité informatique et gouvernance des SI</li>
+                          <li>Gestion de projet et conduite d'équipe</li>
+                          <li>Comptabilité, marketing et organisation d'entreprise</li>
                         </ul>
                       </div>
                     </div>
                   </div>
+
+                  <div class="timeline-item">
+                    <div class="d-flex justify-content-between align-items-center mb-2">
+                      <h5 class="mb-0">Bachelor HES-SO en ingénierie logicielle</h5>
+                      <span class="badge bg-secondary">2021 – 2023</span>
+                    </div>
+                    <p class="mb-0">
+                      HE-Arc, Neuchâtel — deux ans validés, puis réorientation vers l'informatique
+                      de gestion pour rapprocher la technique des enjeux d'entreprise.
+                    </p>
+                  </div>
+
+                  <div class="timeline-item">
+                    <div class="d-flex justify-content-between align-items-center mb-2">
+                      <h5 class="mb-0">CFC d'employé de commerce et maturité professionnelle</h5>
+                      <span class="badge bg-secondary">2012 – 2015</span>
+                    </div>
+                    <p class="mb-0">CIFOM ESTER, La Chaux-de-Fonds</p>
+                  </div>
+
                 </div>
               </div>
             </div>
           </section>
 
-          <!-- Expériences -->
-          <section class="mb-5">
-            <div class="card card-custom">
-              <div class="card-body p-4">
-                <h3 class="text-primary-custom mb-4">Expérience Professionnelle</h3>
-                <div class="timeline">
-                  <div class="timeline-item">
-                    <div class="d-flex justify-content-between align-items-center mb-2">
-                      <h5 class="mb-0">Services Informatiques Freelance</h5>
-                      <span class="badge bg-primary">2020 - Présent</span>
-                    </div>
-                    <p class="mb-2">Entrepreneur indépendant</p>
-                    <ul>
-                      <li>Montage et dépannage PC pour particuliers et petites entreprises</li>
-                      <li>Création de sites web vitrine modernes et performants</li>
-                      <li>Conseil en achat de matériel informatique</li>
-                      <li>Formation clients sur l'utilisation et la maintenance</li>
-                      <li>Support technique et accompagnement personnalisé</li>
-                    </ul>
-                  </div>
-                  <div class="timeline-item">
-                    <div class="d-flex justify-content-between align-items-center mb-2">
-                      <h5 class="mb-0">Technicien Informatique</h5>
-                      <span class="badge bg-secondary">2018 - 2020</span>
-                    </div>
-                    <p class="mb-2">Société de services informatiques</p>
-                    <ul>
-                      <li>Maintenance du parc informatique d'entreprise</li>
-                      <li>Support utilisateur niveau 1 et 2</li>
-                      <li>Gestion des incidents et résolution de problèmes</li>
-                      <li>Installation et configuration de postes de travail</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          <!-- Call to action pour CV complet -->
+          <!-- Call to action -->
           <section class="mb-5">
             <div class="card card-custom highlight-card">
               <div class="card-body p-4 text-center">
                 <div class="icon-feature">📄</div>
-                <h3 class="text-primary-custom mb-3">CV Complet Disponible</h3>
+                <h3 class="text-primary-custom mb-3">Mon CV en PDF</h3>
                 <p class="mb-4">
-                  Vous êtes un employeur ou un potentiel partenaire d'affaires ? 
-                  Mon CV détaillé avec formations, certifications et références 
-                  est disponible sur demande.
+                  Vous pouvez télécharger mon CV directement. Pour une version détaillée
+                  avec références et coordonnées complètes, écrivez-moi.
                 </p>
                 <div class="row g-3 justify-content-center">
                   <div class="col-auto">
-                    <router-link to="/contact" class="btn btn-primary-custom">
+                    <a
+                      href="/cv-loic-barthoulot.pdf"
+                      class="btn btn-primary-custom"
+                      download
+                    >
+                      <i class="fas fa-download me-2"></i>
+                      Télécharger le CV
+                    </a>
+                  </div>
+                  <div class="col-auto">
+                    <router-link to="/contact" class="btn btn-outline-primary-custom">
                       <i class="fas fa-envelope me-2"></i>
-                      Demander mon CV complet
+                      Me contacter
                     </router-link>
                   </div>
                   <div class="col-auto">
-                    <a 
-                      href="https://linkedin.com/in/loic-barthoulot" 
+                    <a
+                      href="https://linkedin.com/in/loic-barthoulot"
                       class="btn btn-outline-primary-custom"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
                       <i class="fab fa-linkedin me-2"></i>
-                      Voir mon LinkedIn
+                      LinkedIn
                     </a>
                   </div>
                 </div>
@@ -348,26 +358,12 @@
 import { usePageMeta } from '@/composables/usePageMeta'
 usePageMeta(
   'Mon CV | Loïc Barthoulot',
-  'Parcours, compétences et expériences de Loïc Barthoulot, étudiant en informatique de gestion passionné d\'IT et de hardware.',
+  'Parcours, compétences et expériences de Loïc Barthoulot : applications métier, développement web et sécurité opérationnelle pour PME romandes.',
   { path: '/cv', type: 'profile' }
 )
 </script>
 
 <style scoped>
-.achievement-item {
-  padding: 16px;
-  border-radius: 8px;
-  background: rgba(255, 255, 255, 0.02);
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  transition: all 0.3s ease;
-}
-
-.achievement-item:hover {
-  background: rgba(11, 94, 215, 0.05);
-  border-color: rgba(11, 94, 215, 0.2);
-  transform: translateY(-2px);
-}
-
 .timeline-item .badge.bg-secondary {
   background-color: var(--muted) !important;
   color: var(--bg) !important;
@@ -381,7 +377,7 @@ usePageMeta(
 /* Désactiver l'effet hover sur toutes les cards de la page CV */
 .card-custom:hover {
   transform: none !important;
-  box-shadow: 
+  box-shadow:
     0 4px 15px rgba(0, 0, 0, 0.3),
     0 2px 4px rgba(0, 0, 0, 0.2),
     inset 0 1px 0 rgba(255, 255, 255, 0.05) !important;
@@ -392,10 +388,10 @@ usePageMeta(
   opacity: 0 !important;
 }
 
-/* Exception pour la card highlight qui peut garder un léger effet */
+/* Exception pour la card highlight qui garde un léger effet */
 .highlight-card:hover {
   transform: translateY(-2px) !important;
-  box-shadow: 
+  box-shadow:
     0 8px 25px rgba(11, 94, 215, 0.2),
     0 4px 8px rgba(0, 0, 0, 0.3) !important;
 }
@@ -405,32 +401,38 @@ usePageMeta(
   .timeline {
     padding-left: 0;
   }
-  
+
   .timeline::before {
     display: none;
   }
-  
+
   .timeline-item {
     margin-bottom: 20px;
     padding: 16px;
     border-left: 3px solid var(--primary);
     border-radius: 6px;
   }
-  
+
   .timeline-item::before {
     display: none;
   }
-  
+
   .timeline-item .d-flex {
     flex-direction: column;
     align-items: flex-start !important;
     gap: 8px;
   }
-  
+
   .timeline-item .badge {
     align-self: flex-start;
     font-size: 0.8rem;
     padding: 4px 8px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .highlight-card:hover {
+    transform: none !important;
   }
 }
 </style>
