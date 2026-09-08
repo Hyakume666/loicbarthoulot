@@ -1,7 +1,12 @@
 <template>
   <header class="bandeau" :class="{ 'bandeau--sur-bloc': surBloc }">
     <div class="contenu bandeau__rangee">
-      <router-link to="/" class="bandeau__nom">Loïc Barthoulot</router-link>
+      <router-link to="/" class="bandeau__marque" aria-label="Loïc Barthoulot, accueil">
+        <picture>
+          <source :srcset="logoWebp" type="image/webp">
+          <img :src="logoPng" alt="" width="40" height="40">
+        </picture>
+      </router-link>
 
       <button
         class="bandeau__bascule"
@@ -30,6 +35,9 @@ defineProps<{ surBloc: boolean }>()
 
 const ouvert = ref(false)
 const route = useRoute()
+
+const logoWebp = import.meta.env.BASE_URL + 'logo.webp'
+const logoPng = import.meta.env.BASE_URL + 'logo.png'
 
 watch(() => route.path, () => { ouvert.value = false })
 </script>
@@ -64,12 +72,18 @@ watch(() => route.path, () => { ouvert.value = false })
   padding-block: var(--e-4);
 }
 
-.bandeau__nom {
-  font-weight: 600;
-  font-size: var(--pas-1);
-  letter-spacing: -0.01em;
-  text-decoration: none;
-  color: var(--texte);
+/* Le monogramme est un dégradé bleu-gris : il a besoin d'une réserve claire
+   pour rester lisible sur l'outremer comme sur la craie. */
+.bandeau__marque {
+  display: block;
+  padding: var(--e-1);
+  background-color: var(--blanc);
+  line-height: 0;
+}
+
+.bandeau__marque img {
+  width: 40px;
+  height: 40px;
 }
 
 .bandeau__nav {
