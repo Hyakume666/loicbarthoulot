@@ -310,32 +310,21 @@
           <section class="mb-5">
             <div class="card card-custom highlight-card">
               <div class="card-body p-4 text-center">
-                <div class="icon-feature">📄</div>
-                <h3 class="text-primary-custom mb-3">Mon CV en PDF</h3>
+                <h3 class="text-primary-custom mb-3">Aller plus loin</h3>
                 <p class="mb-4">
-                  Vous pouvez télécharger mon CV directement. Pour une version détaillée
-                  avec références et coordonnées complètes, écrivez-moi.
+                  Pour une version détaillée avec références et coordonnées
+                  complètes, écrivez-moi.
                 </p>
                 <div class="row g-3 justify-content-center">
                   <div class="col-auto">
-                    <a
-                      href="/cv-loic-barthoulot.pdf"
-                      class="btn btn-primary-custom"
-                      download
-                    >
-                      <i class="fas fa-download me-2"></i>
-                      Télécharger le CV
-                    </a>
-                  </div>
-                  <div class="col-auto">
-                    <router-link to="/contact" class="btn btn-outline-primary-custom">
+                    <router-link to="/contact" class="btn btn-primary-custom">
                       <i class="fas fa-envelope me-2"></i>
                       Me contacter
                     </router-link>
                   </div>
                   <div class="col-auto">
                     <a
-                      href="https://linkedin.com/in/loic-barthoulot"
+                      href="https://www.linkedin.com/in/loic-barthoulot/"
                       class="btn btn-outline-primary-custom"
                       target="_blank"
                       rel="noopener noreferrer"

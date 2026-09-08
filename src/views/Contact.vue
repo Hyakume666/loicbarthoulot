@@ -21,12 +21,12 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-3 text-center">
+            <div class="col-md-4 text-center">
               <div class="card card-custom contact-form-card h-100">
                 <div class="card-body p-4">
-                  <div class="icon-feature"><i class="fas fa-mobile-alt"></i></div>
-                  <h5>Téléphone</h5>
-                  <p>Après un premier contact</p>
+                  <div class="icon-feature"><i class="fas fa-map-marker-alt"></i></div>
+                  <h5>Zone d'intervention</h5>
+                  <p>Neuchâtel et Suisse romande</p>
                 </div>
               </div>
             </div>
@@ -105,9 +105,10 @@
                       aria-describedby="subject-error"
                     >
                       <option value="">Choisissez un sujet</option>
-                      <option value="montage">Montage PC</option>
-                      <option value="depannage">Dépannage / Réparation</option>
-                      <option value="nettoyage">Nettoyage / Entretien</option>
+                      <option value="application-metier">Application métier</option>
+                      <option value="processus">Digitalisation de processus</option>
+                      <option value="site-web">Site web</option>
+                      <option value="support-materiel">Support et matériel</option>
                       <option value="autre">Autre</option>
                     </select>
                     <div class="invalid-feedback" id="subject-error">{{ errors.subject }}</div>
