@@ -4,6 +4,29 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/png" href="/logo.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--
+      Le site ne charge aucune ressource tierce et ne contient aucun script
+      en ligne exécutable : la politique peut donc rester stricte.
+      'unsafe-inline' n'est admis que pour les styles, parce que le collapse
+      de Bootstrap anime la hauteur via l'attribut style de l'élément.
+      api.emailjs.com est le seul hôte joignable, et uniquement à l'envoi du
+      formulaire.
+      frame-ancestors n'a pas d'effet en balise meta ; il demanderait un
+      en-tête HTTP, que GitHub Pages ne permet pas de définir.
+    -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self';
+               script-src 'self';
+               style-src 'self' 'unsafe-inline';
+               img-src 'self' data:;
+               font-src 'self';
+               connect-src 'self' https://api.emailjs.com;
+               form-action 'self';
+               base-uri 'self';
+               object-src 'none';
+               manifest-src 'self'"
+    />
     <meta name="description" content="Sites web, digitalisation de processus, sécurité et supervision, support et matériel. Prestataire informatique indépendant à Neuchâtel.">
     <meta name="theme-color" content="#0a0c10" />
     <meta name="robots" content="index, follow" />

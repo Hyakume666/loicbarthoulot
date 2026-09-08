@@ -48,10 +48,17 @@ export const createApp = ViteSSG(
     if (isClient) {
       // Collapse de la navbar. Seul composant JS de Bootstrap utilisé.
       import('bootstrap/js/dist/collapse')
+      // Restauration du chemin mémorisé par public/404.html.
+      // Le contrôle est refait ici : sessionStorage est modifiable depuis
+      // la console, et un chemin protocole-relatif (« //ailleurs.example »)
+      // ferait lever une SecurityError à replaceState.
       const redirect = sessionStorage.getItem('spa-redirect')
       if (redirect) {
         sessionStorage.removeItem('spa-redirect')
-        if (redirect !== window.location.pathname + window.location.search + window.location.hash) {
+        const cheminInterne = /^\/($|[^/\\])/.test(redirect)
+        const dejaSurPlace =
+          redirect === window.location.pathname + window.location.search + window.location.hash
+        if (cheminInterne && !dejaSurPlace) {
           window.history.replaceState(null, '', redirect)
         }
       }

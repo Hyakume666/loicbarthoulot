@@ -7,6 +7,15 @@
       (function () {
         var l = window.location;
         var path = l.pathname + l.search + l.hash;
+
+        // On ne mémorise qu'un chemin interne. Un chemin commençant par
+        // « // » ou « /\ » est résolu par le navigateur comme une URL
+        // protocole-relative, donc hors origine : history.replaceState
+        // lèverait alors une SecurityError au retour sur l'application.
+        if (!/^\/($|[^/\\])/.test(path)) {
+          path = '/';
+        }
+
         sessionStorage.setItem('spa-redirect', path);
         l.replace(l.origin + '/');
       })();
