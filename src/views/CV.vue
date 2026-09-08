@@ -71,7 +71,7 @@
         <article class="entree">
           <div class="entree__tete">
             <h3 class="entree__titre">Hotline — service informatique</h3>
-            <p class="entree__date">2026 – 2027</p>
+            <p class="entree__date">Année académique 2026 – 2027</p>
           </div>
           <p class="entree__lieu">
             HE-Arc, Neuchâtel — support de premier niveau aux étudiants et au personnel,
