@@ -1,6 +1,11 @@
 <template>
   <footer class="pied-site mt-auto">
     <div class="container">
+      <div class="pied-site__signature">
+        <p class="pied-site__nom">Loïc Barthoulot</p>
+        <p class="mb-0">Informatique de gestion — Neuchâtel, Suisse romande</p>
+      </div>
+
       <div class="row gy-3 align-items-center">
         <div class="col-lg-4">
           <p class="mb-0">© {{ annee }} Loïc Barthoulot</p>

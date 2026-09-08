@@ -360,6 +360,35 @@ p {
 
 // --- Barre de navigation ------------------------------------------------
 
+// Le monogramme a un fond transparent : il se pose directement sur le
+// fond sombre, sans réserve claire.
+.marque {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  padding-block: 0;
+}
+
+.marque__logo {
+  width: 60px;
+  height: 60px;
+  flex-shrink: 0;
+}
+
+.marque__nom {
+  font-size: 1.0625rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: $encre;
+  white-space: nowrap;
+}
+
+@media (max-width: 359px) {
+  .marque__nom {
+    display: none;
+  }
+}
+
 .navbar-site {
   background-color: rgba(10, 12, 16, 0.86);
   backdrop-filter: blur(12px);
@@ -382,9 +411,26 @@ p {
 .pied-site {
   background-color: $surface;
   border-top: 1px solid $bordure;
-  padding-block: 2rem;
+  padding-block: 3rem 2rem;
   font-size: 0.875rem;
   color: $sourdine;
+
+  // Le nom en grand se pose ici, et pas dans le hero : la page d'accueil
+  // doit d'abord dire ce que je fais, pas comment je m'appelle.
+  .pied-site__signature {
+    padding-bottom: 2rem;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid $bordure;
+  }
+
+  .pied-site__nom {
+    font-size: clamp(1.75rem, 4vw, 2.75rem);
+    font-weight: 680;
+    letter-spacing: -0.025em;
+    line-height: 1.1;
+    color: $encre;
+    margin-bottom: 0.5rem;
+  }
 
   a {
     color: $sourdine;

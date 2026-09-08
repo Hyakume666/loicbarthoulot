@@ -1,12 +1,12 @@
 <template>
   <nav class="navbar navbar-expand-lg navbar-site sticky-top" aria-label="Navigation principale">
     <div class="container">
-      <router-link to="/" class="navbar-brand d-flex align-items-center gap-2" aria-label="Loïc Barthoulot, accueil">
+      <router-link to="/" class="navbar-brand marque" aria-label="Loïc Barthoulot, accueil">
         <picture>
           <source :srcset="logoWebp" type="image/webp">
-          <img :src="logoPng" alt="" width="36" height="36" class="rounded-1 bg-white p-1">
+          <img :src="logoPng" alt="" width="60" height="60" class="marque__logo">
         </picture>
-        <span class="fw-semibold fs-6 d-none d-sm-inline">Loïc Barthoulot</span>
+        <span class="marque__nom">Loïc Barthoulot</span>
       </router-link>
 
       <button
