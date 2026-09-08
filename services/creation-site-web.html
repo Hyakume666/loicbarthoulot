@@ -1,15 +1,32 @@
-<!DOCTYPE html><html lang="fr"><head>
+<!DOCTYPE html><html lang="fr" data-bs-theme="dark"><head>
     <meta charset="utf-8">
     <link rel="icon" type="image/png" href="/logo.png">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Site vitrine performant et responsive avec SEO de base, formulaire de contact et déploiement inclus. Stack Vue.js + Bootstrap.">
-    <meta name="theme-color" content="#0b0d10">
+    <!--
+      Le site ne charge aucune ressource tierce et ne contient aucun script
+      en ligne exécutable : la politique peut donc rester stricte.
+      'unsafe-inline' n'est admis que pour les styles, parce que le collapse
+      de Bootstrap anime la hauteur via l'attribut style de l'élément.
+      api.emailjs.com est le seul hôte joignable, et uniquement à l'envoi du
+      formulaire.
+      frame-ancestors n'a pas d'effet en balise meta ; il demanderait un
+      en-tête HTTP, que GitHub Pages ne permet pas de définir.
+    -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self';
+               script-src 'self';
+               style-src 'self' 'unsafe-inline';
+               img-src 'self' data:;
+               font-src 'self';
+               connect-src 'self' https://api.emailjs.com;
+               form-action 'self';
+               base-uri 'self';
+               object-src 'none';
+               manifest-src 'self'">
+    <meta name="description" content="Site vitrine adapté au mobile, avec référencement de base, formulaire de contact et mise en ligne. Vue 3 et TypeScript.">
+    <meta name="theme-color" content="#0a0c10">
     <meta name="robots" content="index, follow">
     <meta name="author" content="Loïc Barthoulot">
-    <title>Création de Site Web | Loïc Barthoulot</title>
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
-    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+    <title>Création de site web | Loïc Barthoulot</title>
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -17,7 +34,7 @@
       "name": "Loïc Barthoulot",
       "url": "https://loicbarthoulot.ch",
       "image": "https://loicbarthoulot.ch/logo.png",
-      "jobTitle": "Étudiant en informatique de gestion, passionné IT",
+      "jobTitle": "Informatique de gestion",
       "address": {
         "@type": "PostalAddress",
         "addressCountry": "CH"
@@ -32,13 +49,12 @@
     {
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
-      "name": "Loïc Barthoulot - Services IT",
+      "name": "Loïc Barthoulot — informatique de gestion",
       "url": "https://loicbarthoulot.ch",
       "email": "contact@loicbarthoulot.ch",
       "image": "https://loicbarthoulot.ch/logo.png",
       "logo": "https://loicbarthoulot.ch/logo.png",
-      "description": "Services informatiques pour particuliers et petites entreprises : montage PC sur mesure, dépannage et réparation, nettoyage, création de site web et automatisation IA.",
-      "priceRange": "$",
+      "description": "Prestataire informatique pour PME de Suisse romande : sites web, digitalisation de processus, sécurité et supervision, support et matériel.",
       "areaServed": {
         "@type": "Country",
         "name": "Suisse"
@@ -49,32 +65,8 @@
       },
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
-        "name": "Services IT",
+        "name": "Prestations",
         "itemListElement": [
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Montage PC sur mesure",
-              "url": "https://loicbarthoulot.ch/services/montage-pc"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Dépannage & Réparation PC",
-              "url": "https://loicbarthoulot.ch/services/depannage-reparation"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Nettoyage & Entretien PC",
-              "url": "https://loicbarthoulot.ch/services/nettoyage-entretien"
-            }
-          },
           {
             "@type": "Offer",
             "itemOffered": {
@@ -87,19 +79,35 @@
             "@type": "Offer",
             "itemOffered": {
               "@type": "Service",
-              "name": "Automatisation IA",
-              "url": "https://loicbarthoulot.ch/services/automatisation-ia"
+              "name": "Digitalisation de processus",
+              "url": "https://loicbarthoulot.ch/services/digitalisation-processus"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Sécurité et supervision",
+              "url": "https://loicbarthoulot.ch/services/securite-supervision"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Support et matériel",
+              "url": "https://loicbarthoulot.ch/services/support-materiel"
             }
           }
         ]
       }
     }
     </script>
-    <script type="module" crossorigin="" src="/assets/app-BL8J8mJE.js"></script>
-    <link rel="stylesheet" crossorigin="" href="/assets/app-COQcP1EV.css">
-  <meta property="og:title" content="Création de Site Web | Loïc Barthoulot"><meta property="og:description" content="Site vitrine performant et responsive avec SEO de base, formulaire de contact et déploiement inclus. Stack Vue.js + Bootstrap."><meta property="og:type" content="website"><meta property="og:url" content="https://loicbarthoulot.ch/services/creation-site-web"><meta property="og:image" content="https://images.pexels.com/photos/270348/pexels-photo-270348.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1200"><meta property="og:site_name" content="Loïc Barthoulot"><meta property="og:locale" content="fr_CH"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Création de Site Web | Loïc Barthoulot"><meta name="twitter:description" content="Site vitrine performant et responsive avec SEO de base, formulaire de contact et déploiement inclus. Stack Vue.js + Bootstrap."><meta name="twitter:image" content="https://images.pexels.com/photos/270348/pexels-photo-270348.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1200"><link rel="canonical" href="https://loicbarthoulot.ch/services/creation-site-web"></head>
+    <script type="module" crossorigin="" src="/assets/app-Dr0uONV9.js"></script>
+    <link rel="stylesheet" crossorigin="" href="/assets/app-BXVtcdib.css">
+  <meta property="og:title" content="Création de site web | Loïc Barthoulot"><meta property="og:description" content="Site vitrine adapté au mobile, avec référencement de base, formulaire de contact et mise en ligne. Vue 3 et TypeScript."><meta property="og:type" content="website"><meta property="og:url" content="https://loicbarthoulot.ch/services/creation-site-web"><meta property="og:image" content="https://loicbarthoulot.ch/og.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="Loïc Barthoulot — informatique pour PME de Suisse romande"><meta property="og:site_name" content="Loïc Barthoulot"><meta property="og:locale" content="fr_CH"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Création de site web | Loïc Barthoulot"><meta name="twitter:description" content="Site vitrine adapté au mobile, avec référencement de base, formulaire de contact et mise en ligne. Vue 3 et TypeScript."><meta name="twitter:image" content="https://loicbarthoulot.ch/og.png"><link rel="canonical" href="https://loicbarthoulot.ch/services/creation-site-web"></head>
   <body>
-    <div id="app" data-server-rendered="true"><div id="app" data-v-eefa04c4=""><nav class="navbar navbar-expand-lg navbar-dark navbar-dark-custom fixed-top mobile-push-menu" style="margin:0;padding-top:0;padding-bottom:0;" data-v-eefa04c4="" data-v-96d506fd=""><div class="container" data-v-96d506fd=""><a href="/" class="navbar-brand" data-v-96d506fd=""><picture data-v-96d506fd=""><source srcset="/logo.webp" type="image/webp" data-v-96d506fd=""><img src="/logo.png" alt="Loïc Barthoulot - Services IT Suisse" height="60" class="me-2" data-v-96d506fd=""></picture></a><button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" data-v-96d506fd=""><span class="navbar-toggler-icon" data-v-96d506fd=""></span></button><div class="collapse navbar-collapse" id="navbarNav" data-v-96d506fd=""><ul class="navbar-nav ms-auto" data-v-96d506fd=""><li class="nav-item" data-v-96d506fd=""><a href="/" class="nav-link" data-v-96d506fd="">ACCUEIL</a></li><li class="nav-item" data-v-96d506fd=""><a href="/services" class="nav-link" data-v-96d506fd="">SERVICES</a></li><li class="nav-item" data-v-96d506fd=""><a href="/cv" class="nav-link" data-v-96d506fd="">MON CV</a></li><li class="nav-item" data-v-96d506fd=""><a href="/contact" class="nav-link" data-v-96d506fd="">CONTACT</a></li></ul></div></div></nav><main class="main-content" data-v-eefa04c4=""><div class="section-padding creation-site-page" style="background-color:var(--bg) !important;min-height:100vh;" data-v-eefa04c4="" data-v-c1a488d6=""><div class="container" data-v-c1a488d6=""><div class="row justify-content-center" data-v-c1a488d6=""><div class="col-lg-8" data-v-c1a488d6=""><div class="mb-4" data-v-c1a488d6=""><a href="/services" class="btn btn-primary-custom" data-v-c1a488d6=""><i class="fas fa-arrow-left me-2" data-v-c1a488d6=""></i>Retour aux services </a></div><div class="text-center mb-5" data-v-c1a488d6=""><h1 class="display-4 fw-bold" data-v-c1a488d6="">Création de site web</h1><p class="lead" data-v-c1a488d6=""> Site vitrine professionnel, performant et responsive </p></div><div class="card card-custom mb-5" data-v-c1a488d6=""><div class="card-body p-4" data-v-c1a488d6=""><div class="text-center mb-4" data-v-c1a488d6=""><div class="icon-feature" data-v-c1a488d6="">🌐</div></div><h3 class="text-primary-custom text-center mb-4" data-v-c1a488d6="">Votre présence web professionnelle</h3><p class="mb-4" data-v-c1a488d6=""> Je crée votre site vitrine sur mesure avec un design moderne et responsive. Chaque site est optimisé pour le référencement (SEO de base), intègre un formulaire de contact fonctionnel et est déployé clé en main. </p><p data-v-c1a488d6=""><strong data-v-c1a488d6="">Technologies utilisées :</strong> Vue.js + Bootstrap par défaut, ou stack technique adaptée selon vos besoins spécifiques. </p></div></div><div class="row g-4 mb-5" data-v-c1a488d6=""><!--[--><div class="col-md-6" data-v-c1a488d6=""><div class="card card-custom h-100" data-v-c1a488d6=""><div class="card-body p-4 text-center" data-v-c1a488d6=""><div class="icon-feature" data-v-c1a488d6="">📱</div><h5 class="card-title" data-v-c1a488d6="">Responsive Design</h5><p class="card-text" data-v-c1a488d6="">Parfait sur tous les appareils : mobile, tablette et desktop</p></div></div></div><div class="col-md-6" data-v-c1a488d6=""><div class="card card-custom h-100" data-v-c1a488d6=""><div class="card-body p-4 text-center" data-v-c1a488d6=""><div class="icon-feature" data-v-c1a488d6="">⚡</div><h5 class="card-title" data-v-c1a488d6="">Performance</h5><p class="card-text" data-v-c1a488d6="">Site rapide et optimisé pour une excellente expérience utilisateur</p></div></div></div><div class="col-md-6" data-v-c1a488d6=""><div class="card card-custom h-100" data-v-c1a488d6=""><div class="card-body p-4 text-center" data-v-c1a488d6=""><div class="icon-feature" data-v-c1a488d6="">🔍</div><h5 class="card-title" data-v-c1a488d6="">SEO Optimisé</h5><p class="card-text" data-v-c1a488d6="">Référencement de base inclus pour être visible sur Google</p></div></div></div><div class="col-md-6" data-v-c1a488d6=""><div class="card card-custom h-100" data-v-c1a488d6=""><div class="card-body p-4 text-center" data-v-c1a488d6=""><div class="icon-feature" data-v-c1a488d6="">🛠️</div><h5 class="card-title" data-v-c1a488d6="">Clé en main</h5><p class="card-text" data-v-c1a488d6="">Déploiement inclus, votre site est prêt à l'emploi</p></div></div></div><!--]--></div><div class="card card-custom mb-5" data-v-c1a488d6=""><div class="card-body p-4" data-v-c1a488d6=""><h3 class="text-primary-custom mb-4" data-v-c1a488d6="">Prestations incluses</h3><div class="row g-3" data-v-c1a488d6=""><div class="col-md-6" data-v-c1a488d6=""><ul class="list-unstyled" data-v-c1a488d6=""><li class="mb-2" data-v-c1a488d6=""><i class="fas fa-check text-primary-custom me-2" data-v-c1a488d6=""></i><span data-v-c1a488d6="">Design moderne et responsive</span></li><li class="mb-2" data-v-c1a488d6=""><i class="fas fa-check text-primary-custom me-2" data-v-c1a488d6=""></i><span data-v-c1a488d6="">Optimisation SEO de base</span></li><li class="mb-2" data-v-c1a488d6=""><i class="fas fa-check text-primary-custom me-2" data-v-c1a488d6=""></i><span data-v-c1a488d6="">Formulaire de contact fonctionnel</span></li></ul></div><div class="col-md-6" data-v-c1a488d6=""><ul class="list-unstyled" data-v-c1a488d6=""><li class="mb-2" data-v-c1a488d6=""><i class="fas fa-check text-primary-custom me-2" data-v-c1a488d6=""></i><span data-v-c1a488d6="">Déploiement et mise en ligne</span></li><li class="mb-2" data-v-c1a488d6=""><i class="fas fa-check text-primary-custom me-2" data-v-c1a488d6=""></i><span data-v-c1a488d6="">Formation à la gestion</span></li><li class="mb-2" data-v-c1a488d6=""><i class="fas fa-check text-primary-custom me-2" data-v-c1a488d6=""></i><span data-v-c1a488d6="">Support technique 3 mois</span></li></ul></div></div></div></div><div class="text-center" data-v-c1a488d6=""><h3 class="mb-4" data-v-c1a488d6="">Prêt à créer votre site web ?</h3><p class="mb-4" data-v-c1a488d6=""> Contactez-moi pour discuter de votre projet et obtenir un devis personnalisé </p><a href="/contact" class="btn btn-primary-custom btn-lg" data-v-c1a488d6=""> Demander un devis gratuit </a></div></div></div></div></div></main><footer class="footer-custom" data-v-eefa04c4="" data-v-af5ec388=""><div class="container" data-v-af5ec388=""><div class="row align-items-center" data-v-af5ec388=""><div class="col-md-6 col-12 mb-2 mb-md-0" data-v-af5ec388=""><p class="footer-copyright mb-0" data-v-af5ec388=""> © 2026 Loïc Barthoulot. Tous droits réservés. </p></div><div class="col-md-6 col-12" data-v-af5ec388=""><div class="footer-right" data-v-af5ec388=""><nav class="footer-nav" data-v-af5ec388=""><a href="/" class="footer-link" data-v-af5ec388="">Accueil</a><span class="footer-separator" data-v-af5ec388="">·</span><a href="/services" class="footer-link" data-v-af5ec388="">Services</a><span class="footer-separator" data-v-af5ec388="">·</span><a href="/cv" class="footer-link" data-v-af5ec388="">Mon CV</a><span class="footer-separator" data-v-af5ec388="">·</span><a href="/contact" class="footer-link" data-v-af5ec388="">Contact</a></nav><div class="footer-actions" data-v-af5ec388=""><a href="https://www.linkedin.com/in/loic-barthoulot/" class="footer-link linkedin-link" target="_blank" rel="noopener noreferrer" aria-label="Profil LinkedIn de Loïc Barthoulot" data-v-af5ec388=""><i class="fab fa-linkedin-in me-1" data-v-af5ec388=""></i> LinkedIn </a><button class="scroll-top-btn d-none d-md-inline-flex" aria-label="Remonter en haut de la page" title="Remonter en haut" data-v-af5ec388=""><i class="fas fa-arrow-up" data-v-af5ec388=""></i></button></div></div></div></div></div></footer></div></div>
+    <div id="app" data-server-rendered="true"><!--[--><a class="saut-contenu" href="#contenu">Aller au contenu</a><div class="d-flex flex-column min-vh-100"><nav class="navbar navbar-expand-lg navbar-site sticky-top" aria-label="Navigation principale"><div class="container"><a href="/" class="navbar-brand marque" aria-label="Loïc Barthoulot, accueil"><picture><source srcset="/logo.webp" type="image/webp"><img src="/logo.png" alt="" width="60" height="60" class="marque__logo"></picture><span class="marque__nom">Loïc Barthoulot</span></a><button class="navbar-toggler border-0 px-2" type="button" data-bs-toggle="collapse" data-bs-target="#navigation" aria-controls="navigation" aria-label="Ouvrir le menu"><span class="navbar-toggler-icon"></span></button><div id="navigation" class="collapse navbar-collapse"><ul class="navbar-nav ms-auto align-items-lg-center gap-lg-4 mt-3 mt-lg-0"><li class="nav-item"><a href="/services" class="nav-link">Ce que je fais</a></li><li class="nav-item"><a href="/cv" class="nav-link">Parcours</a></li><li class="nav-item mt-2 mt-lg-0"><a href="/contact" class="btn btn-primary btn-sm px-3"> Me contacter </a></li></ul></div></div></nav><main id="contenu" class="flex-grow-1"><!--[--><section class="hero hero--compact"><div class="container"><a href="/services" class="hero__retour"> ← Retour aux prestations </a><div class="row"><div class="col-lg-8"><p class="surtitre">Création de site web</p><h1 class="hero__titre mb-3">Un site vitrine mis en ligne et prêt à servir</h1><p class="hero__texte mb-0"> Il s'affiche correctement sur mobile, sur tablette et sur ordinateur. </p></div></div></div></section><section class="section"><div class="container"><div class="row g-4"><div class="col-lg-7"><div class="panneau h-100"><h2 class="h5 mb-3">Ce que je livre</h2><p class="text-body-secondary"> Je construis votre site sur mesure. Le référencement de base est en place, le formulaire de contact fonctionne, et je m'occupe de la mise en ligne. </p><ul class="liste-marquee mb-4"><li>Mise en page adaptée au mobile</li><li>Référencement de base : titres, descriptions, plan du site</li><li>Formulaire de contact</li><li>Hébergement et mise en ligne</li></ul><p class="small text-body-secondary mb-0"> Vue 3 et TypeScript par défaut, ou une autre stack si votre besoin le demande. </p></div></div><div class="col-lg-5"><div class="panneau h-100"><h2 class="h5 mb-3">Ce à quoi je fais attention</h2><p class="text-body-secondary"> Les images sont compressées, les polices et les scripts sont servis depuis votre site plutôt que depuis un service tiers. </p><p class="text-body-secondary mb-0"> Les pages restent utilisables au clavier, et les contrastes tiennent. Ce site s'applique à lui-même ce qu'il annonce. </p></div></div></div></div></section><section class="section section--surface"><div class="container"><div class="row"><div class="col-lg-7"><h2 class="mb-3">Parlons de votre site</h2><p class="text-body-secondary mb-4"> Décrivez-moi votre activité et ce que le site doit faire. </p><a href="/contact" class="btn btn-primary"> Me contacter </a></div></div></div></section><!--]--></main><footer class="pied-site mt-auto"><div class="container"><div class="pied-site__signature"><a href="mailto:contact@loicbarthoulot.ch" class="pied-site__adresse"> contact@loicbarthoulot.ch </a><p class="mb-0">Neuchâtel et Suisse romande</p></div><div class="row gy-3 align-items-center"><div class="col-lg-4"><p class="mb-0">© 2026 Loïc Barthoulot</p></div><div class="col-lg-8"><nav class="d-flex flex-wrap gap-3 gap-lg-4 justify-content-lg-end" aria-label="Pied de page"><a href="/services" class="">Ce que je fais</a><a href="/cv" class="">Parcours</a><a href="/contact" class="">Contact</a><a href="/mentions-legales" class="">Mentions légales</a><a href="/confidentialite" class="">Confidentialité</a><a href="https://www.linkedin.com/in/loic-barthoulot/" target="_blank" rel="noopener noreferrer" class="d-inline-flex align-items-center gap-1"><svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9h4v12H3V9Zm6 0h3.8v1.7h.05c.53-.95 1.83-1.95 3.76-1.95C20.6 8.75 22 10.9 22 14.1V21h-4v-6.1c0-1.46-.03-3.34-2.05-3.34-2.05 0-2.36 1.6-2.36 3.24V21H9V9Z"></path></svg> LinkedIn </a></nav></div></div></div></footer></div><!--]--></div>
   
 
 </body></html>

@@ -1,15 +1,32 @@
-<!DOCTYPE html><html lang="fr"><head>
+<!DOCTYPE html><html lang="fr" data-bs-theme="dark"><head>
     <meta charset="utf-8">
     <link rel="icon" type="image/png" href="/logo.png">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Dépoussiérage, nettoyage des ventilateurs, optimisation logicielle et mise à jour des drivers. Redonnez un coup de jeune à votre PC.">
-    <meta name="theme-color" content="#0b0d10">
+    <!--
+      Le site ne charge aucune ressource tierce et ne contient aucun script
+      en ligne exécutable : la politique peut donc rester stricte.
+      'unsafe-inline' n'est admis que pour les styles, parce que le collapse
+      de Bootstrap anime la hauteur via l'attribut style de l'élément.
+      api.emailjs.com est le seul hôte joignable, et uniquement à l'envoi du
+      formulaire.
+      frame-ancestors n'a pas d'effet en balise meta ; il demanderait un
+      en-tête HTTP, que GitHub Pages ne permet pas de définir.
+    -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self';
+               script-src 'self';
+               style-src 'self' 'unsafe-inline';
+               img-src 'self' data:;
+               font-src 'self';
+               connect-src 'self' https://api.emailjs.com;
+               form-action 'self';
+               base-uri 'self';
+               object-src 'none';
+               manifest-src 'self'">
+    <meta name="description" content="Assemblage de postes de travail, dépannage matériel et logiciel, récupération de données et entretien. Neuchâtel et Suisse romande.">
+    <meta name="theme-color" content="#0a0c10">
     <meta name="robots" content="index, follow">
     <meta name="author" content="Loïc Barthoulot">
-    <title>Nettoyage &amp; Entretien PC | Loïc Barthoulot</title>
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
-    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+    <title>Support et matériel | Loïc Barthoulot</title>
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -17,7 +34,7 @@
       "name": "Loïc Barthoulot",
       "url": "https://loicbarthoulot.ch",
       "image": "https://loicbarthoulot.ch/logo.png",
-      "jobTitle": "Étudiant en informatique de gestion, passionné IT",
+      "jobTitle": "Informatique de gestion",
       "address": {
         "@type": "PostalAddress",
         "addressCountry": "CH"
@@ -32,13 +49,12 @@
     {
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
-      "name": "Loïc Barthoulot - Services IT",
+      "name": "Loïc Barthoulot — informatique de gestion",
       "url": "https://loicbarthoulot.ch",
       "email": "contact@loicbarthoulot.ch",
       "image": "https://loicbarthoulot.ch/logo.png",
       "logo": "https://loicbarthoulot.ch/logo.png",
-      "description": "Services informatiques pour particuliers et petites entreprises : montage PC sur mesure, dépannage et réparation, nettoyage, création de site web et automatisation IA.",
-      "priceRange": "$",
+      "description": "Prestataire informatique pour PME de Suisse romande : sites web, digitalisation de processus, sécurité et supervision, support et matériel.",
       "areaServed": {
         "@type": "Country",
         "name": "Suisse"
@@ -49,32 +65,8 @@
       },
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
-        "name": "Services IT",
+        "name": "Prestations",
         "itemListElement": [
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Montage PC sur mesure",
-              "url": "https://loicbarthoulot.ch/services/montage-pc"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Dépannage & Réparation PC",
-              "url": "https://loicbarthoulot.ch/services/depannage-reparation"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Nettoyage & Entretien PC",
-              "url": "https://loicbarthoulot.ch/services/nettoyage-entretien"
-            }
-          },
           {
             "@type": "Offer",
             "itemOffered": {
@@ -87,19 +79,35 @@
             "@type": "Offer",
             "itemOffered": {
               "@type": "Service",
-              "name": "Automatisation IA",
-              "url": "https://loicbarthoulot.ch/services/automatisation-ia"
+              "name": "Digitalisation de processus",
+              "url": "https://loicbarthoulot.ch/services/digitalisation-processus"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Sécurité et supervision",
+              "url": "https://loicbarthoulot.ch/services/securite-supervision"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Support et matériel",
+              "url": "https://loicbarthoulot.ch/services/support-materiel"
             }
           }
         ]
       }
     }
     </script>
-    <script type="module" crossorigin="" src="/assets/app-BL8J8mJE.js"></script>
-    <link rel="stylesheet" crossorigin="" href="/assets/app-COQcP1EV.css">
-  <meta property="og:title" content="Nettoyage &amp; Entretien PC | Loïc Barthoulot"><meta property="og:description" content="Dépoussiérage, nettoyage des ventilateurs, optimisation logicielle et mise à jour des drivers. Redonnez un coup de jeune à votre PC."><meta property="og:type" content="website"><meta property="og:url" content="https://loicbarthoulot.ch/services/nettoyage-entretien"><meta property="og:image" content="https://images.pexels.com/photos/4792728/pexels-photo-4792728.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1200"><meta property="og:site_name" content="Loïc Barthoulot"><meta property="og:locale" content="fr_CH"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Nettoyage &amp; Entretien PC | Loïc Barthoulot"><meta name="twitter:description" content="Dépoussiérage, nettoyage des ventilateurs, optimisation logicielle et mise à jour des drivers. Redonnez un coup de jeune à votre PC."><meta name="twitter:image" content="https://images.pexels.com/photos/4792728/pexels-photo-4792728.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1200"><link rel="canonical" href="https://loicbarthoulot.ch/services/nettoyage-entretien"></head>
+    <script type="module" crossorigin="" src="/assets/app-Dr0uONV9.js"></script>
+    <link rel="stylesheet" crossorigin="" href="/assets/app-BXVtcdib.css">
+  <meta property="og:title" content="Support et matériel | Loïc Barthoulot"><meta property="og:description" content="Assemblage de postes de travail, dépannage matériel et logiciel, récupération de données et entretien. Neuchâtel et Suisse romande."><meta property="og:type" content="website"><meta property="og:url" content="https://loicbarthoulot.ch/services/support-materiel"><meta property="og:image" content="https://loicbarthoulot.ch/og.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="Loïc Barthoulot — informatique pour PME de Suisse romande"><meta property="og:site_name" content="Loïc Barthoulot"><meta property="og:locale" content="fr_CH"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Support et matériel | Loïc Barthoulot"><meta name="twitter:description" content="Assemblage de postes de travail, dépannage matériel et logiciel, récupération de données et entretien. Neuchâtel et Suisse romande."><meta name="twitter:image" content="https://loicbarthoulot.ch/og.png"><link rel="canonical" href="https://loicbarthoulot.ch/services/support-materiel"></head>
   <body>
-    <div id="app" data-server-rendered="true"><div id="app" data-v-eefa04c4=""><nav class="navbar navbar-expand-lg navbar-dark navbar-dark-custom fixed-top mobile-push-menu" style="margin:0;padding-top:0;padding-bottom:0;" data-v-eefa04c4="" data-v-96d506fd=""><div class="container" data-v-96d506fd=""><a href="/" class="navbar-brand" data-v-96d506fd=""><picture data-v-96d506fd=""><source srcset="/logo.webp" type="image/webp" data-v-96d506fd=""><img src="/logo.png" alt="Loïc Barthoulot - Services IT Suisse" height="60" class="me-2" data-v-96d506fd=""></picture></a><button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" data-v-96d506fd=""><span class="navbar-toggler-icon" data-v-96d506fd=""></span></button><div class="collapse navbar-collapse" id="navbarNav" data-v-96d506fd=""><ul class="navbar-nav ms-auto" data-v-96d506fd=""><li class="nav-item" data-v-96d506fd=""><a href="/" class="nav-link" data-v-96d506fd="">ACCUEIL</a></li><li class="nav-item" data-v-96d506fd=""><a href="/services" class="nav-link" data-v-96d506fd="">SERVICES</a></li><li class="nav-item" data-v-96d506fd=""><a href="/cv" class="nav-link" data-v-96d506fd="">MON CV</a></li><li class="nav-item" data-v-96d506fd=""><a href="/contact" class="nav-link" data-v-96d506fd="">CONTACT</a></li></ul></div></div></nav><main class="main-content" data-v-eefa04c4=""><div class="section-padding entretien-page" style="background-color:var(--bg) !important;min-height:100vh;" data-v-eefa04c4="" data-v-d52098ec=""><div class="container" data-v-d52098ec=""><div class="mb-4" data-v-d52098ec=""><a href="/services" class="btn btn-primary-custom" data-v-d52098ec=""><i class="fas fa-arrow-left me-2" data-v-d52098ec=""></i>Retour aux services </a></div><div class="text-center mb-5" data-v-d52098ec=""><h1 class="display-4 fw-bold" data-v-d52098ec="">Nettoyage &amp; Entretien</h1><p class="lead" data-v-d52098ec=""> Maintenance complète pour optimiser les performances de votre PC </p></div><div class="row justify-content-center" data-v-d52098ec=""><div class="col-lg-8" data-v-d52098ec=""><div class="card card-custom mb-5" data-v-d52098ec=""><div class="card-body p-4" data-v-d52098ec=""><div class="text-center mb-4" data-v-d52098ec=""><div class="icon-feature" data-v-d52098ec="">🧹</div></div><h3 class="text-primary-custom text-center mb-4" data-v-d52098ec="">Entretien professionnel de votre PC</h3><p class="mb-4" data-v-d52098ec=""> Un PC bien entretenu, c'est un PC qui dure plus longtemps et fonctionne mieux. Je réalise un nettoyage complet de votre ordinateur, tant au niveau matériel que logiciel, pour retrouver des performances optimales. </p><p data-v-d52098ec=""><strong data-v-d52098ec="">Recommandation :</strong> Un entretien tous les 6 à 12 mois selon l'environnement et l'utilisation. </p></div></div><div class="row g-4 mb-5" data-v-d52098ec=""><!--[--><div class="col-md-6" data-v-d52098ec=""><div class="card card-custom h-100" data-v-d52098ec=""><div class="card-body p-4 text-center" data-v-d52098ec=""><div class="icon-feature" data-v-d52098ec="">🌪️</div><h5 class="card-title" data-v-d52098ec="">Dépoussiérage</h5><p class="card-text text-muted" data-v-d52098ec="">Élimination de la poussière accumulée dans le boîtier et sur les composants</p></div></div></div><div class="col-md-6" data-v-d52098ec=""><div class="card card-custom h-100" data-v-d52098ec=""><div class="card-body p-4 text-center" data-v-d52098ec=""><div class="icon-feature" data-v-d52098ec="">💨</div><h5 class="card-title" data-v-d52098ec="">Ventilation</h5><p class="card-text text-muted" data-v-d52098ec="">Nettoyage et vérification du système de refroidissement</p></div></div></div><div class="col-md-6" data-v-d52098ec=""><div class="card card-custom h-100" data-v-d52098ec=""><div class="card-body p-4 text-center" data-v-d52098ec=""><div class="icon-feature" data-v-d52098ec="">🗂️</div><h5 class="card-title" data-v-d52098ec="">Optimisation système</h5><p class="card-text text-muted" data-v-d52098ec="">Nettoyage des fichiers temporaires et optimisation Windows</p></div></div></div><div class="col-md-6" data-v-d52098ec=""><div class="card card-custom h-100" data-v-d52098ec=""><div class="card-body p-4 text-center" data-v-d52098ec=""><div class="icon-feature" data-v-d52098ec="">🔄</div><h5 class="card-title" data-v-d52098ec="">Mises à jour</h5><p class="card-text text-muted" data-v-d52098ec="">Installation des derniers drivers et mises à jour système</p></div></div></div><!--]--></div><div class="card card-custom mb-5" data-v-d52098ec=""><div class="card-body p-4" data-v-d52098ec=""><h3 class="text-primary-custom mb-4" data-v-d52098ec="">Prestations détaillées</h3><div class="row g-4" data-v-d52098ec=""><div class="col-md-6" data-v-d52098ec=""><h5 class="mb-3" data-v-d52098ec="">Nettoyage matériel</h5><ul class="list-unstyled" data-v-d52098ec=""><li class="mb-2" data-v-d52098ec=""><i class="fas fa-check text-primary-custom me-2" data-v-d52098ec=""></i><span data-v-d52098ec="">Dépoussiérage complet</span></li><li class="mb-2" data-v-d52098ec=""><i class="fas fa-check text-primary-custom me-2" data-v-d52098ec=""></i><span data-v-d52098ec="">Nettoyage ventilateurs</span></li><li class="mb-2" data-v-d52098ec=""><i class="fas fa-check text-primary-custom me-2" data-v-d52098ec=""></i><span data-v-d52098ec="">Contrôle températures</span></li></ul></div><div class="col-md-6" data-v-d52098ec=""><h5 class="mb-3" data-v-d52098ec="">Optimisation logicielle</h5><ul class="list-unstyled" data-v-d52098ec=""><li class="mb-2" data-v-d52098ec=""><i class="fas fa-check text-primary-custom me-2" data-v-d52098ec=""></i><span data-v-d52098ec="">Nettoyage registre Windows</span></li><li class="mb-2" data-v-d52098ec=""><i class="fas fa-check text-primary-custom me-2" data-v-d52098ec=""></i><span data-v-d52098ec="">Suppression fichiers temporaires</span></li><li class="mb-2" data-v-d52098ec=""><i class="fas fa-check text-primary-custom me-2" data-v-d52098ec=""></i><span data-v-d52098ec="">Mise à jour drivers</span></li></ul></div></div></div></div><div class="card card-custom mb-5" data-v-d52098ec=""><div class="card-body p-4" data-v-d52098ec=""><h3 class="text-primary-custom mb-4" data-v-d52098ec="">Bénéfices de l'entretien régulier</h3><div class="row g-4" data-v-d52098ec=""><div class="col-md-4 text-center" data-v-d52098ec=""><div class="mb-3" data-v-d52098ec=""><i class="fas fa-tachometer-alt text-primary-custom" style="font-size:2.5rem;" data-v-d52098ec=""></i></div><h5 data-v-d52098ec="">Performances</h5><p class="small" data-v-d52098ec="">PC plus rapide et réactif</p></div><div class="col-md-4 text-center" data-v-d52098ec=""><div class="mb-3" data-v-d52098ec=""><i class="fas fa-thermometer-half text-primary-custom" style="font-size:2.5rem;" data-v-d52098ec=""></i></div><h5 data-v-d52098ec="">Température</h5><p class="small" data-v-d52098ec="">Refroidissement optimisé</p></div><div class="col-md-4 text-center" data-v-d52098ec=""><div class="mb-3" data-v-d52098ec=""><i class="fas fa-clock text-primary-custom" style="font-size:2.5rem;" data-v-d52098ec=""></i></div><h5 data-v-d52098ec="">Longévité</h5><p class="small" data-v-d52098ec="">Durée de vie prolongée</p></div></div></div></div><div class="text-center" data-v-d52098ec=""><h3 class="mb-4" data-v-d52098ec="">Votre PC a besoin d'un bon nettoyage ?</h3><p class="mb-4" data-v-d52098ec=""> Redonnez un coup de jeune à votre ordinateur avec un entretien professionnel </p><a href="/contact" class="btn btn-primary-custom btn-lg" data-v-d52098ec=""> Programmer un nettoyage </a></div></div></div></div></div></main><footer class="footer-custom" data-v-eefa04c4="" data-v-af5ec388=""><div class="container" data-v-af5ec388=""><div class="row align-items-center" data-v-af5ec388=""><div class="col-md-6 col-12 mb-2 mb-md-0" data-v-af5ec388=""><p class="footer-copyright mb-0" data-v-af5ec388=""> © 2026 Loïc Barthoulot. Tous droits réservés. </p></div><div class="col-md-6 col-12" data-v-af5ec388=""><div class="footer-right" data-v-af5ec388=""><nav class="footer-nav" data-v-af5ec388=""><a href="/" class="footer-link" data-v-af5ec388="">Accueil</a><span class="footer-separator" data-v-af5ec388="">·</span><a href="/services" class="footer-link" data-v-af5ec388="">Services</a><span class="footer-separator" data-v-af5ec388="">·</span><a href="/cv" class="footer-link" data-v-af5ec388="">Mon CV</a><span class="footer-separator" data-v-af5ec388="">·</span><a href="/contact" class="footer-link" data-v-af5ec388="">Contact</a></nav><div class="footer-actions" data-v-af5ec388=""><a href="https://www.linkedin.com/in/loic-barthoulot/" class="footer-link linkedin-link" target="_blank" rel="noopener noreferrer" aria-label="Profil LinkedIn de Loïc Barthoulot" data-v-af5ec388=""><i class="fab fa-linkedin-in me-1" data-v-af5ec388=""></i> LinkedIn </a><button class="scroll-top-btn d-none d-md-inline-flex" aria-label="Remonter en haut de la page" title="Remonter en haut" data-v-af5ec388=""><i class="fas fa-arrow-up" data-v-af5ec388=""></i></button></div></div></div></div></div></footer></div></div>
+    <div id="app" data-server-rendered="true"><!--[--><a class="saut-contenu" href="#contenu">Aller au contenu</a><div class="d-flex flex-column min-vh-100"><nav class="navbar navbar-expand-lg navbar-site sticky-top" aria-label="Navigation principale"><div class="container"><a href="/" class="navbar-brand marque" aria-label="Loïc Barthoulot, accueil"><picture><source srcset="/logo.webp" type="image/webp"><img src="/logo.png" alt="" width="60" height="60" class="marque__logo"></picture><span class="marque__nom">Loïc Barthoulot</span></a><button class="navbar-toggler border-0 px-2" type="button" data-bs-toggle="collapse" data-bs-target="#navigation" aria-controls="navigation" aria-label="Ouvrir le menu"><span class="navbar-toggler-icon"></span></button><div id="navigation" class="collapse navbar-collapse"><ul class="navbar-nav ms-auto align-items-lg-center gap-lg-4 mt-3 mt-lg-0"><li class="nav-item"><a href="/services" class="nav-link">Ce que je fais</a></li><li class="nav-item"><a href="/cv" class="nav-link">Parcours</a></li><li class="nav-item mt-2 mt-lg-0"><a href="/contact" class="btn btn-primary btn-sm px-3"> Me contacter </a></li></ul></div></div></nav><main id="contenu" class="flex-grow-1"><!--[--><section class="hero hero--compact"><div class="container"><a href="/services" class="hero__retour"> ← Retour aux prestations </a><div class="row"><div class="col-lg-8"><p class="surtitre">Support et matériel</p><h1 class="hero__titre mb-3">Postes de travail, dépannage et entretien</h1><p class="hero__texte mb-0"> Pour les particuliers comme pour les PME, sur Neuchâtel et la Suisse romande. </p></div></div></div></section><section class="section"><div class="container"><div class="row g-4"><div class="col-lg-4"><div class="panneau h-100"><h2 class="h5 mb-3">Assemblage</h2><p class="text-body-secondary"> J'assemble des postes de travail et des machines de jeu, selon l'usage et le budget. Le choix des composants se décide avec vous, à partir de ce que la machine devra faire. </p><p class="text-body-secondary mb-0"> Chaque machine est testée avant livraison, et les réglages BIOS et système sont faits à la remise. </p></div></div><div class="col-lg-4"><div class="panneau h-100"><h2 class="h5 mb-3">Dépannage</h2><p class="text-body-secondary"> Votre ordinateur ne démarre plus, il est lent, ou il présente un dysfonctionnement. Je cherche l'origine de la panne, matérielle ou logicielle, puis je répare. </p><ul class="liste-marquee"><li>Intervention sur place ou en atelier</li><li>Récupération de données</li><li>Remplacement de composants</li><li>Tests de stabilité après réparation</li></ul></div></div><div class="col-lg-4"><div class="panneau h-100"><h2 class="h5 mb-3">Entretien</h2><p class="text-body-secondary"> Un ordinateur entretenu chauffe moins et dure plus longtemps. L'entretien couvre le matériel et le système. </p><ul class="liste-marquee mb-3"><li>Dépoussiérage du boîtier</li><li>Nettoyage des ventilateurs</li><li>Contrôle des températures</li><li>Suppression des fichiers temporaires</li><li>Mise à jour des pilotes</li><li>Vérification des sauvegardes</li></ul><p class="small text-body-secondary mb-0"> Un entretien tous les six à douze mois suffit dans la plupart des cas, selon l'environnement et l'usage. </p></div></div></div></div></section><section class="section section--surface"><div class="container"><div class="row"><div class="col-lg-7"><h2 class="mb-3">Une panne ou un besoin de machine ?</h2><p class="text-body-secondary mb-4"> Décrivez-moi le symptôme ou l'usage prévu. Je suis joignable sept jours sur sept. </p><a href="/contact" class="btn btn-primary"> Me contacter </a></div></div></div></section><!--]--></main><footer class="pied-site mt-auto"><div class="container"><div class="pied-site__signature"><a href="mailto:contact@loicbarthoulot.ch" class="pied-site__adresse"> contact@loicbarthoulot.ch </a><p class="mb-0">Neuchâtel et Suisse romande</p></div><div class="row gy-3 align-items-center"><div class="col-lg-4"><p class="mb-0">© 2026 Loïc Barthoulot</p></div><div class="col-lg-8"><nav class="d-flex flex-wrap gap-3 gap-lg-4 justify-content-lg-end" aria-label="Pied de page"><a href="/services" class="">Ce que je fais</a><a href="/cv" class="">Parcours</a><a href="/contact" class="">Contact</a><a href="/mentions-legales" class="">Mentions légales</a><a href="/confidentialite" class="">Confidentialité</a><a href="https://www.linkedin.com/in/loic-barthoulot/" target="_blank" rel="noopener noreferrer" class="d-inline-flex align-items-center gap-1"><svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9h4v12H3V9Zm6 0h3.8v1.7h.05c.53-.95 1.83-1.95 3.76-1.95C20.6 8.75 22 10.9 22 14.1V21h-4v-6.1c0-1.46-.03-3.34-2.05-3.34-2.05 0-2.36 1.6-2.36 3.24V21H9V9Z"></path></svg> LinkedIn </a></nav></div></div></div></footer></div><!--]--></div>
   
 
 </body></html>

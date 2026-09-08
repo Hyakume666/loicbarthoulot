@@ -1,15 +1,32 @@
-<!DOCTYPE html><html lang="fr"><head>
+<!DOCTYPE html><html lang="fr" data-bs-theme="dark"><head>
     <meta charset="utf-8">
     <link rel="icon" type="image/png" href="/logo.png">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Contactez Loïc Barthoulot pour un devis, une question ou une démo gratuite. Réponse rapide.">
-    <meta name="theme-color" content="#0b0d10">
+    <!--
+      Le site ne charge aucune ressource tierce et ne contient aucun script
+      en ligne exécutable : la politique peut donc rester stricte.
+      'unsafe-inline' n'est admis que pour les styles, parce que le collapse
+      de Bootstrap anime la hauteur via l'attribut style de l'élément.
+      api.emailjs.com est le seul hôte joignable, et uniquement à l'envoi du
+      formulaire.
+      frame-ancestors n'a pas d'effet en balise meta ; il demanderait un
+      en-tête HTTP, que GitHub Pages ne permet pas de définir.
+    -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self';
+               script-src 'self';
+               style-src 'self' 'unsafe-inline';
+               img-src 'self' data:;
+               font-src 'self';
+               connect-src 'self' https://api.emailjs.com;
+               form-action 'self';
+               base-uri 'self';
+               object-src 'none';
+               manifest-src 'self'">
+    <meta name="description" content="Contactez Loïc Barthoulot au sujet d'une application métier, d'un processus à digitaliser, d'un site web ou d'un poste de travail.">
+    <meta name="theme-color" content="#0a0c10">
     <meta name="robots" content="index, follow">
     <meta name="author" content="Loïc Barthoulot">
-    <title>Contact | Loïc Barthoulot</title>
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
-    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+    <title>Me contacter | Loïc Barthoulot</title>
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -17,7 +34,7 @@
       "name": "Loïc Barthoulot",
       "url": "https://loicbarthoulot.ch",
       "image": "https://loicbarthoulot.ch/logo.png",
-      "jobTitle": "Étudiant en informatique de gestion, passionné IT",
+      "jobTitle": "Informatique de gestion",
       "address": {
         "@type": "PostalAddress",
         "addressCountry": "CH"
@@ -32,13 +49,12 @@
     {
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
-      "name": "Loïc Barthoulot - Services IT",
+      "name": "Loïc Barthoulot — informatique de gestion",
       "url": "https://loicbarthoulot.ch",
       "email": "contact@loicbarthoulot.ch",
       "image": "https://loicbarthoulot.ch/logo.png",
       "logo": "https://loicbarthoulot.ch/logo.png",
-      "description": "Services informatiques pour particuliers et petites entreprises : montage PC sur mesure, dépannage et réparation, nettoyage, création de site web et automatisation IA.",
-      "priceRange": "$",
+      "description": "Prestataire informatique pour PME de Suisse romande : sites web, digitalisation de processus, sécurité et supervision, support et matériel.",
       "areaServed": {
         "@type": "Country",
         "name": "Suisse"
@@ -49,32 +65,8 @@
       },
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
-        "name": "Services IT",
+        "name": "Prestations",
         "itemListElement": [
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Montage PC sur mesure",
-              "url": "https://loicbarthoulot.ch/services/montage-pc"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Dépannage & Réparation PC",
-              "url": "https://loicbarthoulot.ch/services/depannage-reparation"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Nettoyage & Entretien PC",
-              "url": "https://loicbarthoulot.ch/services/nettoyage-entretien"
-            }
-          },
           {
             "@type": "Offer",
             "itemOffered": {
@@ -87,19 +79,35 @@
             "@type": "Offer",
             "itemOffered": {
               "@type": "Service",
-              "name": "Automatisation IA",
-              "url": "https://loicbarthoulot.ch/services/automatisation-ia"
+              "name": "Digitalisation de processus",
+              "url": "https://loicbarthoulot.ch/services/digitalisation-processus"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Sécurité et supervision",
+              "url": "https://loicbarthoulot.ch/services/securite-supervision"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Support et matériel",
+              "url": "https://loicbarthoulot.ch/services/support-materiel"
             }
           }
         ]
       }
     }
     </script>
-    <script type="module" crossorigin="" src="/assets/app-BL8J8mJE.js"></script>
-    <link rel="stylesheet" crossorigin="" href="/assets/app-COQcP1EV.css">
-  <meta property="og:title" content="Contact | Loïc Barthoulot"><meta property="og:description" content="Contactez Loïc Barthoulot pour un devis, une question ou une démo gratuite. Réponse rapide."><meta property="og:type" content="website"><meta property="og:url" content="https://loicbarthoulot.ch/contact"><meta property="og:image" content="https://loicbarthoulot.ch/logo.png"><meta property="og:site_name" content="Loïc Barthoulot"><meta property="og:locale" content="fr_CH"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Contact | Loïc Barthoulot"><meta name="twitter:description" content="Contactez Loïc Barthoulot pour un devis, une question ou une démo gratuite. Réponse rapide."><meta name="twitter:image" content="https://loicbarthoulot.ch/logo.png"><link rel="canonical" href="https://loicbarthoulot.ch/contact"></head>
+    <script type="module" crossorigin="" src="/assets/app-Dr0uONV9.js"></script>
+    <link rel="stylesheet" crossorigin="" href="/assets/app-BXVtcdib.css">
+  <meta property="og:title" content="Me contacter | Loïc Barthoulot"><meta property="og:description" content="Contactez Loïc Barthoulot au sujet d'une application métier, d'un processus à digitaliser, d'un site web ou d'un poste de travail."><meta property="og:type" content="website"><meta property="og:url" content="https://loicbarthoulot.ch/contact"><meta property="og:image" content="https://loicbarthoulot.ch/og.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="Loïc Barthoulot — informatique pour PME de Suisse romande"><meta property="og:site_name" content="Loïc Barthoulot"><meta property="og:locale" content="fr_CH"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Me contacter | Loïc Barthoulot"><meta name="twitter:description" content="Contactez Loïc Barthoulot au sujet d'une application métier, d'un processus à digitaliser, d'un site web ou d'un poste de travail."><meta name="twitter:image" content="https://loicbarthoulot.ch/og.png"><link rel="canonical" href="https://loicbarthoulot.ch/contact"></head>
   <body>
-    <div id="app" data-server-rendered="true"><div id="app" data-v-eefa04c4=""><nav class="navbar navbar-expand-lg navbar-dark navbar-dark-custom fixed-top mobile-push-menu" style="margin:0;padding-top:0;padding-bottom:0;" data-v-eefa04c4="" data-v-96d506fd=""><div class="container" data-v-96d506fd=""><a href="/" class="navbar-brand" data-v-96d506fd=""><picture data-v-96d506fd=""><source srcset="/logo.webp" type="image/webp" data-v-96d506fd=""><img src="/logo.png" alt="Loïc Barthoulot - Services IT Suisse" height="60" class="me-2" data-v-96d506fd=""></picture></a><button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" data-v-96d506fd=""><span class="navbar-toggler-icon" data-v-96d506fd=""></span></button><div class="collapse navbar-collapse" id="navbarNav" data-v-96d506fd=""><ul class="navbar-nav ms-auto" data-v-96d506fd=""><li class="nav-item" data-v-96d506fd=""><a href="/" class="nav-link" data-v-96d506fd="">ACCUEIL</a></li><li class="nav-item" data-v-96d506fd=""><a href="/services" class="nav-link" data-v-96d506fd="">SERVICES</a></li><li class="nav-item" data-v-96d506fd=""><a href="/cv" class="nav-link" data-v-96d506fd="">MON CV</a></li><li class="nav-item" data-v-96d506fd=""><a aria-current="page" href="/contact" class="router-link-active router-link-exact-active nav-link" data-v-96d506fd="">CONTACT</a></li></ul></div></div></nav><main class="main-content" data-v-eefa04c4=""><div class="section-padding" style="min-height:100vh;" data-v-eefa04c4="" data-v-ddd5fb1b=""><div class="container" data-v-ddd5fb1b=""><div class="row justify-content-center" data-v-ddd5fb1b=""><div class="col-lg-8" data-v-ddd5fb1b=""><div class="text-center mb-5" data-v-ddd5fb1b=""><h1 class="display-4 fw-bold" data-v-ddd5fb1b="">Me Contacter</h1><p class="lead" data-v-ddd5fb1b=""> Une question ? Un projet ? N'hésitez pas à me contacter pour un devis gratuit </p></div><div class="row g-4 mb-5 justify-content-center" data-v-ddd5fb1b=""><div class="col-md-4 text-center" data-v-ddd5fb1b=""><div class="card card-custom contact-form-card h-100" data-v-ddd5fb1b=""><div class="card-body p-4" data-v-ddd5fb1b=""><div class="icon-feature" data-v-ddd5fb1b=""><i class="fas fa-envelope" data-v-ddd5fb1b=""></i></div><h5 data-v-ddd5fb1b="">Email</h5><p data-v-ddd5fb1b="">contact@loicbarthoulot.ch</p></div></div></div><div class="col-md-3 text-center" data-v-ddd5fb1b=""><div class="card card-custom contact-form-card h-100" data-v-ddd5fb1b=""><div class="card-body p-4" data-v-ddd5fb1b=""><div class="icon-feature" data-v-ddd5fb1b=""><i class="fas fa-mobile-alt" data-v-ddd5fb1b=""></i></div><h5 data-v-ddd5fb1b="">Téléphone</h5><p data-v-ddd5fb1b="">Après un premier contact</p></div></div></div></div><div class="card card-custom contact-form-card" data-v-ddd5fb1b=""><div class="card-body p-4" data-v-ddd5fb1b=""><h3 class="text-primary-custom mb-4" data-v-ddd5fb1b="">Formulaire de contact</h3><!----><!----><form novalidate="" data-v-ddd5fb1b=""><div class="row g-3" data-v-ddd5fb1b=""><div class="col-md-6" data-v-ddd5fb1b=""><label for="firstName" class="form-label text-color" data-v-ddd5fb1b="">Prénom *</label><input type="text" class="form-control" id="firstName" value="" aria-required="true" aria-describedby="firstName-error" data-v-ddd5fb1b=""><div class="invalid-feedback" id="firstName-error" data-v-ddd5fb1b=""></div></div><div class="col-md-6" data-v-ddd5fb1b=""><label for="lastName" class="form-label text-color" data-v-ddd5fb1b="">Nom *</label><input type="text" class="form-control" id="lastName" value="" aria-required="true" aria-describedby="lastName-error" data-v-ddd5fb1b=""><div class="invalid-feedback" id="lastName-error" data-v-ddd5fb1b=""></div></div><div class="col-12" data-v-ddd5fb1b=""><label for="email" class="form-label text-color" data-v-ddd5fb1b="">Email *</label><input type="email" class="form-control" id="email" value="" aria-required="true" aria-describedby="email-error" data-v-ddd5fb1b=""><div class="invalid-feedback" id="email-error" data-v-ddd5fb1b=""></div></div><div class="col-12" data-v-ddd5fb1b=""><label for="subject" class="form-label text-color" data-v-ddd5fb1b="">Sujet *</label><select class="form-select" id="subject" aria-required="true" aria-describedby="subject-error" data-v-ddd5fb1b=""><option value="" data-v-ddd5fb1b="" selected="">Choisissez un sujet</option><option value="montage" data-v-ddd5fb1b="">Montage PC</option><option value="depannage" data-v-ddd5fb1b="">Dépannage / Réparation</option><option value="nettoyage" data-v-ddd5fb1b="">Nettoyage / Entretien</option><option value="autre" data-v-ddd5fb1b="">Autre</option></select><div class="invalid-feedback" id="subject-error" data-v-ddd5fb1b=""></div></div><div class="col-12" data-v-ddd5fb1b=""><label for="message" class="form-label text-color" data-v-ddd5fb1b="">Message *</label><textarea class="form-control" id="message" rows="5" placeholder="Décrivez votre projet ou votre problème..." aria-required="true" aria-describedby="message-error" data-v-ddd5fb1b=""></textarea><div class="invalid-feedback" id="message-error" data-v-ddd5fb1b=""></div></div><div class="col-12" data-v-ddd5fb1b=""><button type="submit" class="btn btn-primary-custom btn-lg" data-v-ddd5fb1b=""><span data-v-ddd5fb1b=""><i class="fas fa-paper-plane me-2" data-v-ddd5fb1b=""></i>Envoyer le message </span></button></div></div></form></div></div></div></div></div></div></main><footer class="footer-custom" data-v-eefa04c4="" data-v-af5ec388=""><div class="container" data-v-af5ec388=""><div class="row align-items-center" data-v-af5ec388=""><div class="col-md-6 col-12 mb-2 mb-md-0" data-v-af5ec388=""><p class="footer-copyright mb-0" data-v-af5ec388=""> © 2026 Loïc Barthoulot. Tous droits réservés. </p></div><div class="col-md-6 col-12" data-v-af5ec388=""><div class="footer-right" data-v-af5ec388=""><nav class="footer-nav" data-v-af5ec388=""><a href="/" class="footer-link" data-v-af5ec388="">Accueil</a><span class="footer-separator" data-v-af5ec388="">·</span><a href="/services" class="footer-link" data-v-af5ec388="">Services</a><span class="footer-separator" data-v-af5ec388="">·</span><a href="/cv" class="footer-link" data-v-af5ec388="">Mon CV</a><span class="footer-separator" data-v-af5ec388="">·</span><a aria-current="page" href="/contact" class="router-link-active router-link-exact-active footer-link" data-v-af5ec388="">Contact</a></nav><div class="footer-actions" data-v-af5ec388=""><a href="https://www.linkedin.com/in/loic-barthoulot/" class="footer-link linkedin-link" target="_blank" rel="noopener noreferrer" aria-label="Profil LinkedIn de Loïc Barthoulot" data-v-af5ec388=""><i class="fab fa-linkedin-in me-1" data-v-af5ec388=""></i> LinkedIn </a><button class="scroll-top-btn d-none d-md-inline-flex" aria-label="Remonter en haut de la page" title="Remonter en haut" data-v-af5ec388=""><i class="fas fa-arrow-up" data-v-af5ec388=""></i></button></div></div></div></div></div></footer></div></div>
+    <div id="app" data-server-rendered="true"><!--[--><a class="saut-contenu" href="#contenu">Aller au contenu</a><div class="d-flex flex-column min-vh-100"><nav class="navbar navbar-expand-lg navbar-site sticky-top" aria-label="Navigation principale"><div class="container"><a href="/" class="navbar-brand marque" aria-label="Loïc Barthoulot, accueil"><picture><source srcset="/logo.webp" type="image/webp"><img src="/logo.png" alt="" width="60" height="60" class="marque__logo"></picture><span class="marque__nom">Loïc Barthoulot</span></a><button class="navbar-toggler border-0 px-2" type="button" data-bs-toggle="collapse" data-bs-target="#navigation" aria-controls="navigation" aria-label="Ouvrir le menu"><span class="navbar-toggler-icon"></span></button><div id="navigation" class="collapse navbar-collapse"><ul class="navbar-nav ms-auto align-items-lg-center gap-lg-4 mt-3 mt-lg-0"><li class="nav-item"><a href="/services" class="nav-link">Ce que je fais</a></li><li class="nav-item"><a href="/cv" class="nav-link">Parcours</a></li><li class="nav-item mt-2 mt-lg-0"><a aria-current="page" href="/contact" class="router-link-active router-link-exact-active btn btn-primary btn-sm px-3"> Me contacter </a></li></ul></div></div></nav><main id="contenu" class="flex-grow-1"><!--[--><section class="hero hero--compact"><div class="container"><div class="row"><div class="col-lg-8"><p class="surtitre">Contact</p><h1 class="hero__titre mb-3">Me contacter</h1><p class="hero__texte mb-0"> Décrivez votre projet ou votre problème. Je réponds par écrit. </p></div></div></div></section><section class="section"><div class="container"><div class="row gy-5 gx-4"><div class="col-lg-5"><div class="fiche"><div class="fiche__ligne"><span class="fiche__cle">Courriel</span><span class="fiche__valeur"><a href="mailto:contact@loicbarthoulot.ch">contact@loicbarthoulot.ch</a></span></div><div class="fiche__ligne"><span class="fiche__cle">Zone d'intervention</span><span class="fiche__valeur">Neuchâtel et Suisse romande</span></div><div class="fiche__ligne"><span class="fiche__cle">Délai de réponse</span><span class="fiche__valeur">Par écrit, sous quelques jours</span></div></div></div><div class="col-lg-7"><div class="panneau"><h2 class="h5 mb-4">Formulaire</h2><div aria-live="polite"><!----><!----></div><form novalidate=""><div class="row g-3"><div class="col-md-6"><label for="firstName" class="form-label">Prénom</label><input id="firstName" type="text" class="form-control" value="" required="" aria-required="true" aria-describedby="firstName-error"><div id="firstName-error" class="invalid-feedback"></div></div><div class="col-md-6"><label for="lastName" class="form-label">Nom</label><input id="lastName" type="text" class="form-control" value="" required="" aria-required="true" aria-describedby="lastName-error"><div id="lastName-error" class="invalid-feedback"></div></div><div class="col-12"><label for="email" class="form-label">Adresse électronique</label><input id="email" type="email" class="form-control" value="" required="" aria-required="true" aria-describedby="email-error"><div id="email-error" class="invalid-feedback"></div></div><div class="col-12"><label for="subject" class="form-label">Sujet</label><select id="subject" class="form-select" required="" aria-required="true" aria-describedby="subject-error"><option value="" selected="">Choisissez un sujet</option><option value="application-metier">Application métier</option><option value="processus">Digitalisation de processus</option><option value="site-web">Site web</option><option value="support-materiel">Support et matériel</option><option value="autre">Autre</option></select><div id="subject-error" class="invalid-feedback"></div></div><div class="col-12"><label for="message" class="form-label">Message</label><textarea id="message" rows="6" class="form-control" placeholder="Décrivez votre projet ou votre problème." required="" aria-required="true" aria-describedby="message-error"></textarea><div id="message-error" class="invalid-feedback"></div></div><div class="champ-leurre" aria-hidden="true"><label for="site-web">Ne remplissez pas ce champ</label><input id="site-web" type="text" value="" tabindex="-1" autocomplete="off"></div><div class="col-12"><button type="submit" class="btn btn-primary"><!----> Envoyer le message</button></div></div></form></div></div></div></div></section><!--]--></main><footer class="pied-site mt-auto"><div class="container"><div class="pied-site__signature"><a href="mailto:contact@loicbarthoulot.ch" class="pied-site__adresse"> contact@loicbarthoulot.ch </a><p class="mb-0">Neuchâtel et Suisse romande</p></div><div class="row gy-3 align-items-center"><div class="col-lg-4"><p class="mb-0">© 2026 Loïc Barthoulot</p></div><div class="col-lg-8"><nav class="d-flex flex-wrap gap-3 gap-lg-4 justify-content-lg-end" aria-label="Pied de page"><a href="/services" class="">Ce que je fais</a><a href="/cv" class="">Parcours</a><a aria-current="page" href="/contact" class="router-link-active router-link-exact-active">Contact</a><a href="/mentions-legales" class="">Mentions légales</a><a href="/confidentialite" class="">Confidentialité</a><a href="https://www.linkedin.com/in/loic-barthoulot/" target="_blank" rel="noopener noreferrer" class="d-inline-flex align-items-center gap-1"><svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9h4v12H3V9Zm6 0h3.8v1.7h.05c.53-.95 1.83-1.95 3.76-1.95C20.6 8.75 22 10.9 22 14.1V21h-4v-6.1c0-1.46-.03-3.34-2.05-3.34-2.05 0-2.36 1.6-2.36 3.24V21H9V9Z"></path></svg> LinkedIn </a></nav></div></div></div></footer></div><!--]--></div>
   
 
 </body></html>
