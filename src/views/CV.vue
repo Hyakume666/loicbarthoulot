@@ -9,6 +9,12 @@
             Développement web, sécurité opérationnelle et support informatique
             pour PME romandes
           </p>
+
+          <p class="disponibilite">
+            Je termine mon Bachelor HES-SO en juillet 2027 et je cherche un
+            poste à partir de cette date.
+          </p>
+
           <div class="d-flex flex-wrap gap-3">
             <router-link to="/contact" class="btn btn-primary">Me contacter</router-link>
             <a

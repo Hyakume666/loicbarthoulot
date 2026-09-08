@@ -221,6 +221,18 @@ p {
   max-width: 52ch;
 }
 
+// --- Disponibilité ------------------------------------------------------
+// Uniquement sur la page parcours : c'est là qu'arrive un recruteur, et un
+// client qui parcourt les prestations ne la croise jamais.
+
+.disponibilite {
+  border-left: 2px solid $bleu;
+  padding-left: 1rem;
+  margin-bottom: 2rem;
+  max-width: 46ch;
+  color: $encre;
+}
+
 // --- Étiquette de section -----------------------------------------------
 
 .surtitre {
