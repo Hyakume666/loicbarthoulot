@@ -30,3 +30,8 @@ dist-ssr
 .claude/
 CLAUDE.md
 graphify-out/
+
+# Captures de vérification visuelle
+.playwright-mcp/
+*.png
+!public/logo.png

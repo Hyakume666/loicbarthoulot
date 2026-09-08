@@ -1,79 +1,104 @@
 <template>
-  <div class="home-wrapper">
-    <!-- Hero Section -->
-    <section class="hero-section">
-      <!-- Particules d'arrière-plan -->
-      <div class="particles-bg">
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
+  <!-- Bloc d'ouverture : l'élément mémorable du site. -->
+  <section class="bloc bloc--accueil">
+    <div class="contenu">
+      <h1 class="bloc__titre">
+        Des <span class="bloc__appui">applications métier</span>
+        pour des PME romandes.
+      </h1>
+
+      <p class="bloc__texte accueil__texte">
+        Je regarde comment votre entreprise travaille, puis je construis
+        l'outil qui prend en charge ce qui se répète.
+      </p>
+
+      <p class="bloc__pied accueil__pied">
+        <span>Neuchâtel, Suisse romande</span>
+        <router-link to="/contact">Écrire</router-link>
+      </p>
+    </div>
+  </section>
+
+  <!-- Ce que je fais -->
+  <section class="section">
+    <div class="contenu">
+      <h2 class="accueil__section-titre">Ce que je fais</h2>
+
+      <div class="accueil__entrees">
+        <article class="entree">
+          <h3 class="entree__titre">Applications métier</h3>
+          <p>
+            Un outil développé sur mesure, qui suit le fonctionnement réel
+            de l'entreprise plutôt que l'inverse.
+          </p>
+        </article>
+
+        <article class="entree">
+          <h3 class="entree__titre">
+            <router-link to="/services/automatisation-ia">
+              Digitalisation de processus
+            </router-link>
+          </h3>
+          <p>
+            J'analyse ce qui se fait à la main, puis j'automatise ce qui
+            est répétitif, sans changer vos outils.
+          </p>
+        </article>
+
+        <article class="entree">
+          <h3 class="entree__titre">
+            <router-link to="/services/creation-site-web">
+              Sites web
+            </router-link>
+          </h3>
+          <p>
+            Site vitrine adapté au mobile, avec référencement de base,
+            formulaire de contact et mise en ligne.
+          </p>
+        </article>
+
+        <article class="entree">
+          <h3 class="entree__titre">
+            <router-link to="/services/support-materiel">
+              Support et matériel
+            </router-link>
+          </h3>
+          <p>
+            Assemblage de postes de travail, dépannage matériel et
+            logiciel, récupération de données et entretien.
+          </p>
+        </article>
       </div>
+    </div>
+  </section>
 
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-lg-8 text-center">
-            <!-- Nom principal avec effet néon -->
-            <div class="hero-name-container fade-in-up">
-              <h1 class="hero-name">
-                Loïc Barthoulot
-                <span class="visually-hidden"> — applications métier et digitalisation de processus en Suisse romande</span>
-              </h1>
-              <div class="hero-name-glow"></div>
-            </div>
+  <!-- Le différenciateur : le parcours commercial avant l'informatique. -->
+  <section class="bloc">
+    <div class="contenu">
+      <h2 class="bloc__titre accueil__titre-second">
+        Avant l'informatique, un CFC d'employé de commerce.
+      </h2>
+      <p class="bloc__texte accueil__texte">
+        C'est ce qui me permet de parler processus, comptabilité et
+        contraintes d'organisation avec un client, pas seulement technique.
+      </p>
+      <p class="bloc__pied accueil__pied">
+        <span>Bachelor HES-SO en informatique de gestion, HE-Arc Neuchâtel</span>
+        <router-link to="/cv">Le parcours</router-link>
+      </p>
+    </div>
+  </section>
 
-            <!-- Titre professionnel avec animation -->
-            <div class="hero-title-container fade-in-up delay-1">
-              <h2 class="hero-title">
-                <span class="title-line">Informatique de gestion</span>
-              </h2>
-            </div>
-
-            <div class="hero-location fade-in-up delay-2">
-              <i class="fas fa-map-marker-alt me-2"></i>Canton de Neuchâtel, Suisse
-            </div>
-
-            <p class="hero-description fade-in-up delay-3">
-              Je construis des applications métier et j'automatise des
-              processus pour des PME de Suisse romande. Je réalise aussi
-              des sites web, et j'interviens sur les postes de travail.
-            </p>
-
-            <div class="hero-cta fade-in-up delay-3">
-              <router-link to="/services" class="btn btn-primary-custom">
-                <i class="fas fa-cogs me-2"></i>
-                Voir mes services
-              </router-link>
-              <router-link to="/cv" class="btn btn-outline-primary-custom">
-                <i class="fas fa-file-alt me-2"></i>
-                Mon CV
-              </router-link>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CTA final -->
-    <section class="final-cta-section">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-lg-8 text-center">
-            <h2 class="cta-title fade-in-up">
-              Un projet ou une question ? Écrivez-moi.
-            </h2>
-            <div class="fade-in-up delay-1">
-              <router-link to="/contact" class="btn btn-primary-custom btn-lg">
-                Me contacter
-              </router-link>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </div>
+  <!-- Contact -->
+  <section class="section">
+    <div class="contenu">
+      <h2>Un projet ou une question ?</h2>
+      <p class="accueil__texte-clair">
+        Décrivez-moi votre situation. Je réponds par écrit.
+      </p>
+      <router-link to="/contact" class="bouton">Me contacter</router-link>
+    </div>
+  </section>
 </template>
 
 <script setup lang="ts">
@@ -86,391 +111,45 @@ usePageMeta(
 </script>
 
 <style scoped>
-.home-wrapper {
-  background-color: var(--bg);
-  min-height: 100vh;
-  margin: 0;
-  padding: 0;
-  border: none;
-  outline: none;
+.accueil__texte {
+  margin-top: var(--e-6);
 }
 
-/* Hero Section */
-.hero-section {
-  background:
-      radial-gradient(circle at 20% 80%, rgba(11, 94, 215, 0.15) 0%, transparent 50%),
-      radial-gradient(circle at 80% 20%, rgba(79, 70, 229, 0.15) 0%, transparent 50%),
-      linear-gradient(135deg, #0b0d10 0%, #151a1f 100%);
-  padding: 180px 0 100px 0;
-  position: relative;
-  overflow: hidden;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
+.accueil__pied {
+  margin-top: var(--e-8);
 }
 
-/* Particules animées */
-.particles-bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  z-index: 1;
+/* Le second bloc porte un texte plus long : il descend d'un pas. */
+.accueil__titre-second {
+  font-size: clamp(2rem, 5vw, 3.5625rem);
+  max-width: 30ch;
 }
 
-.particle {
-  position: absolute;
-  background: rgba(11, 94, 215, 0.1);
-  border-radius: 50%;
-  animation: float 6s ease-in-out infinite;
+.accueil__section-titre {
+  margin-bottom: var(--e-7);
 }
 
-.particle:nth-child(1) {
-  width: 80px;
-  height: 80px;
-  top: 20%;
-  left: 10%;
-  animation-delay: 0s;
+.accueil__entrees {
+  display: grid;
+  gap: 0;
 }
 
-.particle:nth-child(2) {
-  width: 120px;
-  height: 120px;
-  top: 60%;
-  right: 10%;
-  animation-delay: 2s;
-}
-
-.particle:nth-child(3) {
-  width: 60px;
-  height: 60px;
-  top: 80%;
-  left: 20%;
-  animation-delay: 4s;
-}
-
-.particle:nth-child(4) {
-  width: 100px;
-  height: 100px;
-  top: 30%;
-  right: 30%;
-  animation-delay: 1s;
-}
-
-.particle:nth-child(5) {
-  width: 40px;
-  height: 40px;
-  top: 10%;
-  right: 20%;
-  animation-delay: 3s;
-}
-
-.particle:nth-child(6) {
-  width: 90px;
-  height: 90px;
-  top: 70%;
-  left: 60%;
-  animation-delay: 5s;
-}
-
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0px) rotate(0deg);
-    opacity: 0.1;
+@media (min-width: 48rem) {
+  .accueil__entrees {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: var(--e-8);
   }
-  50% {
-    transform: translateY(-20px) rotate(180deg);
-    opacity: 0.3;
+
+  /* Sur deux colonnes, les deux premières entrées n'ont pas de filet haut. */
+  .accueil__entrees .entree:nth-child(2) {
+    border-top: 0;
+    margin-top: 0;
+    padding-top: 0;
   }
 }
 
-/* Container avec z-index pour passer au-dessus des particules */
-.hero-section .container {
-  position: relative;
-  z-index: 2;
-}
-
-/* Nom principal avec effet néon */
-.hero-name-container {
-  position: relative;
-  margin-bottom: 1.5rem;
-}
-
-.hero-name {
-  font-size: 4.5rem;
-  font-weight: 700;
-  color: var(--text);
-  margin: 0;
-  position: relative;
-  z-index: 2;
-  text-shadow:
-      0 0 10px rgba(11, 94, 215, 0.5),
-      0 0 20px rgba(11, 94, 215, 0.3),
-      0 0 30px rgba(11, 94, 215, 0.2);
-  background: linear-gradient(135deg, #e6e9ef 0%, #ffffff 50%, #e6e9ef 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-.hero-name-glow {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(135deg, rgba(11, 94, 215, 0.3) 0%, rgba(79, 70, 229, 0.3) 100%);
-  filter: blur(20px);
-  z-index: 1;
-  opacity: 0.6;
-  animation: pulse-glow 3s ease-in-out infinite;
-}
-
-@keyframes pulse-glow {
-  0%, 100% {
-    opacity: 0.4;
-    transform: translateX(-50%) scale(1);
-  }
-  50% {
-    opacity: 0.8;
-    transform: translateX(-50%) scale(1.05);
-  }
-}
-
-.hero-location {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  color: var(--muted);
-  font-size: 0.95rem;
-  font-weight: 500;
-  margin-bottom: 2rem;
-  padding: 0.4rem 1rem;
-  border: 1px solid var(--border);
-  border-radius: 20px;
-  background: rgba(11, 94, 215, 0.08);
-}
-
-/* Titre professionnel avec design moderne */
-.hero-title-container {
-  margin-bottom: 2.5rem;
-  position: relative;
-}
-
-.hero-title {
-  font-size: 1.8rem;
-  font-weight: 500;
-  margin: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-  flex-wrap: wrap;
-}
-
-.title-line {
-  color: var(--text);
-  font-weight: 400;
-  font-size: 1.6rem;
-  position: relative;
-  padding: 0 20px;
-}
-
-.title-line::after {
-  content: '';
-  position: absolute;
-  bottom: -8px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 60px;
-  height: 3px;
-  background: linear-gradient(90deg, var(--primary), #4f46e5);
-  border-radius: 2px;
-  opacity: 0.8;
-}
-
-.title-line:first-child::after {
-  background: linear-gradient(90deg, var(--primary), #06b6d4);
-}
-
-.title-line:last-child::after {
-  background: linear-gradient(90deg, #4f46e5, #8b5cf6);
-}
-
-/* Animation pour les lignes */
-.title-line {
-  animation: fadeInSlide 0.8s ease forwards;
-}
-
-.title-line:first-child {
-  animation-delay: 0.3s;
-}
-
-.title-line:last-child {
-  animation-delay: 0.5s;
-}
-
-@keyframes fadeInSlide {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.title-separator {
-  color: var(--muted);
-  font-weight: 300;
-  font-size: 1.2rem;
-  opacity: 0.6;
-  margin: 0 10px;
-}
-
-/* Description avec meilleur espacement */
-.hero-description {
-  font-size: 1.2rem;
-  color: var(--muted);
-  line-height: 1.7;
-  margin-bottom: 3rem;
-  max-width: 750px;
-  margin-left: auto;
-  margin-right: auto;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
-  font-weight: 400;
-}
-
-/* Boutons CTA améliorés */
-.hero-cta {
-  margin-top: 2rem;
-  display: flex;
-  justify-content: center;
-  gap: 1.5rem;
-  flex-wrap: wrap;
-}
-
-.hero-cta .btn {
-  font-size: 1.1rem;
-  padding: 14px 28px;
-  border-radius: 12px;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.hero-cta .btn:hover {
-  transform: translateY(-4px) scale(1.05);
-}
-
-/* Suppression de l'ancien style hero-title */
-.hero-title-container::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: radial-gradient(circle at 30% 20%, rgba(11, 94, 215, 0.15) 0%, transparent 50%);
-}
-
-
-/* Final CTA Section */
-.final-cta-section {
-  padding: 100px 0;
-  background-color: var(--bg);
-}
-
-.cta-title {
-  font-size: 2.5rem;
-  font-weight: 600;
-  color: var(--text);
-  margin-bottom: 2rem;
-  line-height: 1.3;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .home-wrapper {
-    padding-top: 70px;
-  }
-
-  .hero-section {
-    padding: 100px 0 60px 0;
-    text-align: center;
-  }
-
-  .hero-name {
-    font-size: 2rem;
-  }
-
-  .hero-title {
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-
-  .title-separator {
-    display: none;
-  }
-
-  .title-line {
-    display: block;
-    padding: 0;
-    font-size: 1.2rem;
-  }
-
-  .hero-description {
-    font-size: 1.1rem;
-    margin-bottom: 2rem;
-    padding: 0 15px;
-  }
-
-  .hero-cta {
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-    width: 100%;
-    padding: 0 20px;
-  }
-
-  .hero-cta .btn {
-    width: 100%;
-    max-width: 280px;
-    margin: 0 auto;
-    display: block;
-    text-align: center;
-  }
-
-  .final-cta-section {
-    padding: 60px 0;
-    margin-bottom: 60px;
-  }
-
-  .cta-title {
-    font-size: 1.75rem;
-    margin-bottom: 1.5rem;
-    padding: 0 15px;
-  }
-}
-
-@media (max-width: 480px) {
-  .hero-name {
-    font-size: 1.6rem;
-  }
-
-  .title-line {
-    font-size: 1rem;
-  }
-
-  .hero-cta .btn {
-    max-width: 250px;
-    padding: 12px 16px;
-    font-size: 0.95rem;
-  }
+.accueil__texte-clair {
+  color: var(--texte-faible);
+  margin-block: var(--e-4) var(--e-6);
 }
 </style>
