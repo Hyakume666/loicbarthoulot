@@ -6,7 +6,8 @@
           <p class="surtitre">Parcours</p>
           <h1 class="hero__titre mb-3">Mon parcours</h1>
           <p class="hero__texte mb-4">
-            Applications métier, sites web et infrastructure pour PME romandes
+            Développement web, sécurité opérationnelle et support informatique
+            pour PME romandes
           </p>
           <div class="d-flex flex-wrap gap-3">
             <router-link to="/contact" class="btn btn-primary">Me contacter</router-link>
@@ -33,7 +34,7 @@
             Je suis en dernière année de Bachelor HES-SO en informatique de gestion
             à la HE-Arc, à Neuchâtel. Mon travail consiste à comprendre comment une
             entreprise fonctionne, puis à construire l'outil qui lui fait gagner du
-            temps : application métier, automatisation d'un processus, site web ou
+            temps : site web, automatisation d'un processus, application métier ou
             reprise d'une infrastructure existante.
           </p>
           <p class="text-body-secondary">
@@ -237,7 +238,7 @@
 import { usePageMeta } from '@/composables/usePageMeta'
 usePageMeta(
   'Mon CV | Loïc Barthoulot',
-  'Parcours, compétences et expériences de Loïc Barthoulot : applications métier, développement web et sécurité opérationnelle pour PME romandes.',
+  'Parcours, compétences et expériences de Loïc Barthoulot : développement web, sécurité opérationnelle et support informatique pour PME romandes.',
   { path: '/cv', type: 'profile' }
 )
 </script>

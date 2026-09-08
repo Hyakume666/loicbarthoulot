@@ -13,7 +13,8 @@
           <h1 class="mb-3">Savoir ce qui se passe sur vos postes</h1>
           <p class="lead text-body-secondary mb-0">
             Une protection installée ne sert à rien si personne ne regarde ce
-            qu'elle remonte.
+            qu'elle remonte. Prestation assurée en partenariat avec PC-Shop
+            Informatique.
           </p>
         </div>
       </div>
@@ -21,17 +22,21 @@
       <div class="row g-4 mb-4">
         <div class="col-lg-7">
           <div class="panneau h-100">
-            <h2 class="h5 mb-3">Ce que je fais aujourd'hui</h2>
+            <h2 class="h5 mb-3">Comment c'est organisé</h2>
             <p class="text-body-secondary">
               Depuis 2023, j'assure la supervision de la sécurité opérationnelle
               sur le parc client de PC-Shop Informatique, en mandat indépendant.
               J'administre leur console de détection et de réponse, je surveille
-              les détections, je qualifie les alertes et je traite celles qui
-              le demandent.
+              les détections, je qualifie les alertes et je traite celles qui le
+              demandent. Je suis l'état de protection des postes et je remonte
+              les cas qui nécessitent une intervention.
             </p>
             <p class="text-body-secondary mb-0">
-              Je suis aussi l'état de protection des postes et je remonte les
-              cas qui nécessitent une intervention sur place.
+              Cette prestation vous est proposée <strong>dans ce cadre</strong> :
+              l'infrastructure de supervision et les licences sont celles de
+              PC-Shop Informatique, et c'est moi qui suis vos postes au
+              quotidien. Vous avez donc un interlocuteur direct et une structure
+              établie derrière.
             </p>
           </div>
         </div>
@@ -96,7 +101,7 @@
 import { usePageMeta } from '@/composables/usePageMeta'
 usePageMeta(
   'Sécurité et supervision | Loïc Barthoulot',
-  'Supervision de la sécurité opérationnelle : administration d\'une console de détection et de réponse, qualification des alertes, suivi de l\'état de protection du parc.',
+  'Supervision de la sécurité de vos postes : surveillance des détections, qualification et traitement des alertes. En partenariat avec PC-Shop Informatique.',
   { path: '/services/securite-supervision' }
 )
 </script>
