@@ -1,509 +1,551 @@
-:root {
-  --bg: #0b0d10;
-  --surface: #151a1f;
-  --text: #e6e9ef;
-  --muted: #9aa4b2;
-  --primary: #0b5ed7;
-  --primary-hover: #0a58ca;
-  --border: rgba(255, 255, 255, 0.06);
-  --shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
-  --shadow-hover: 0 8px 25px rgba(11, 94, 215, 0.15);
+/* =========================================================================
+   loicbarthoulot.ch — feuille de style globale
+
+   Direction « Le bloc » : l'impact vient de la couleur, pas de la
+   décoration. Deux fonds seulement (craie et outremer), une famille
+   typographique, une échelle, aucune ombre portée, aucune carte.
+
+   Les rôles de couleur (--fond, --texte, --accent, --trait, --focus) sont
+   redéfinis par .bloc. Tout composant placé dans un bloc s'adapte donc
+   sans règle supplémentaire : c'est ce qui remplace les surcharges
+   -custom de l'ancienne feuille.
+
+   Points de rupture, les deux seuls du site : 48rem et 64rem.
+   ========================================================================= */
+
+/* -------------------------------------------------------------------------
+   1. Remise à zéro
+   ------------------------------------------------------------------------- */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
 * {
   margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+}
+
+img,
+picture,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  color: inherit;
+}
+
+/* -------------------------------------------------------------------------
+   2. Tokens
+   ------------------------------------------------------------------------- */
+
+:root {
+  /* Couleurs brutes — six valeurs, aucune autre n'existe dans le site */
+  --outremer: #23277a;
+  --blanc: #ffffff;
+  --craie: #f1f2f6;
+  --nuit: #1a1e3a;
+  --sourdine: #5a6079;
+  --or: #e9b949;
+
+  /* Rôles, sur fond clair */
+  --fond: var(--craie);
+  --fond-net: var(--blanc);
+  --texte: var(--nuit);
+  --texte-faible: var(--sourdine);
+  --accent: var(--outremer);
+  --trait: #d9dce4;
+  --focus: var(--outremer);
+
+  /* Échelle typographique, ratio 1.333 à partir de 16 px */
+  --pas-0: 0.875rem;    /* 14 — mentions, libellés */
+  --pas-1: 1.125rem;    /* 18 — texte courant */
+  --pas-2: 1.5rem;      /* 24 — intertitre */
+  --pas-3: 2rem;        /* 32 — titre de section */
+  --pas-4: 2.6875rem;   /* 43 — titre de page */
+  --pas-5: 3.5625rem;   /* 57 — titre de page, écran large */
+  --pas-bloc: clamp(2.75rem, 8vw, 6.5rem);  /* réservé aux blocs */
+
+  /* Espacement, base 4 px */
+  --e-1: 0.25rem;
+  --e-2: 0.5rem;
+  --e-3: 0.75rem;
+  --e-4: 1rem;
+  --e-5: 1.5rem;
+  --e-6: 2rem;
+  --e-7: 3rem;
+  --e-8: 4rem;
+  --e-9: 6rem;
+  --e-10: 8rem;
+
+  /* Mesure */
+  --mesure: 64ch;
+  --mesure-bloc: 22ch;
+  --largeur-page: 68rem;
+
+  /* Divers */
+  --rayon: 3px;         /* champs de formulaire uniquement */
+  --duree: 160ms;
+}
+
+/* Dans un bloc, les rôles changent. Rien d'autre ne bouge. */
+.bloc {
+  --fond: var(--outremer);
+  --fond-net: var(--outremer);
+  --texte: var(--blanc);
+  --texte-faible: #b9bce0;
+  --accent: var(--or);
+  --trait: rgb(255 255 255 / 0.22);
+  --focus: var(--or);
+}
+
+/* -------------------------------------------------------------------------
+   3. Éléments de base
+   ------------------------------------------------------------------------- */
+
+html {
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
 }
 
 body {
-  font-family: 'Inter Variable', 'Inter', sans-serif;
-  background-color: var(--bg);
-  color: var(--text);
-  line-height: 1.6;
-  overflow-x: hidden;
   margin: 0;
-  padding: 0;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--craie);
+  color: var(--nuit);
+  font-family: 'Archivo Variable', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  font-size: var(--pas-1);
+  font-weight: 400;
+  font-variant-numeric: tabular-nums;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4 {
   font-weight: 600;
-  line-height: 1.2;
-  margin-bottom: 1rem;
-  color: var(--text);
+  line-height: 1.12;
+  letter-spacing: -0.012em;
+  text-wrap: balance;
 }
 
-p, li, small {
-  color: var(--text);
+h1 { font-size: var(--pas-4); }
+h2 { font-size: var(--pas-3); }
+h3 { font-size: var(--pas-2); }
+h4 { font-size: var(--pas-1); }
+
+@media (min-width: 64rem) {
+  h1 { font-size: var(--pas-5); }
 }
 
-.lead {
-  color: var(--muted);
+p {
+  max-width: var(--mesure);
+  text-wrap: pretty;
 }
 
-.bg-dark-custom {
-  background-color: var(--bg) !important;
+a {
+  color: inherit;
+  text-decoration-color: var(--trait);
+  text-underline-offset: 0.18em;
+  text-decoration-thickness: 1px;
+  transition: text-decoration-color var(--duree) ease;
 }
 
-.bg-dark-secondary {
-  background-color: var(--surface) !important;
+a:hover {
+  text-decoration-color: currentColor;
 }
 
-.bg-dark-tertiary {
-  background-color: var(--surface) !important;
+ul,
+ol {
+  padding-left: 1.1em;
 }
 
-.text-primary-custom {
-  color: var(--primary) !important;
+li::marker {
+  color: var(--texte-faible);
 }
 
-.text-color {
-  color: var(--text) !important;
-}
-
-.text-muted {
-  color: var(--muted) !important;
-}
-
-.btn-primary-custom {
-  background-color: var(--primary);
-  border-color: var(--primary);
-  color: white !important;
-  font-weight: 500;
-  padding: 12px 24px;
-  border-radius: 8px;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  text-decoration: none;
-  display: inline-block;
-  border: none;
-  box-shadow: 
-    0 4px 15px rgba(11, 94, 215, 0.4),
-    0 2px 4px rgba(0, 0, 0, 0.3),
-    inset 0 1px 0 rgba(255, 255, 255, 0.2);
-  position: relative;
-  overflow: hidden;
-}
-
-.btn-primary-custom::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-  transition: left 0.5s;
-}
-
-.btn-primary-custom:hover {
-  background-color: var(--primary-hover);
-  border-color: var(--primary-hover);
-  color: white !important;
-  transform: translateY(-3px) scale(1.02);
-  box-shadow: 
-    0 8px 25px rgba(11, 94, 215, 0.6),
-    0 4px 8px rgba(0, 0, 0, 0.4),
-    inset 0 1px 0 rgba(255, 255, 255, 0.3);
-}
-
-.btn-primary-custom:hover::before {
-  left: 100%;
-}
-
-.btn-primary-custom:active {
-  transform: translateY(-1px) scale(1.01);
-  box-shadow: 
-    0 4px 15px rgba(11, 94, 215, 0.5),
-    0 2px 4px rgba(0, 0, 0, 0.3),
-    inset 0 1px 0 rgba(255, 255, 255, 0.2);
-}
-
-/* Force white text on primary buttons */
-.btn-primary-custom,
-.btn-primary-custom:hover,
-.btn-primary-custom:focus,
-.btn-primary-custom:active {
-  color: white !important;
-}
-
-.btn-outline-primary-custom {
-  color: var(--primary);
-  border-color: var(--primary);
-  background-color: rgba(11, 94, 215, 0.2);
-  font-weight: 500;
-  padding: 12px 24px;
-  border-radius: 8px;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  text-decoration: none;
-  display: inline-block;
-  border: 2px solid rgba(11, 94, 215, 0.8);
-  box-shadow: 
-    0 4px 15px rgba(11, 94, 215, 0.6),
-    0 2px 4px rgba(0, 0, 0, 0.4),
-    inset 0 1px 0 rgba(255, 255, 255, 0.2);
-  position: relative;
-  overflow: hidden;
-  backdrop-filter: blur(10px);
-  color: white !important;
-}
-
-.btn-outline-primary-custom::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-  transition: left 0.5s;
-}
-
-.btn-outline-primary-custom:hover {
-  background-color: var(--primary);
-  border-color: var(--primary);
-  color: white !important;
-  transform: translateY(-3px) scale(1.02);
-  box-shadow: 
-    0 8px 25px rgba(11, 94, 215, 0.6),
-    0 4px 8px rgba(0, 0, 0, 0.4),
-    inset 0 1px 0 rgba(255, 255, 255, 0.3);
-}
-
-.btn-outline-primary-custom:hover::before {
-  left: 100%;
-}
-
-.btn-outline-primary-custom:active {
-  transform: translateY(-1px) scale(1.01);
-  box-shadow: 
-    0 4px 15px rgba(11, 94, 215, 0.5),
-    0 2px 4px rgba(0, 0, 0, 0.3),
-    inset 0 1px 0 rgba(255, 255, 255, 0.2);
-}
-
-/* Force white text on outline buttons when hovered */
-.btn-outline-primary-custom:hover,
-.btn-outline-primary-custom:focus,
-.btn-outline-primary-custom:active {
-  color: white !important;
-}
-
-.card-custom {
-  background-color: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  overflow: hidden;
-  position: relative;
-  box-shadow: 
-    0 4px 15px rgba(0, 0, 0, 0.3),
-    0 2px 4px rgba(0, 0, 0, 0.2),
-    inset 0 1px 0 rgba(255, 255, 255, 0.05);
-}
-
-.card-custom::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 3px;
-  background: linear-gradient(90deg, var(--primary), #4f46e5, var(--primary));
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.card-custom:hover {
-  transform: translateY(-8px) scale(1.02);
-  box-shadow: 
-    0 20px 40px rgba(11, 94, 215, 0.3),
-    0 8px 16px rgba(0, 0, 0, 0.4),
-    inset 0 1px 0 rgba(255, 255, 255, 0.1);
-  border-color: var(--primary);
-}
-
-.card-custom:hover::before {
-  opacity: 1;
-}
-
-.card-custom .card-img-top {
-  transition: transform 0.4s ease;
-  filter: brightness(0.9) contrast(1.1);
-}
-
-.card-custom:hover .card-img-top {
-  transform: scale(1.05);
-  filter: brightness(1) contrast(1.2);
-}
-
-.card-custom .card-body {
-  background: linear-gradient(135deg, var(--surface) 0%, rgba(21, 26, 31, 0.8) 100%);
-  position: relative;
-  color: var(--text);
-}
-
-.card-custom .card-title {
-  color: var(--text) !important;
+strong {
   font-weight: 600;
-  margin-bottom: 1rem;
-  position: relative;
 }
 
-.card-custom .card-title::after {
-  content: '';
-  position: absolute;
-  bottom: -5px;
-  left: 0;
-  width: 30px;
-  height: 2px;
-  background: var(--primary);
+hr {
+  border: 0;
+  border-top: 1px solid var(--trait);
+  margin: var(--e-6) 0;
+}
+
+/* Focus clavier — visible partout, sur les deux fonds */
+:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 2px;
   border-radius: 1px;
-  transition: width 0.3s ease;
 }
 
-.card-custom:hover .card-title::after {
-  width: 60px;
+:focus:not(:focus-visible) {
+  outline: none;
 }
 
-.card-custom .card-text {
-  color: var(--muted) !important;
-  line-height: 1.6;
+/* -------------------------------------------------------------------------
+   4. Mouvement
+   Une seule animation orchestrée sur le site : la montée du bloc d'accueil.
+   Le bloc ci-dessous la neutralise, ainsi que toute transition, quand le
+   système le demande. C'est le seul !important de la feuille, et il est
+   là pour cette raison précise.
+   ------------------------------------------------------------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
 
-.card-custom .text-primary-custom {
-  font-size: 1.25rem;
-  font-weight: 700;
-  text-shadow: 0 0 10px rgba(11, 94, 215, 0.5);
+/* -------------------------------------------------------------------------
+   5. Primitives de mise en page
+   ------------------------------------------------------------------------- */
+
+.contenu {
+  width: 100%;
+  max-width: var(--largeur-page);
+  margin-inline: auto;
+  padding-inline: var(--e-5);
 }
 
-.card-img-service {
-  height: 200px;
-  object-fit: cover;
+@media (min-width: 48rem) {
+  .contenu {
+    padding-inline: var(--e-6);
+  }
 }
 
-.service-card-clickable {
-  cursor: pointer;
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+.section {
+  padding-block: var(--e-8);
+  background-color: var(--fond);
+  color: var(--texte);
 }
 
-.service-card-clickable:hover {
-  transform: translateY(-12px) scale(1.03);
+@media (min-width: 48rem) {
+  .section {
+    padding-block: var(--e-9);
+  }
 }
 
-.text-decoration-none:hover .card-title {
-  color: var(--text) !important;
+.pile > * + * {
+  margin-top: var(--e-4);
 }
 
-.text-decoration-none:hover .card-text {
-  color: var(--muted) !important;
+.pile-large > * + * {
+  margin-top: var(--e-7);
 }
 
-.section-padding {
-  padding: 80px 0;
-  background-color: var(--bg);
+.colonnes {
+  display: grid;
+  gap: var(--e-5) var(--e-7);
 }
 
-.hero-section {
-  background: linear-gradient(135deg, var(--bg) 0%, var(--surface) 100%);
-  min-height: 100vh;
+@media (min-width: 48rem) {
+  .colonnes--2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .colonnes--3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.saut-contenu {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  padding: var(--e-3) var(--e-4);
+  background: var(--outremer);
+  color: var(--blanc);
+  z-index: 100;
+}
+
+.saut-contenu:focus {
+  left: var(--e-4);
+  top: var(--e-4);
+}
+
+/* -------------------------------------------------------------------------
+   6. Le bloc — élément porteur de la direction
+   ------------------------------------------------------------------------- */
+
+.bloc {
+  background-color: var(--fond);
+  color: var(--texte);
+  padding-block: var(--e-9);
+}
+
+@media (min-width: 48rem) {
+  .bloc {
+    padding-block: var(--e-10);
+  }
+}
+
+.bloc__titre {
+  font-size: var(--pas-bloc);
+  font-weight: 600;
+  font-stretch: 112%;
+  line-height: 0.98;
+  letter-spacing: -0.022em;
+  max-width: var(--mesure-bloc);
+  text-wrap: balance;
+}
+
+.bloc__texte {
+  font-size: var(--pas-1);
+  color: var(--texte-faible);
+  max-width: 46ch;
+}
+
+/* Le mot qui porte la phrase. Seul emploi de l'or. */
+.bloc__appui {
+  color: var(--accent);
+}
+
+/* L'unique animation orchestrée du site. */
+.bloc--accueil {
+  min-height: 100dvh;
   display: flex;
   align-items: center;
-  position: relative;
-  overflow: hidden;
+  animation: bloc-monte 420ms cubic-bezier(0.22, 0.61, 0.36, 1) both;
 }
 
-.hero-section::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: radial-gradient(circle at 30% 20%, rgba(11, 94, 215, 0.1) 0%, transparent 50%);
+.bloc--accueil .bloc__titre,
+.bloc--accueil .bloc__pied {
+  animation: bloc-texte 380ms 300ms ease both;
 }
 
-.fade-in-up {
-  opacity: 0;
-  transform: translateY(30px);
-  animation: fadeInUp 0.8s ease forwards;
+@keyframes bloc-monte {
+  from { clip-path: inset(100% 0 0 0); }
+  to   { clip-path: inset(0 0 0 0); }
 }
 
-.fade-in-up.delay-1 {
-  animation-delay: 0.2s;
+@keyframes bloc-texte {
+  from { opacity: 0; }
+  to   { opacity: 1; }
 }
 
-.fade-in-up.delay-2 {
-  animation-delay: 0.4s;
+.bloc__pied {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--e-4) var(--e-6);
+  align-items: baseline;
+  justify-content: space-between;
+  border-top: 1px solid var(--trait);
+  padding-top: var(--e-4);
+  font-size: var(--pas-0);
+  color: var(--texte-faible);
 }
 
-.fade-in-up.delay-3 {
-  animation-delay: 0.6s;
-}
+/* -------------------------------------------------------------------------
+   7. Boutons et liens d'action
+   ------------------------------------------------------------------------- */
 
-@keyframes fadeInUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.navbar-dark-custom {
-  background-color: rgba(11, 13, 16, 0.95) !important;
-  backdrop-filter: blur(10px);
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
-  transition: all 0.3s ease;
-  border-bottom: none !important;
-}
-
-.navbar-nav .nav-link {
-  color: var(--text) !important;
+.bouton {
+  display: inline-block;
+  padding: var(--e-3) var(--e-5);
+  border: 1px solid var(--accent);
+  border-radius: var(--rayon);
+  background-color: var(--accent);
+  color: var(--blanc);
+  font-size: var(--pas-0);
   font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color var(--duree) ease, border-color var(--duree) ease;
+}
+
+.bouton:hover {
+  background-color: color-mix(in srgb, var(--accent) 84%, black);
+  border-color: color-mix(in srgb, var(--accent) 84%, black);
+}
+
+.bouton:disabled {
+  opacity: 0.55;
+  cursor: default;
+}
+
+/* Dans un bloc, l'accent est l'or : le texte doit repasser en sombre. */
+.bloc .bouton {
+  color: var(--nuit);
+}
+
+.bouton--discret {
+  background-color: transparent;
+  border-color: var(--trait);
+  color: var(--texte);
+}
+
+.bouton--discret:hover {
+  background-color: transparent;
+  border-color: var(--texte);
+}
+
+.bloc .bouton--discret {
+  color: var(--texte);
+}
+
+/* -------------------------------------------------------------------------
+   8. Listes de prestations
+   Les 43 icônes fa-check identiques sont remplacées par une puce carrée.
+   Elle ne prétend pas informer, elle sépare.
+   ------------------------------------------------------------------------- */
+
+.liste {
+  list-style: none;
+  padding-left: 0;
+}
+
+.liste > li {
   position: relative;
-  transition: color 0.3s ease;
-  margin: 0 10px;
+  padding-left: var(--e-5);
+  margin-bottom: var(--e-3);
 }
 
-.navbar-nav .nav-link:hover {
-  color: var(--primary) !important;
-}
-
-.navbar-nav .nav-link::after {
+.liste > li::before {
   content: '';
   position: absolute;
-  width: 0;
-  height: 2px;
-  bottom: -2px;
-  left: 50%;
-  background-color: var(--primary);
-  transition: all 0.3s ease;
-  transform: translateX(-50%);
+  left: 0;
+  top: 0.62em;
+  width: 6px;
+  height: 6px;
+  background-color: var(--accent);
 }
 
-.navbar-nav .nav-link:hover::after,
-.navbar-nav .nav-link.router-link-active::after {
+/* -------------------------------------------------------------------------
+   9. Entrées libellé / contenu (services, CV)
+   ------------------------------------------------------------------------- */
+
+.entree {
+  border-top: 1px solid var(--trait);
+  padding-top: var(--e-5);
+  margin-top: var(--e-5);
+}
+
+.entree:first-child {
+  border-top: 0;
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.entree__titre {
+  font-size: var(--pas-2);
+  margin-bottom: var(--e-2);
+}
+
+.entree__date {
+  font-size: var(--pas-0);
+  color: var(--texte-faible);
+  white-space: nowrap;
+}
+
+.entree__lieu {
+  font-size: var(--pas-0);
+  color: var(--texte-faible);
+  margin-bottom: var(--e-3);
+}
+
+.mention {
+  font-size: var(--pas-0);
+  color: var(--texte-faible);
+}
+
+/* -------------------------------------------------------------------------
+   10. Formulaire
+   ------------------------------------------------------------------------- */
+
+.champ-groupe {
+  display: flex;
+  flex-direction: column;
+  gap: var(--e-2);
+}
+
+.champ-libelle {
+  font-size: var(--pas-0);
+  font-weight: 500;
+}
+
+.champ {
   width: 100%;
+  padding: var(--e-3);
+  background-color: var(--fond-net);
+  border: 1px solid var(--trait);
+  border-radius: var(--rayon);
+  font-size: var(--pas-1);
+  transition: border-color var(--duree) ease;
 }
 
-.icon-feature {
-  font-size: 3rem;
-  color: var(--primary);
-  margin-bottom: 1rem;
+.champ:hover {
+  border-color: var(--texte-faible);
 }
 
-.timeline {
-  position: relative;
-  padding-left: 30px;
+.champ:focus {
+  border-color: var(--accent);
 }
 
-.timeline::before {
-  content: '';
+.champ::placeholder {
+  color: var(--texte-faible);
+}
+
+.champ[aria-invalid='true'] {
+  border-color: #8a1e2c;
+}
+
+.champ-erreur {
+  font-size: var(--pas-0);
+  color: #8a1e2c;
+}
+
+.avis {
+  padding: var(--e-4);
+  border-left: 3px solid var(--accent);
+  background-color: var(--fond-net);
+  font-size: var(--pas-0);
+}
+
+.avis--erreur {
+  border-left-color: #8a1e2c;
+}
+
+/* -------------------------------------------------------------------------
+   11. Utilitaires — les seuls du site
+   ------------------------------------------------------------------------- */
+
+.invisible-sauf-lecteur {
   position: absolute;
-  left: 15px;
-  top: 0;
-  bottom: 0;
-  width: 2px;
-  background: var(--primary);
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
-.timeline-item {
-  position: relative;
-  margin-bottom: 30px;
-  background-color: var(--surface);
-  border-radius: 8px;
-  padding: 20px;
-  border: 1px solid var(--border);
-  border-left: 4px solid var(--primary);
+.texte-faible {
+  color: var(--texte-faible);
 }
 
-.timeline-item::before {
-  content: '';
-  position: absolute;
-  left: -33px;
-  top: 25px;
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background: var(--primary);
-  border: 3px solid var(--bg);
-}
-
-.timeline-item h5 {
-  color: var(--text) !important;
-  font-weight: 600;
-}
-
-.timeline-item .badge {
-  background-color: var(--primary) !important;
-  color: white !important;
-}
-
-.timeline-item .badge.bg-secondary {
-  background-color: var(--muted) !important;
-  color: var(--bg) !important;
-}
-
-.highlight-card {
-  background: linear-gradient(135deg, var(--surface) 0%, rgba(11, 94, 215, 0.1) 100%);
-  border: 1px solid var(--primary);
-}
-
-.sub-service-card {
-  background-color: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  padding: 24px;
-  margin-bottom: 24px;
-  transition: all 0.3s ease;
-}
-
-.sub-service-card:hover {
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-hover);
-  border-color: var(--primary);
-}
-
-.hero-section h1 {
-  color: var(--text) !important;
-}
-
-.hero-section .lead {
-  color: var(--muted) !important;
-}
-
-.section-title {
-  color: var(--text) !important;
-}
-
-.section-subtitle {
-  color: var(--muted) !important;
-}
-
-.form-control::placeholder {
-  color: var(--muted) !important;
-}
-
-/* Désactiver l'effet hover sur le formulaire de contact */
-.contact-form-card:hover {
-  transform: none !important;
-  box-shadow: 
-    0 4px 15px rgba(0, 0, 0, 0.3),
-    0 2px 4px rgba(0, 0, 0, 0.2),
-    inset 0 1px 0 rgba(255, 255, 255, 0.05) !important;
-  border-color: var(--border) !important;
-}
-
-.contact-form-card::before {
-  opacity: 0 !important;
-}
-
-
-@media (max-width: 768px) {
-  
-  .section-padding {
-    padding: 60px 0;
-  }
-  
-  .navbar-nav .nav-link {
-    margin: 5px 0;
-  }
+.petit {
+  font-size: var(--pas-0);
 }

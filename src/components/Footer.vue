@@ -1,198 +1,76 @@
 <template>
-  <footer class="footer-custom">
-    <div class="container">
-      <div class="row align-items-center">
-        <!-- Copyright à gauche -->
-        <div class="col-md-6 col-12 mb-2 mb-md-0">
-          <p class="footer-copyright mb-0">
-            &copy; {{ currentYear }} Loïc Barthoulot. Tous droits réservés.
-          </p>
-        </div>
-        
-        <!-- Navigation et liens à droite -->
-        <div class="col-md-6 col-12">
-          <div class="footer-right">
-            <!-- Mini menu -->
-            <nav class="footer-nav">
-              <router-link to="/" class="footer-link">Accueil</router-link>
-              <span class="footer-separator">·</span>
-              <router-link to="/services" class="footer-link">Services</router-link>
-              <span class="footer-separator">·</span>
-              <router-link to="/cv" class="footer-link">Mon CV</router-link>
-              <span class="footer-separator">·</span>
-              <router-link to="/contact" class="footer-link">Contact</router-link>
-            </nav>
-            
-            <!-- LinkedIn et bouton scroll top -->
-            <div class="footer-actions">
-              <a 
-                href="https://www.linkedin.com/in/loic-barthoulot/" 
-                class="footer-link linkedin-link"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Profil LinkedIn de Loïc Barthoulot"
-              >
-                <i class="fab fa-linkedin-in me-1"></i>
-                LinkedIn
-              </a>
-              
-              <!-- Bouton scroll to top (desktop uniquement) -->
-              <button 
-                @click="scrollToTop"
-                class="scroll-top-btn d-none d-md-inline-flex"
-                aria-label="Remonter en haut de la page"
-                title="Remonter en haut"
-              >
-                <i class="fas fa-arrow-up"></i>
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
+  <footer class="pied">
+    <div class="contenu pied__rangee">
+      <p class="pied__mention">© {{ annee }} Loïc Barthoulot</p>
+
+      <nav class="pied__nav" aria-label="Pied de page">
+        <router-link to="/services">Ce que je fais</router-link>
+        <router-link to="/cv">Parcours</router-link>
+        <router-link to="/contact">Contact</router-link>
+        <a
+          href="https://www.linkedin.com/in/loic-barthoulot/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <svg class="pied__icone" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path
+              fill="currentColor"
+              d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9h4v12H3V9Zm6 0h3.8v1.7h.05c.53-.95 1.83-1.95 3.76-1.95C20.6 8.75 22 10.9 22 14.1V21h-4v-6.1c0-1.46-.03-3.34-2.05-3.34-2.05 0-2.36 1.6-2.36 3.24V21H9V9Z"
+            />
+          </svg>
+          LinkedIn
+        </a>
+      </nav>
     </div>
   </footer>
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted } from 'vue'
-
-// Année dynamique
-const currentYear = ref(new Date().getFullYear())
-
-// Fonction scroll to top
-const scrollToTop = () => {
-  window.scrollTo({
-    top: 0,
-    behavior: 'smooth'
-  })
-}
-
-// Mettre à jour l'année si nécessaire
-onMounted(() => {
-  currentYear.value = new Date().getFullYear()
-})
+const annee = new Date().getFullYear()
 </script>
 
 <style scoped>
-.footer-custom {
-  background-color: #0f1419;
-  border-top: none;
-  padding: 24px 0;
-  margin-top: auto;
-  margin-bottom: 0;
-  min-height: 80px;
-  display: flex;
-  align-items: center;
+.pied {
+  background-color: var(--craie);
+  border-top: 1px solid var(--trait);
+  padding-block: var(--e-6);
+  font-size: var(--pas-0);
+  color: var(--texte-faible);
 }
 
-.footer-copyright {
-  color: #9aa4b2;
-  font-size: 0.9rem;
-}
-
-.footer-right {
+.pied__rangee {
   display: flex;
-  flex-direction: column;
-  gap: 12px;
-  align-items: flex-start;
-}
-
-.footer-nav {
-  display: flex;
-  align-items: center;
-  gap: 8px;
   flex-wrap: wrap;
+  gap: var(--e-4) var(--e-6);
+  align-items: baseline;
+  justify-content: space-between;
 }
 
-.footer-link {
-  color: #9aa4b2;
-  text-decoration: none;
-  font-size: 0.9rem;
-  transition: color 0.3s ease;
-  display: inline-flex;
-  align-items: center;
+.pied__mention {
+  margin: 0;
 }
 
-.footer-link:hover {
-  color: #e6e9ef;
-  text-decoration: none;
-}
-
-.footer-separator {
-  color: #9aa4b2;
-  font-size: 0.9rem;
-  user-select: none;
-}
-
-.footer-actions {
+.pied__nav {
   display: flex;
-  align-items: center;
-  gap: 16px;
+  flex-wrap: wrap;
+  gap: var(--e-5);
 }
 
-.linkedin-link {
-  font-weight: 500;
-}
-
-.linkedin-link i {
-  font-size: 1rem;
-}
-
-.scroll-top-btn {
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  color: #9aa4b2;
-  width: 32px;
-  height: 32px;
-  border-radius: 6px;
+.pied__nav a {
   display: inline-flex;
   align-items: center;
-  justify-content: center;
-  font-size: 0.8rem;
-  transition: all 0.3s ease;
-  cursor: pointer;
+  gap: var(--e-2);
+  color: var(--texte-faible);
+  text-decoration: none;
+  transition: color var(--duree) ease;
 }
 
-.scroll-top-btn:hover {
-  background: rgba(255, 255, 255, 0.15);
-  color: #e6e9ef;
-  border-color: rgba(255, 255, 255, 0.3);
-  transform: translateY(-1px);
+.pied__nav a:hover {
+  color: var(--texte);
 }
 
-.scroll-top-btn:active {
-  transform: translateY(0);
-}
-
-/* Responsive */
-@media (min-width: 768px) {
-  .footer-right {
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-end;
-    gap: 20px;
-  }
-  
-  .footer-nav {
-    gap: 12px;
-  }
-}
-
-@media (max-width: 767px) {
-  .footer-custom {
-    text-align: center;
-  }
-  
-  .footer-right {
-    align-items: center;
-  }
-  
-  .footer-nav {
-    justify-content: center;
-  }
-  
-  .footer-actions {
-    justify-content: center;
-  }
+.pied__icone {
+  width: 1em;
+  height: 1em;
 }
 </style>

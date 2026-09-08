@@ -1,7 +1,6 @@
 import { ViteSSG } from 'vite-ssg'
 import App from './App.vue'
-import '@fontsource-variable/inter'
-import 'bootstrap/dist/css/bootstrap.min.css'
+import '@fontsource-variable/archivo/wdth.css'
 import './style.css'
 
 import Home from './views/Home.vue'
@@ -41,7 +40,6 @@ export const createApp = ViteSSG(
   },
   ({ isClient }) => {
     if (isClient) {
-      import('bootstrap/dist/js/bootstrap.bundle.min.js')
       const redirect = sessionStorage.getItem('spa-redirect')
       if (redirect) {
         sessionStorage.removeItem('spa-redirect')

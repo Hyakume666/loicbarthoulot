@@ -1,49 +1,27 @@
 <template>
-  <div id="app">
-    <Header />
-    <main class="main-content">
-      <RouterView v-slot="{ Component }">
-        <Transition name="page" mode="out-in">
-          <component :is="Component" />
-        </Transition>
-      </RouterView>
-    </main>
-    <Footer />
-  </div>
+  <a class="saut-contenu" href="#contenu">Aller au contenu</a>
+  <Header :sur-bloc="surBloc" />
+  <main id="contenu" class="principal">
+    <RouterView />
+  </main>
+  <Footer />
 </template>
 
 <script setup lang="ts">
+import { computed } from 'vue'
+import { useRoute } from 'vue-router'
 import Header from './components/Header.vue'
 import Footer from './components/Footer.vue'
+
+const route = useRoute()
+
+// L'accueil ouvre sur un bloc outremer pleine hauteur : l'en-tête s'y pose
+// sans fond propre. Partout ailleurs il a le fond clair de la page.
+const surBloc = computed(() => route.path === '/')
 </script>
 
-<style>
-.page-enter-active,
-.page-leave-active {
-  transition: opacity 0.18s ease;
-}
-.page-enter-from,
-.page-leave-to {
-  opacity: 0;
-}
-</style>
-
 <style scoped>
-#app {
-  background-color: var(--bg);
-  margin: 0;
-  padding: 0;
-  border: none;
-  outline: none;
-  min-height: 100vh;
-}
-
-.main-content {
-  min-height: calc(100vh - 80px);
-  background-color: var(--bg);
-  margin: 0;
-  padding: 0;
-  border: none;
-  outline: none;
+.principal {
+  flex: 1;
 }
 </style>
