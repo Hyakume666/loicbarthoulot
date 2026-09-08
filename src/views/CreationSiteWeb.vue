@@ -81,12 +81,12 @@
 
           <!-- Call to action -->
           <div class="text-center">
-            <h3 class="mb-4">Prêt à créer votre site web ?</h3>
+            <h3 class="mb-4">Parlons de votre site</h3>
             <p class="mb-4">
-              Contactez-moi pour discuter de votre projet et obtenir un devis personnalisé
+              Décrivez-moi votre activité et ce que le site doit faire.
             </p>
             <router-link to="/contact" class="btn btn-primary-custom btn-lg">
-              Demander un devis gratuit
+              Me contacter
             </router-link>
           </div>
         </div>

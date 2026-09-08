@@ -4,9 +4,9 @@
       <div class="row justify-content-center">
         <div class="col-lg-8">
           <div class="text-center mb-5">
-            <h1 class="display-4 fw-bold">Me Contacter</h1>
+            <h1 class="display-4 fw-bold">Me contacter</h1>
             <p class="lead">
-              Une question ? Un projet ? N'hésitez pas à me contacter pour un devis gratuit
+              Décrivez votre projet ou votre problème. Je réponds par écrit.
             </p>
           </div>
 
@@ -158,7 +158,7 @@ import emailjs from '@emailjs/browser'
 
 usePageMeta(
   'Contact | Loïc Barthoulot',
-  'Contactez Loïc Barthoulot pour un devis, une question ou une démo gratuite. Réponse rapide.',
+  'Contactez Loïc Barthoulot au sujet d\'une application métier, d\'un processus à digitaliser, d\'un site web ou d\'un poste de travail.',
   { path: '/contact' }
 )
 
