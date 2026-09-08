@@ -16,7 +16,12 @@
           </p>
 
           <div class="d-flex flex-wrap gap-3">
-            <router-link to="/contact" class="btn btn-primary">Me contacter</router-link>
+            <a
+              :href="cvPdf"
+              class="btn btn-primary"
+              download
+            >Télécharger le CV (PDF)</a>
+            <router-link to="/contact" class="btn btn-outline-light">Me contacter</router-link>
             <a
               href="https://www.linkedin.com/in/loic-barthoulot/"
               class="btn btn-outline-light"
@@ -242,6 +247,10 @@
 
 <script setup lang="ts">
 import { usePageMeta } from '@/composables/usePageMeta'
+
+// Version publique du CV : sans téléphone, sans adresse postale, sans date
+// de naissance et sans coordonnée de référence. Source dans cv-source/.
+const cvPdf = import.meta.env.BASE_URL + 'cv-loic-barthoulot.pdf'
 usePageMeta(
   'Mon CV | Loïc Barthoulot',
   'Parcours, compétences et expériences de Loïc Barthoulot : développement web, sécurité opérationnelle et support informatique pour PME romandes.',

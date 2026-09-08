@@ -1,0 +1,447 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>CV — Loïc Barthoulot</title>
+<!--
+  Source du CV public, composée pour l'impression A4.
+
+  Version publique : ni téléphone, ni adresse postale, ni date de naissance,
+  ni coordonnée de référence. Le contenu est aligné sur la page /cv du site.
+
+  Régénérer le PDF, en deux temps :
+    1) npm run dev
+    2) "C:\Program Files\Google\Chrome\Application\chrome.exe" ^
+         --headless=new --disable-gpu --no-pdf-header-footer ^
+         --virtual-time-budget=8000 ^
+         --print-to-pdf="%CD%\public\cv-loic-barthoulot.pdf" ^
+         "http://localhost:5199/cv-source/cv.html"
+-->
+<style>
+  @page {
+    size: A4;
+    margin: 13mm 14mm 11mm;
+  }
+
+  @font-face {
+    font-family: 'Inter Variable';
+    font-style: normal;
+    font-weight: 100 900;
+    src: url('../node_modules/@fontsource-variable/inter/files/inter-latin-wght-normal.woff2') format('woff2-variations');
+  }
+
+  :root {
+    --bleu: #2b5fd9;      /* le bleu du site, assombri pour l'encre */
+    --encre: #16191f;
+    --gris: #5a6272;
+    --trait: #d7dbe2;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Inter Variable', system-ui, sans-serif;
+    font-size: 8.9pt;
+    line-height: 1.3;
+    color: var(--encre);
+    background: #fff;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* Aperçu à l'écran uniquement : reproduit les marges @page pour que ce
+     qu'on voit dans le navigateur corresponde au PDF. Ignoré à l'impression. */
+  @media screen {
+    body {
+      width: 210mm;
+      min-height: 297mm;
+      margin: 0 auto;
+      padding: 13mm 14mm 11mm;
+      box-shadow: 0 0 0 1px #e5e8ec;
+    }
+  }
+
+  /* --- En-tête ------------------------------------------------------- */
+
+  .entete {
+    border-bottom: 2pt solid var(--bleu);
+    padding-bottom: 5pt;
+    margin-bottom: 9pt;
+  }
+
+  .nom {
+    font-size: 22pt;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.05;
+  }
+
+  .fonction {
+    font-size: 9.8pt;
+    color: var(--bleu);
+    font-weight: 550;
+    margin-top: 2pt;
+  }
+
+  .contacts {
+    margin-top: 7pt;
+    font-size: 8.6pt;
+    color: var(--gris);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3pt 14pt;
+  }
+
+  .contacts a { color: var(--gris); text-decoration: none; }
+
+  /* --- Grille -------------------------------------------------------- */
+
+  .corps {
+    display: grid;
+    grid-template-columns: 1fr 62mm;
+    gap: 0 11mm;
+  }
+
+  /* --- Titres de rubrique -------------------------------------------- */
+
+  h2 {
+    font-size: 9pt;
+    font-weight: 700;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: var(--bleu);
+    padding-bottom: 2.5pt;
+    border-bottom: 0.75pt solid var(--trait);
+    margin: 7pt 0 4pt;
+  }
+
+  .colonne > h2:first-child { margin-top: 0; }
+
+  /* --- Entrées d'expérience ------------------------------------------ */
+
+  .poste {
+    margin-bottom: 4.5pt;
+    break-inside: avoid;
+  }
+
+  .poste__tete {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 6pt;
+  }
+
+  .poste__titre { font-size: 9.4pt; font-weight: 650; }
+
+  .poste__date {
+    font-size: 8.4pt;
+    color: var(--gris);
+    white-space: nowrap;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .poste__lieu {
+    font-size: 8.8pt;
+    color: var(--gris);
+    margin-bottom: 3pt;
+  }
+
+  .poste ul { list-style: none; }
+
+  .poste li {
+    position: relative;
+    padding-left: 8pt;
+    margin-bottom: 1pt;
+  }
+
+  .poste li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 4.6pt;
+    width: 2.6pt;
+    height: 2.6pt;
+    background: var(--bleu);
+  }
+
+  /* --- Colonne latérale ---------------------------------------------- */
+
+  .profil { margin-bottom: 2pt; }
+  .profil p + p { margin-top: 3pt; }
+
+  .groupe { margin-bottom: 4.5pt; break-inside: avoid; }
+
+  .groupe__titre {
+    font-weight: 650;
+    font-size: 9pt;
+    margin-bottom: 1.5pt;
+  }
+
+  .groupe p { color: var(--gris); font-size: 8.9pt; }
+
+  .langue {
+    display: flex;
+    justify-content: space-between;
+    gap: 6pt;
+    margin-bottom: 2pt;
+  }
+
+  .langue__niveau { color: var(--gris); font-size: 8.6pt; text-align: right; }
+
+  .liste-simple { list-style: none; }
+
+  .liste-simple li {
+    position: relative;
+    padding-left: 8pt;
+    margin-bottom: 2pt;
+    color: var(--gris);
+    font-size: 8.9pt;
+  }
+
+  .liste-simple li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 4.4pt;
+    width: 2.6pt;
+    height: 2.6pt;
+    background: var(--trait);
+  }
+
+    .mention { color: var(--gris); font-size: 8.9pt; }
+
+  /* Postes antérieurs à l'informatique : une ligne chacun. Ils montrent la
+     continuité d'emploi, pas des compétences techniques. */
+  .poste--bref {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 6pt;
+    margin-bottom: 3pt;
+  }
+
+  .poste--bref .poste__titre { font-weight: 600; }
+  .poste--bref .poste__lieu { margin-bottom: 0; }
+</style>
+</head>
+<body>
+
+  <header class="entete">
+    <div class="nom">Loïc Barthoulot</div>
+    <div class="fonction">
+      Informatique de gestion — développement web, sécurité opérationnelle, support
+    </div>
+    <div class="contacts">
+      <span>contact@loicbarthoulot.ch</span>
+      <span>La Chaux-de-Fonds, Suisse</span>
+      <span>loicbarthoulot.ch</span>
+      <span>linkedin.com/in/loic-barthoulot</span>
+    </div>
+  </header>
+
+  <div class="corps">
+
+    <!-- Colonne principale -->
+    <div class="colonne">
+
+      <h2>Profil</h2>
+      <div class="profil">
+        <p>
+          Dernière année de Bachelor HES-SO en informatique de gestion à la
+          HE-Arc. Je conçois et développe des outils web pour des PME de Suisse
+          romande, et j'assure la supervision de la sécurité opérationnelle
+          d'un parc client en mandat indépendant.
+        </p>
+        <p>
+          Un CFC d'employé de commerce avant l'informatique me permet de
+          discuter comptabilité, processus et contraintes d'organisation avec
+          un client, pas seulement technique.
+        </p>
+      </div>
+
+      <h2>Expérience</h2>
+
+      <div class="poste">
+        <div class="poste__tete">
+          <span class="poste__titre">Développement web &amp; prestations informatiques</span>
+          <span class="poste__date">2023 – aujourd'hui</span>
+        </div>
+        <div class="poste__lieu">Activité indépendante — loicbarthoulot.ch</div>
+        <ul>
+          <li>Conception et développement de sites web sur mesure (Vue 3 / TypeScript, WordPress)</li>
+          <li>Analyse du besoin client et cadrage avant développement</li>
+          <li>Assemblage, diagnostic et remise en état de postes de travail</li>
+          <li>Conseil en choix de matériel et accompagnement des utilisateurs</li>
+        </ul>
+      </div>
+
+      <div class="poste">
+        <div class="poste__tete">
+          <span class="poste__titre">Prestataire IT — sécurité opérationnelle</span>
+          <span class="poste__date">07/2023 – aujourd'hui</span>
+        </div>
+        <div class="poste__lieu">PC-Shop Informatique, Corcelles-Cormondrèche — mandat indépendant</div>
+        <ul>
+          <li>Administration de la console XDR (Trend Micro) sur le parc client de l'entreprise</li>
+          <li>Surveillance des détections, qualification et traitement des alertes</li>
+          <li>Suivi de l'état de protection des postes et remontée des cas nécessitant une intervention</li>
+        </ul>
+      </div>
+
+      <div class="poste">
+        <div class="poste__tete">
+          <span class="poste__titre">Hotline — service informatique</span>
+          <span class="poste__date">Année académique 2026 – 2027</span>
+        </div>
+        <div class="poste__lieu">HE-Arc, Neuchâtel</div>
+        <ul>
+          <li>Support de premier niveau aux étudiants et au personnel, en parallèle du cursus</li>
+        </ul>
+      </div>
+
+      <div class="poste">
+        <div class="poste__tete">
+          <span class="poste__titre">Stagiaire en informatique</span>
+          <span class="poste__date">08/2020 – 08/2021</span>
+        </div>
+        <div class="poste__lieu">PC-Shop Informatique, Corcelles-Cormondrèche</div>
+        <ul>
+          <li>Installation et configuration de postes de travail</li>
+          <li>Diagnostic et réparation matérielle et logicielle</li>
+          <li>Support utilisateur et suivi des interventions</li>
+        </ul>
+      </div>
+
+      <div class="poste--bref">
+        <span><span class="poste__titre">Assistant logistique</span><span class="poste__lieu"> — Ynovatec SA, La Chaux-de-Fonds</span></span>
+        <span class="poste__date">03/2023 – 06/2023</span>
+      </div>
+
+      <div class="poste--bref">
+        <span><span class="poste__titre">Vendeur</span><span class="poste__lieu"> — Station Eni, La Chaux-de-Fonds</span></span>
+        <span class="poste__date">10/2018 – 11/2019</span>
+      </div>
+
+      <div class="poste--bref">
+        <span><span class="poste__titre">Commissionnaire</span><span class="poste__lieu"> — BBV Laboratoires SA, La Chaux-de-Fonds</span></span>
+        <span class="poste__date">12/2017 – 09/2018</span>
+      </div>
+
+      <div class="poste--bref">
+        <span><span class="poste__titre">Agent de sécurité</span><span class="poste__lieu"> — NSA Sécurité, La Chaux-de-Fonds</span></span>
+        <span class="poste__date">08/2015 – 09/2017</span>
+      </div>
+
+      <h2>Formation</h2>
+
+      <div class="poste">
+        <div class="poste__tete">
+          <span class="poste__titre">Bachelor of Science HES-SO en informatique de gestion</span>
+          <span class="poste__date">2023 – 2027</span>
+        </div>
+        <div class="poste__lieu">
+          HE-Arc Gestion, Neuchâtel — cursus à temps partiel, dernière année en cours
+        </div>
+      </div>
+
+      <div class="poste">
+        <div class="poste__tete">
+          <span class="poste__titre">Bachelor HES-SO en ingénierie logicielle</span>
+          <span class="poste__date">2021 – 2023</span>
+        </div>
+        <div class="poste__lieu">
+          HE-Arc, Neuchâtel — deux ans validés, puis réorientation vers
+          l'informatique de gestion pour rapprocher la technique des enjeux
+          d'entreprise
+        </div>
+      </div>
+
+      <div class="poste">
+        <div class="poste__tete">
+          <span class="poste__titre">CFC d'employé de commerce et maturité professionnelle</span>
+          <span class="poste__date">2012 – 2015</span>
+        </div>
+        <div class="poste__lieu">CIFOM ESTER, La Chaux-de-Fonds</div>
+      </div>
+
+    </div>
+
+    <!-- Colonne latérale -->
+    <aside class="colonne">
+
+      <h2>Compétences</h2>
+
+      <div class="groupe">
+        <div class="groupe__titre">Analyse et processus métier</div>
+        <p>
+          Analyse des besoins et des processus métiers · modélisation BPMN et
+          UML · conception de données MERISE, MCD / MLD / MPD · progiciels de
+          gestion intégrés (ERP) · gestion documentaire (GED) · conduite de
+          projet et méthodes agiles
+        </p>
+      </div>
+
+      <div class="groupe">
+        <div class="groupe__titre">Développement</div>
+        <p>
+          Java — POO, Hibernate 6, JDBC · JavaScript / TypeScript, Vue 3 ·
+          HTML / CSS, intégration responsive · SQL et Oracle — requêtes
+          avancées, PL/SQL, XML · architecture logicielle et design patterns ·
+          Git · conception d'interface et expérience utilisateur
+        </p>
+      </div>
+
+      <div class="groupe">
+        <div class="groupe__titre">Infrastructure et sécurité</div>
+        <p>
+          Détection et réponse (XDR / EDR) en environnement client ·
+          gouvernance de la sécurité des SI · Docker — images, volumes,
+          réseaux, multi-stage builds · Windows 10 / 11 et Linux · réseaux
+          locaux et infrastructure · virtualisation VMware et VirtualBox,
+          notions Kubernetes / K3s
+        </p>
+      </div>
+
+      <div class="groupe">
+        <div class="groupe__titre">Matériel</div>
+        <p>
+          Montage et configuration de postes · choix et assemblage de
+          composants · diagnostic et remise en état
+        </p>
+      </div>
+
+      <div class="groupe">
+        <div class="groupe__titre">Conformité</div>
+        <p>Protection des données nLPD et RGPD · numérique responsable</p>
+      </div>
+
+      <h2>Langues</h2>
+
+      <div class="langue">
+        <span>Français</span>
+        <span class="langue__niveau">Langue maternelle</span>
+      </div>
+      <div class="langue">
+        <span>Anglais</span>
+        <span class="langue__niveau">Intermédiaire B1<br>CESC Certificate</span>
+      </div>
+      <div class="langue">
+        <span>Allemand</span>
+        <span class="langue__niveau">Élémentaire A2<br>Fit in Deutsch A2</span>
+      </div>
+
+      <h2>Certificats</h2>
+      <ul class="liste-simple">
+        <li>Certificat HTML &amp; CSS (Dyma)</li>
+        <li>« SQL de A à Z » (Udemy)</li>
+        <li>Formations complémentaires Dyma et Udemy sur divers langages</li>
+      </ul>
+
+      <h2>Références</h2>
+      <p class="mention">Sur demande.</p>
+
+    </aside>
+  </div>
+
+</body>
+</html>
