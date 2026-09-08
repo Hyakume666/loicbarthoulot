@@ -148,6 +148,23 @@ $focus-ring-blur:    0;
 //    Bootstrap : tout l'ajuste en amont, section 2.
 // -------------------------------------------------------------------------
 
+// Inter, sous-ensemble latin uniquement. Le paquet complet livrait aussi
+// cyrillique, grec, grec étendu, vietnamien et latin étendu — 170 Ko que le
+// navigateur ne demande jamais pour du français, mais qui partaient au
+// déploiement. Un caractère hors de cette plage retomberait sur la pile
+// système, ce qui n'arrive pas sur un site francophone.
+@font-face {
+  font-family: 'Inter Variable';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 100 900;
+  src: url('@fontsource-variable/inter/files/inter-latin-wght-normal.woff2') format('woff2-variations');
+  unicode-range:
+    U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
+    U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193,
+    U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
 body {
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
@@ -431,14 +448,6 @@ p {
   padding: $card-spacer-y $card-spacer-x;
 }
 
-.panneau--nu {
-  background-color: transparent;
-  border: 0;
-  border-top: 1px solid $bordure;
-  border-radius: 0;
-  padding: 1.75rem 0 0;
-}
-
 // --- Listes -------------------------------------------------------------
 
 .liste-marquee {
@@ -584,6 +593,30 @@ p {
       color: $encre;
     }
   }
+}
+
+// --- Adresse manquante (404) --------------------------------------------
+
+.adresse-manquante {
+  font-size: 0.875rem;
+  color: $sourdine;
+
+  span {
+    color: $encre;
+    word-break: break-all;
+  }
+}
+
+// --- Champ leurre du formulaire -----------------------------------------
+// Sorti du flux plutôt que masqué en display:none, que certains robots
+// détectent.
+
+.champ-leurre {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
 }
 
 // --- Lien d'évitement ---------------------------------------------------

@@ -29,7 +29,7 @@
         </div>
 
         <div class="col-lg-6">
-          <router-link to="/services/automatisation-ia" class="carte-lien">
+          <router-link to="/services/digitalisation-processus" class="carte-lien">
             <h2 class="carte-lien__titre h4">Digitalisation de processus</h2>
             <p class="carte-lien__texte">
               J'analyse ce qui se fait à la main dans votre entreprise, puis

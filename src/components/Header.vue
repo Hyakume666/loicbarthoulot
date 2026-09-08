@@ -15,8 +15,7 @@
         data-bs-toggle="collapse"
         data-bs-target="#navigation"
         aria-controls="navigation"
-        :aria-expanded="false"
-        aria-label="Ouvrir le menu"
+        :aria-label="ouvert ? 'Fermer le menu' : 'Ouvrir le menu'"
       >
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -41,17 +40,35 @@
 </template>
 
 <script setup lang="ts">
-import { watch } from 'vue'
+import { ref, watch, onMounted, onBeforeUnmount } from 'vue'
 import { useRoute } from 'vue-router'
 
 const logoWebp = import.meta.env.BASE_URL + 'logo.webp'
 const logoPng = import.meta.env.BASE_URL + 'logo.png'
 
 const route = useRoute()
+const ouvert = ref(false)
+
+// Bootstrap pilote aria-expanded lui-même, mais pas aria-label : on suit
+// ses événements pour que le libellé du bouton dise ce qu'il fait.
+const ouvre = () => { ouvert.value = true }
+const ferme = () => { ouvert.value = false }
+let menu: HTMLElement | null = null
+
+onMounted(() => {
+  menu = document.getElementById('navigation')
+  menu?.addEventListener('show.bs.collapse', ouvre)
+  menu?.addEventListener('hide.bs.collapse', ferme)
+})
+
+onBeforeUnmount(() => {
+  menu?.removeEventListener('show.bs.collapse', ouvre)
+  menu?.removeEventListener('hide.bs.collapse', ferme)
+})
 
 // Referme le menu mobile après une navigation.
 watch(() => route.path, () => {
-  const menu = document.getElementById('navigation')
   menu?.classList.remove('show')
+  ouvert.value = false
 })
 </script>

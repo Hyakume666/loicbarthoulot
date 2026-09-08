@@ -78,7 +78,7 @@
         </div>
 
         <div class="col-md-6 col-xl-3">
-          <router-link to="/services/automatisation-ia" class="carte-lien">
+          <router-link to="/services/digitalisation-processus" class="carte-lien">
             <h3 class="carte-lien__titre h5">Digitalisation de processus</h3>
             <p class="carte-lien__texte">
               J'analyse ce qui se fait à la main, puis j'automatise ce qui est

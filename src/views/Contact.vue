@@ -138,6 +138,23 @@
                   <div id="message-error" class="invalid-feedback">{{ errors.message }}</div>
                 </div>
 
+                <!--
+                  Champ leurre. Invisible à l'écran, retiré de l'ordre de
+                  tabulation et masqué aux lecteurs d'écran : une personne ne
+                  le remplit jamais, un robot qui remplit tout le remplit.
+                  Ce n'est pas de la sécurité, c'est du filtrage de spam.
+                -->
+                <div class="champ-leurre" aria-hidden="true">
+                  <label for="site-web">Ne remplissez pas ce champ</label>
+                  <input
+                    id="site-web"
+                    type="text"
+                    v-model="form.siteWeb"
+                    tabindex="-1"
+                    autocomplete="off"
+                  >
+                </div>
+
                 <div class="col-12">
                   <button type="submit" class="btn btn-primary" :disabled="isSubmitting">
                     <span
@@ -168,7 +185,7 @@ usePageMeta(
   { path: '/contact' }
 )
 
-const emptyForm = () => ({ firstName: '', lastName: '', email: '', subject: '', message: '' })
+const emptyForm = () => ({ firstName: '', lastName: '', email: '', subject: '', message: '', siteWeb: '' })
 const emptyErrors = () => ({ firstName: '', lastName: '', email: '', subject: '', message: '' })
 
 const form = ref(emptyForm())
@@ -194,6 +211,16 @@ const validate = (): boolean => {
 const submitForm = async () => {
   showSuccess.value = false
   showError.value = false
+
+  // Champ leurre rempli : c'est un robot. On affiche le même message que
+  // pour un envoi réussi, sans rien envoyer — lui signaler l'échec
+  // reviendrait à lui apprendre à contourner le piège.
+  if (form.value.siteWeb) {
+    form.value = emptyForm()
+    showSuccess.value = true
+    return
+  }
+
   if (!validate()) return
   isSubmitting.value = true
 

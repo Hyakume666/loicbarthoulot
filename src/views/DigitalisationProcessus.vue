@@ -113,6 +113,6 @@ import { usePageMeta } from '@/composables/usePageMeta'
 usePageMeta(
   'Digitalisation de processus | Loïc Barthoulot',
   'Analyse de vos processus, puis automatisation de ce qui est répétitif : génération de documents, centralisation des données, suivi des dossiers.',
-  { path: '/services/automatisation-ia' }
+  { path: '/services/digitalisation-processus' }
 )
 </script>
