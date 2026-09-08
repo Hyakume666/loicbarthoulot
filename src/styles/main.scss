@@ -427,21 +427,26 @@ p {
   font-size: 0.875rem;
   color: $sourdine;
 
-  // Le nom en grand se pose ici, et pas dans le hero : la page d'accueil
-  // doit d'abord dire ce que je fais, pas comment je m'appelle.
+  // L'adresse plutôt que le nom : celui-ci figure déjà dans la barre et
+  // dans le copyright, alors qu'une adresse joignable depuis n'importe
+  // quelle page évite un aller-retour par le formulaire.
   .pied-site__signature {
-    padding-bottom: 2rem;
-    margin-bottom: 2rem;
+    padding-bottom: 1.75rem;
+    margin-bottom: 1.75rem;
     border-bottom: 1px solid $bordure;
   }
 
-  .pied-site__nom {
-    font-size: clamp(1.75rem, 4vw, 2.75rem);
-    font-weight: 680;
-    letter-spacing: -0.025em;
-    line-height: 1.1;
+  .pied-site__adresse {
+    display: inline-block;
+    font-size: clamp(1.125rem, 2.5vw, 1.5rem);
+    font-weight: 600;
+    letter-spacing: -0.015em;
     color: $encre;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.35rem;
+
+    &:hover {
+      color: $bleu-clair;
+    }
   }
 
   a {
