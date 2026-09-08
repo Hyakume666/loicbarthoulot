@@ -11,6 +11,7 @@ import CV from './views/CV.vue'
 import Contact from './views/Contact.vue'
 import AutomatisationIa from './views/AutomatisationIa.vue'
 import SupportMateriel from './views/SupportMateriel.vue'
+import SecuriteSupervision from './views/SecuriteSupervision.vue'
 import MentionsLegales from './views/MentionsLegales.vue'
 import Confidentialite from './views/Confidentialite.vue'
 
@@ -19,6 +20,7 @@ const routes = [
   { path: '/services', name: 'Services', component: Services },
   { path: '/services/automatisation-ia', name: 'AutomatisationIa', component: AutomatisationIa },
   { path: '/services/creation-site-web', name: 'CreationSiteWeb', component: CreationSiteWeb },
+  { path: '/services/securite-supervision', name: 'SecuriteSupervision', component: SecuriteSupervision },
   { path: '/services/support-materiel', name: 'SupportMateriel', component: SupportMateriel },
 
   // Anciennes URL, conservées pour ne pas casser les liens existants

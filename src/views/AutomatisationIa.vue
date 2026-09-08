@@ -30,7 +30,9 @@
               prend en charge ce qui est répétitif.
             </p>
             <p class="text-body-secondary mb-0">
-              Vos outils actuels restent en place.
+              Selon le cas, cela va d'un document généré automatiquement à une
+              application métier développée sur mesure. Vos outils actuels
+              restent en place.
             </p>
           </div>
         </div>

@@ -34,7 +34,7 @@ export function usePageMeta(
       { property: 'og:image', content: image },
       { property: 'og:image:width', content: '1200' },
       { property: 'og:image:height', content: '630' },
-      { property: 'og:image:alt', content: 'Loïc Barthoulot — des applications métier pour des PME romandes' },
+      { property: 'og:image:alt', content: 'Loïc Barthoulot — informatique pour PME de Suisse romande' },
       { property: 'og:site_name', content: SITE_NAME },
       { property: 'og:locale', content: 'fr_CH' },
       { name: 'twitter:card', content: 'summary_large_image' },

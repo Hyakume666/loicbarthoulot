@@ -6,12 +6,12 @@
         <div class="col-lg-9">
           <p class="surtitre">Informatique de gestion — Neuchâtel</p>
           <h1 class="hero__titre mb-4">
-            Des <span class="hero__accent">applications métier</span>
-            pour des PME romandes.
+            Je m'occupe de l'informatique
+            des <span class="hero__accent">PME romandes</span>.
           </h1>
           <p class="hero__texte mb-4">
-            Je regarde comment votre entreprise travaille, puis je construis
-            l'outil qui prend en charge ce qui se répète.
+            Du site web au poste de travail, en passant par la sécurité et
+            l'automatisation de ce qui se répète.
           </p>
           <div class="d-flex flex-wrap gap-3">
             <router-link to="/services" class="btn btn-primary">
@@ -34,21 +34,22 @@
           <p class="surtitre">Prestations</p>
           <h2 class="mb-3">Quatre façons d'intervenir</h2>
           <p class="section__intro mb-0">
-            De l'analyse d'un processus au poste de travail, en passant par
-            l'outil qui fait le lien.
+            Construire, automatiser, surveiller, réparer. Selon ce dont votre
+            entreprise a besoin.
           </p>
         </div>
       </div>
 
       <div class="row g-4">
         <div class="col-md-6 col-xl-3">
-          <div class="panneau h-100">
-            <h3 class="carte-lien__titre h5">Applications métier</h3>
-            <p class="text-body-secondary mb-0">
-              Un outil développé sur mesure, qui suit le fonctionnement réel
-              de l'entreprise plutôt que l'inverse.
+          <router-link to="/services/creation-site-web" class="carte-lien">
+            <h3 class="carte-lien__titre h5">Sites web</h3>
+            <p class="carte-lien__texte">
+              Site vitrine adapté au mobile, avec référencement de base,
+              hébergement et mise en ligne.
             </p>
-          </div>
+            <span class="carte-lien__suite">Voir le détail</span>
+          </router-link>
         </div>
 
         <div class="col-md-6 col-xl-3">
@@ -63,11 +64,11 @@
         </div>
 
         <div class="col-md-6 col-xl-3">
-          <router-link to="/services/creation-site-web" class="carte-lien">
-            <h3 class="carte-lien__titre h5">Sites web</h3>
+          <router-link to="/services/securite-supervision" class="carte-lien">
+            <h3 class="carte-lien__titre h5">Sécurité et supervision</h3>
             <p class="carte-lien__texte">
-              Site vitrine adapté au mobile, avec référencement de base et mise
-              en ligne.
+              Surveillance des détections sur vos postes, qualification et
+              traitement des alertes.
             </p>
             <span class="carte-lien__suite">Voir le détail</span>
           </router-link>
@@ -148,8 +149,8 @@
 <script setup lang="ts">
 import { usePageMeta } from '@/composables/usePageMeta'
 usePageMeta(
-  'Loïc Barthoulot — Applications métier et digitalisation de processus',
-  'Je construis des applications métier et j\'automatise des processus pour des PME de Suisse romande. Sites web, support et matériel.',
+  'Loïc Barthoulot — Informatique pour PME de Suisse romande',
+  'Sites web, digitalisation de processus, sécurité et supervision, support et matériel. Prestataire informatique indépendant à Neuchâtel.',
   { path: '/' }
 )
 </script>
