@@ -1,141 +1,103 @@
 <template>
-  <div class="section-padding creation-site-page" style="background-color: var(--bg) !important; min-height: 100vh;">
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-lg-8">
-          <!-- Bouton retour -->
-          <div class="mb-4">
-            <router-link to="/services" class="btn btn-primary-custom">
-              <i class="fas fa-arrow-left me-2"></i>Retour aux services
-            </router-link>
-          </div>
-          
-          <div class="text-center mb-5">
-            <h1 class="display-4 fw-bold">Création de site web</h1>
-            <p class="lead">
-              Un site vitrine adapté au mobile, mis en ligne et prêt à servir.
-            </p>
-          </div>
+  <section class="section">
+    <div class="contenu">
+      <p class="retour">
+        <router-link to="/services">Retour aux prestations</router-link>
+      </p>
 
-          <!-- Description principale -->
-          <div class="card card-custom mb-5">
-            <div class="card-body p-4">
-              <div class="text-center mb-4">
-                <div class="icon-feature">🌐</div>
-              </div>
-              <h3 class="text-primary-custom text-center mb-4">Votre site vitrine</h3>
-              <p class="mb-4">
-                Je construis votre site sur mesure. Il s'affiche correctement
-                sur mobile, sur tablette et sur ordinateur. Le référencement
-                de base est en place, le formulaire de contact fonctionne, et
-                je m'occupe de la mise en ligne.
-              </p>
-              <p>
-                <strong>Technologies :</strong> Vue 3 et TypeScript par défaut,
-                ou une autre stack si votre besoin le demande.
-              </p>
-            </div>
-          </div>
+      <header class="tete">
+        <h1>Création de site web</h1>
+        <p class="tete__intro">
+          Un site vitrine adapté au mobile, mis en ligne et prêt à servir.
+        </p>
+      </header>
 
-          <!-- Avantages -->
-          <div class="row g-4 mb-5">
-            <div class="col-md-6" v-for="advantage in advantages" :key="advantage.id">
-              <div class="card card-custom h-100">
-                <div class="card-body p-4 text-center">
-                  <div class="icon-feature">{{ advantage.icon }}</div>
-                  <h5 class="card-title">{{ advantage.title }}</h5>
-                  <p class="card-text">{{ advantage.description }}</p>
-                </div>
-              </div>
-            </div>
-          </div>
+      <div class="sections">
+        <section class="entree">
+          <h2 class="entree__titre">Votre site vitrine</h2>
+          <p>
+            Je construis votre site sur mesure. Il s'affiche correctement sur
+            mobile, sur tablette et sur ordinateur. Le référencement de base
+            est en place, le formulaire de contact fonctionne, et je m'occupe
+            de la mise en ligne.
+          </p>
+          <p class="mention">
+            Vue 3 et TypeScript par défaut, ou une autre stack si votre besoin
+            le demande.
+          </p>
+        </section>
 
-          <!-- Prestations incluses -->
-          <div class="card card-custom mb-5">
-            <div class="card-body p-4">
-              <h3 class="text-primary-custom mb-4">Prestations incluses</h3>
-              <div class="row g-3">
-                <div class="col-md-6">
-                  <ul class="list-unstyled">
-                    <li class="mb-2">
-                      <i class="fas fa-check text-primary-custom me-2"></i><span>Mise en page adaptée au mobile</span>
-                    </li>
-                    <li class="mb-2">
-                      <i class="fas fa-check text-primary-custom me-2"></i><span>Référencement de base</span>
-                    </li>
-                  </ul>
-                </div>
-                <div class="col-md-6">
-                  <ul class="list-unstyled">
-                    <li class="mb-2">
-                      <i class="fas fa-check text-primary-custom me-2"></i><span>Formulaire de contact</span>
-                    </li>
-                    <li class="mb-2">
-                      <i class="fas fa-check text-primary-custom me-2"></i><span>Hébergement et mise en ligne</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
+        <section class="entree">
+          <h2 class="entree__titre">Ce qui est inclus</h2>
+          <ul class="liste colonnes colonnes--2">
+            <li>Mise en page adaptée au mobile</li>
+            <li>Référencement de base : titres, descriptions, plan du site</li>
+            <li>Formulaire de contact</li>
+            <li>Hébergement et mise en ligne</li>
+          </ul>
+        </section>
 
-          <!-- Call to action -->
-          <div class="text-center">
-            <h3 class="mb-4">Parlons de votre site</h3>
-            <p class="mb-4">
-              Décrivez-moi votre activité et ce que le site doit faire.
-            </p>
-            <router-link to="/contact" class="btn btn-primary-custom btn-lg">
-              Me contacter
-            </router-link>
-          </div>
-        </div>
+        <section class="entree">
+          <h2 class="entree__titre">Ce à quoi je fais attention</h2>
+          <p>
+            Les images sont compressées, les polices et les scripts sont
+            servis depuis votre site plutôt que depuis un service tiers. Les
+            pages restent utilisables au clavier, et les contrastes tiennent.
+          </p>
+        </section>
       </div>
     </div>
-  </div>
+  </section>
+
+  <section class="section section--net">
+    <div class="contenu">
+      <h2>Parlons de votre site</h2>
+      <p class="conclusion">
+        Décrivez-moi votre activité et ce que le site doit faire.
+      </p>
+      <router-link to="/contact" class="bouton">Me contacter</router-link>
+    </div>
+  </section>
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
 import { usePageMeta } from '@/composables/usePageMeta'
 usePageMeta(
   'Création de site web | Loïc Barthoulot',
   'Site vitrine adapté au mobile, avec référencement de base, formulaire de contact et mise en ligne. Vue 3 et TypeScript.',
-  { path: '/services/creation-site-web', image: 'https://loicbarthoulot.ch/images/creation-site-web.jpg' }
+  { path: '/services/creation-site-web' }
 )
-
-const advantages = ref([
-  {
-    id: 1,
-    icon: '📱',
-    title: 'Mobile, tablette, ordinateur',
-    description: 'La mise en page s\'adapte à la taille de l\'écran.'
-  },
-  {
-    id: 2,
-    icon: '⚡',
-    title: 'Pages légères',
-    description: 'Images compressées, polices et scripts servis depuis le site.'
-  },
-  {
-    id: 3,
-    icon: '🔍',
-    title: 'Référencement de base',
-    description: 'Titres, descriptions, plan du site et données structurées.'
-  },
-  {
-    id: 4,
-    icon: '🛠️',
-    title: 'Mise en ligne',
-    description: 'Nom de domaine, hébergement et déploiement.'
-  }
-])
 </script>
 
 <style scoped>
-/* Désactive le hover uniquement sur cette page */
-.creation-site-page .card-custom:hover {
-  transform: none !important;
-  box-shadow: none !important;
+.retour {
+  font-size: var(--pas-0);
+  margin-bottom: var(--e-6);
+}
+
+.tete {
+  margin-bottom: var(--e-8);
+}
+
+.tete__intro {
+  margin-top: var(--e-4);
+  font-size: var(--pas-2);
+  color: var(--texte-faible);
+  max-width: 42ch;
+}
+
+.entree p + p,
+.entree p + ul {
+  margin-top: var(--e-4);
+}
+
+.section--net {
+  background-color: var(--blanc);
+  border-top: 1px solid var(--trait);
+}
+
+.conclusion {
+  margin-block: var(--e-4) var(--e-6);
+  color: var(--texte-faible);
 }
 </style>
