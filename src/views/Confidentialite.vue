@@ -1,19 +1,19 @@
 <template>
   <section class="section">
-    <div class="contenu">
-      <header class="tete">
+    <div class="container">
+      <header class="mb-5 mesure-texte">
         <h1>Politique de confidentialité</h1>
-        <p class="tete__intro">
+        <p class="lead text-body-secondary">
           Ce site ne dépose aucun cookie, n'utilise aucun outil de mesure
           d'audience et ne fait aucune requête vers un service tiers au
           chargement des pages.
         </p>
-        <p class="mention">Dernière mise à jour : 8 septembre 2026</p>
+        <p class="small text-body-secondary">Dernière mise à jour : 8 septembre 2026</p>
       </header>
 
-      <div class="legal">
-        <section class="entree">
-          <h2 class="entree__titre">Responsable du traitement</h2>
+      <div class="mesure-texte">
+        <section class="panneau mb-4">
+          <h2 class="h5 mb-3">Responsable du traitement</h2>
           <p>
             Loïc Barthoulot, canton de Neuchâtel, Suisse.
             <a href="mailto:contact@loicbarthoulot.ch">contact@loicbarthoulot.ch</a>
@@ -25,13 +25,13 @@
           </p>
         </section>
 
-        <section class="entree">
-          <h2 class="entree__titre">Données que vous transmettez</h2>
+        <section class="panneau mb-4">
+          <h2 class="h5 mb-3">Données que vous transmettez</h2>
           <p>
             Le formulaire de contact collecte quatre éléments, plus votre
             message :
           </p>
-          <ul class="liste">
+          <ul class="liste-marquee mb-3">
             <li>Prénom et nom</li>
             <li>Adresse électronique</li>
             <li>Sujet choisi dans la liste</li>
@@ -45,8 +45,8 @@
           </p>
         </section>
 
-        <section class="entree">
-          <h2 class="entree__titre">Prestataires techniques</h2>
+        <section class="panneau mb-4">
+          <h2 class="h5 mb-3">Prestataires techniques</h2>
           <p>
             <strong>Envoi du formulaire.</strong> Le message est transmis par
             EmailJS Pte. Ltd., société établie à Singapour, dont les serveurs
@@ -71,8 +71,8 @@
           </p>
         </section>
 
-        <section class="entree">
-          <h2 class="entree__titre">Durée de conservation</h2>
+        <section class="panneau mb-4">
+          <h2 class="h5 mb-3">Durée de conservation</h2>
           <p>
             Les messages sont conservés dans ma messagerie aussi longtemps que
             nécessaire au traitement de la demande et au suivi d'une éventuelle
@@ -80,8 +80,8 @@
           </p>
         </section>
 
-        <section class="entree">
-          <h2 class="entree__titre">Cookies et stockage local</h2>
+        <section class="panneau mb-4">
+          <h2 class="h5 mb-3">Cookies et stockage local</h2>
           <p>
             Le site ne dépose aucun cookie et n'utilise aucun outil de mesure
             d'audience.
@@ -95,8 +95,8 @@
           </p>
         </section>
 
-        <section class="entree">
-          <h2 class="entree__titre">Requêtes vers des tiers</h2>
+        <section class="panneau mb-4">
+          <h2 class="h5 mb-3">Requêtes vers des tiers</h2>
           <p>
             Les polices de caractères, les images et les scripts sont servis
             depuis ce site. Aucune requête n'est adressée à un service tiers
@@ -109,8 +109,8 @@
           </p>
         </section>
 
-        <section class="entree">
-          <h2 class="entree__titre">Vos droits</h2>
+        <section class="panneau mb-4">
+          <h2 class="h5 mb-3">Vos droits</h2>
           <p>
             Vous pouvez demander l'accès à vos données, leur rectification,
             leur effacement, ou vous opposer à leur traitement. Une demande à
@@ -123,16 +123,16 @@
           </p>
         </section>
 
-        <section class="entree">
-          <h2 class="entree__titre">Sécurité</h2>
+        <section class="panneau mb-4">
+          <h2 class="h5 mb-3">Sécurité</h2>
           <p>
             Le site est servi exclusivement en HTTPS. L'envoi du formulaire
             est chiffré en transit.
           </p>
         </section>
 
-        <section class="entree">
-          <h2 class="entree__titre">Modifications</h2>
+        <section class="panneau mb-4">
+          <h2 class="h5 mb-3">Modifications</h2>
           <p>
             Cette politique peut évoluer si les outils du site changent. La
             date de mise à jour figure en haut de cette page.
@@ -151,26 +151,3 @@ usePageMeta(
   { path: '/confidentialite' }
 )
 </script>
-
-<style scoped>
-.tete {
-  margin-bottom: var(--e-8);
-}
-
-.tete__intro {
-  margin-top: var(--e-4);
-  font-size: var(--pas-2);
-  color: var(--texte-faible);
-  max-width: 46ch;
-}
-
-.tete .mention {
-  margin-top: var(--e-4);
-}
-
-.entree p + p,
-.entree p + ul,
-.entree ul + p {
-  margin-top: var(--e-4);
-}
-</style>

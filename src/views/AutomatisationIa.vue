@@ -1,87 +1,106 @@
 <template>
   <section class="section">
-    <div class="contenu">
-      <p class="retour">
-        <router-link to="/services">Retour aux prestations</router-link>
+    <div class="container">
+      <p class="mb-4">
+        <router-link to="/services" class="text-body-secondary small text-decoration-none">
+          ← Retour aux prestations
+        </router-link>
       </p>
 
-      <header class="tete">
-        <h1>Digitalisation de processus</h1>
-        <p class="tete__intro">
-          J'analyse ce qui se fait à la main dans votre entreprise, puis
-          j'automatise ce qui est répétitif.
-        </p>
-      </header>
-
-      <div class="sections">
-        <section class="entree">
-          <h2 class="entree__titre">Comment ça se passe</h2>
-          <p>
-            Une partie du travail administratif se répète chaque semaine :
-            ressaisir une commande, remettre en forme un document, reporter
-            des chiffres d'un fichier à un autre. Je regarde comment votre
-            entreprise travaille réellement, puis je construis l'outil qui
-            prend en charge ce qui est répétitif.
+      <div class="row mb-5">
+        <div class="col-lg-8">
+          <p class="surtitre">Digitalisation de processus</p>
+          <h1 class="mb-3">Supprimer la ressaisie et les écarts qu'elle entraîne</h1>
+          <p class="lead text-body-secondary mb-0">
+            J'analyse ce qui se fait à la main dans votre entreprise, puis
+            j'automatise ce qui est répétitif.
           </p>
-          <p>
-            Le but est de supprimer la ressaisie et les écarts qu'elle
-            entraîne. Vos outils actuels restent en place.
-          </p>
-        </section>
+        </div>
+      </div>
 
-        <section class="entree">
-          <h2 class="entree__titre">Ce que ça peut couvrir</h2>
-          <div class="colonnes colonnes--2">
-            <div>
-              <h3>Génération de documents</h3>
-              <p>
-                Devis, factures ou comptes rendus produits à partir des
-                données déjà saisies, plutôt que ressaisis.
-              </p>
-            </div>
-            <div>
-              <h3>Centralisation des données</h3>
-              <p>
-                Une seule base pour les informations aujourd'hui réparties
-                entre plusieurs fichiers.
-              </p>
-            </div>
-            <div>
-              <h3>Suppression de la ressaisie</h3>
-              <p>
-                Les données passent d'une étape à l'autre sans être retapées,
-                ce qui supprime les écarts.
-              </p>
-            </div>
-            <div>
-              <h3>Suivi d'un dossier</h3>
-              <p>
-                Chaque dossier a un état visible, de son arrivée à sa clôture.
-              </p>
-            </div>
+      <div class="row g-4 mb-4">
+        <div class="col-lg-7">
+          <div class="panneau h-100">
+            <h2 class="h5 mb-3">Comment ça se passe</h2>
+            <p class="text-body-secondary">
+              Une partie du travail administratif se répète chaque semaine :
+              ressaisir une commande, remettre en forme un document, reporter
+              des chiffres d'un fichier à un autre. Je regarde comment votre
+              entreprise travaille réellement, puis je construis l'outil qui
+              prend en charge ce qui est répétitif.
+            </p>
+            <p class="text-body-secondary mb-0">
+              Vos outils actuels restent en place.
+            </p>
           </div>
-        </section>
+        </div>
 
-        <section class="entree">
-          <h2 class="entree__titre">Ce qui est inclus</h2>
-          <ul class="liste colonnes colonnes--2">
-            <li>Analyse du processus tel qu'il se déroule aujourd'hui</li>
-            <li>Modélisation et validation avec vous avant développement</li>
-            <li>Tests sur vos données réelles</li>
-            <li>Prise en main par vos équipes</li>
-          </ul>
-        </section>
+        <div class="col-lg-5">
+          <div class="panneau h-100">
+            <h2 class="h5 mb-3">Ce qui est inclus</h2>
+            <ul class="liste-marquee">
+              <li>Analyse du processus tel qu'il se déroule aujourd'hui</li>
+              <li>Modélisation et validation avec vous avant développement</li>
+              <li>Tests sur vos données réelles</li>
+              <li>Prise en main par vos équipes</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-6 col-xl-3">
+          <div class="panneau h-100">
+            <h3 class="h6 mb-2">Génération de documents</h3>
+            <p class="small text-body-secondary mb-0">
+              Devis, factures ou comptes rendus produits à partir des données
+              déjà saisies, plutôt que ressaisis.
+            </p>
+          </div>
+        </div>
+        <div class="col-md-6 col-xl-3">
+          <div class="panneau h-100">
+            <h3 class="h6 mb-2">Centralisation des données</h3>
+            <p class="small text-body-secondary mb-0">
+              Une seule base pour les informations aujourd'hui réparties entre
+              plusieurs fichiers.
+            </p>
+          </div>
+        </div>
+        <div class="col-md-6 col-xl-3">
+          <div class="panneau h-100">
+            <h3 class="h6 mb-2">Suppression de la ressaisie</h3>
+            <p class="small text-body-secondary mb-0">
+              Les données passent d'une étape à l'autre sans être retapées, ce
+              qui supprime les écarts.
+            </p>
+          </div>
+        </div>
+        <div class="col-md-6 col-xl-3">
+          <div class="panneau h-100">
+            <h3 class="h6 mb-2">Suivi d'un dossier</h3>
+            <p class="small text-body-secondary mb-0">
+              Chaque dossier a un état visible, de son arrivée à sa clôture.
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <section class="section section--net">
-    <div class="contenu">
-      <h2>Décrivez-moi une tâche qui vous prend du temps</h2>
-      <p class="conclusion">
-        Dix minutes suffisent pour dire si elle peut être automatisée.
-      </p>
-      <router-link to="/contact" class="bouton">Me contacter</router-link>
+  <section class="section section--surface">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-7">
+          <h2 class="mb-3">Décrivez-moi une tâche qui vous prend du temps</h2>
+          <p class="text-body-secondary mb-4">
+            Dix minutes suffisent pour dire si elle peut être automatisée.
+          </p>
+          <router-link to="/contact" class="btn btn-primary">
+            Me contacter
+          </router-link>
+        </div>
+      </div>
     </div>
   </section>
 </template>
@@ -94,41 +113,3 @@ usePageMeta(
   { path: '/services/automatisation-ia' }
 )
 </script>
-
-<style scoped>
-.retour {
-  font-size: var(--pas-0);
-  margin-bottom: var(--e-6);
-}
-
-.tete {
-  margin-bottom: var(--e-8);
-}
-
-.tete__intro {
-  margin-top: var(--e-4);
-  font-size: var(--pas-2);
-  color: var(--texte-faible);
-  max-width: 42ch;
-}
-
-.entree p + p,
-.entree p + ul,
-.entree p + .colonnes {
-  margin-top: var(--e-4);
-}
-
-.entree h3 {
-  margin-bottom: var(--e-2);
-}
-
-.section--net {
-  background-color: var(--blanc);
-  border-top: 1px solid var(--trait);
-}
-
-.conclusion {
-  margin-block: var(--e-4) var(--e-6);
-  color: var(--texte-faible);
-}
-</style>

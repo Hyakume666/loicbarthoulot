@@ -1,14 +1,19 @@
 <template>
-  <section class="bloc bloc--erreur">
-    <div class="contenu">
-      <p class="code">404</p>
-      <h1 class="bloc__titre">Cette page n'existe pas.</h1>
-      <p class="bloc__texte">
-        Elle a peut-être été déplacée, ou l'adresse comporte une erreur.
-      </p>
-      <p class="retour">
-        <router-link to="/" class="bouton">Retour à l'accueil</router-link>
-      </p>
+  <section class="hero">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-7">
+          <p class="surtitre">Erreur 404</p>
+          <h1 class="hero__titre mb-4">Cette page n'existe pas.</h1>
+          <p class="hero__texte mb-4">
+            Elle a peut-être été déplacée, ou l'adresse comporte une erreur.
+          </p>
+          <div class="d-flex flex-wrap gap-3">
+            <router-link to="/" class="btn btn-primary">Retour à l'accueil</router-link>
+            <router-link to="/services" class="btn btn-outline-light">Ce que je fais</router-link>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 </template>
@@ -20,30 +25,3 @@ usePageMeta(
   'Cette page n\'existe pas ou a été déplacée.'
 )
 </script>
-
-<style scoped>
-.bloc--erreur {
-  min-height: 70dvh;
-  display: flex;
-  align-items: center;
-}
-
-.code {
-  font-size: var(--pas-0);
-  color: var(--texte-faible);
-  margin-bottom: var(--e-4);
-}
-
-.bloc--erreur .bloc__titre {
-  font-size: clamp(2rem, 6vw, 4rem);
-  max-width: 20ch;
-}
-
-.bloc__texte {
-  margin-top: var(--e-5);
-}
-
-.retour {
-  margin-top: var(--e-7);
-}
-</style>
