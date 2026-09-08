@@ -18,8 +18,8 @@
             <!-- Nom principal avec effet néon -->
             <div class="hero-name-container fade-in-up">
               <h1 class="hero-name">
-                LOÏC BARTHOULOT
-                <span class="visually-hidden"> — Services IT, montage PC & création web en Suisse</span>
+                Loïc Barthoulot
+                <span class="visually-hidden"> — applications métier et digitalisation de processus en Suisse romande</span>
               </h1>
               <div class="hero-name-glow"></div>
             </div>
@@ -27,9 +27,7 @@
             <!-- Titre professionnel avec animation -->
             <div class="hero-title-container fade-in-up delay-1">
               <h2 class="hero-title">
-                <span class="title-line">Futur informaticien de gestion</span>
-                <span class="title-separator">•</span>
-                <span class="title-line">Passionné d'hardware</span>
+                <span class="title-line">Informatique de gestion</span>
               </h2>
             </div>
 
@@ -38,8 +36,9 @@
             </div>
 
             <p class="hero-description fade-in-up delay-3">
-              Étudiant en Informatique de Gestion, passionné d'IT.<br><br>
-              Je donne un coup de main aux particuliers et aux petites structures pour monter, dépanner et optimiser leurs PC, automatiser leurs tâches du quotidien, et je conçois aussi des sites web modernes, rapides et parfaitement adaptés à leurs besoins, le tout à des tarifs très accessibles.
+              Je construis des applications métier et j'automatise des
+              processus pour des PME de Suisse romande. Je réalise aussi
+              des sites web, et j'interviens sur les postes de travail.
             </p>
 
             <div class="hero-cta fade-in-up delay-3">
@@ -63,7 +62,7 @@
         <div class="row justify-content-center">
           <div class="col-lg-8 text-center">
             <h2 class="cta-title fade-in-up">
-              Un projet, une panne ou une idée ? Discutons-en !
+              Un projet ou une question ? Écrivez-moi.
             </h2>
             <div class="fade-in-up delay-1">
               <router-link to="/contact" class="btn btn-primary-custom btn-lg">
@@ -80,8 +79,8 @@
 <script setup lang="ts">
 import { usePageMeta } from '@/composables/usePageMeta'
 usePageMeta(
-  'Loïc Barthoulot | Services IT, Montage PC & Création Web en Suisse',
-  'Étudiant en informatique, je monte, dépanne et optimise vos PC, automatise vos tâches avec l\'IA et crée des sites web modernes. Tarifs accessibles.',
+  'Loïc Barthoulot — Applications métier et digitalisation de processus',
+  'Je construis des applications métier et j\'automatise des processus pour des PME de Suisse romande. Sites web, support et matériel.',
   { path: '/' }
 )
 </script>

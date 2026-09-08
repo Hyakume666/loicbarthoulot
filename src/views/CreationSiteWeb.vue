@@ -13,7 +13,7 @@
           <div class="text-center mb-5">
             <h1 class="display-4 fw-bold">Création de site web</h1>
             <p class="lead">
-              Site vitrine professionnel, performant et responsive
+              Un site vitrine adapté au mobile, mis en ligne et prêt à servir.
             </p>
           </div>
 
@@ -23,15 +23,16 @@
               <div class="text-center mb-4">
                 <div class="icon-feature">🌐</div>
               </div>
-              <h3 class="text-primary-custom text-center mb-4">Votre présence web professionnelle</h3>
+              <h3 class="text-primary-custom text-center mb-4">Votre site vitrine</h3>
               <p class="mb-4">
-                Je crée votre site vitrine sur mesure avec un design moderne et responsive. 
-                Chaque site est optimisé pour le référencement (SEO de base), intègre un 
-                formulaire de contact fonctionnel et est déployé clé en main.
+                Je construis votre site sur mesure. Il s'affiche correctement
+                sur mobile, sur tablette et sur ordinateur. Le référencement
+                de base est en place, le formulaire de contact fonctionne, et
+                je m'occupe de la mise en ligne.
               </p>
               <p>
-                <strong>Technologies utilisées :</strong> Vue.js + Bootstrap par défaut, 
-                ou stack technique adaptée selon vos besoins spécifiques.
+                <strong>Technologies :</strong> Vue 3 et TypeScript par défaut,
+                ou une autre stack si votre besoin le demande.
               </p>
             </div>
           </div>
@@ -57,26 +58,20 @@
                 <div class="col-md-6">
                   <ul class="list-unstyled">
                     <li class="mb-2">
-                      <i class="fas fa-check text-primary-custom me-2"></i><span>Design moderne et responsive</span>
+                      <i class="fas fa-check text-primary-custom me-2"></i><span>Mise en page adaptée au mobile</span>
                     </li>
                     <li class="mb-2">
-                      <i class="fas fa-check text-primary-custom me-2"></i><span>Optimisation SEO de base</span>
-                    </li>
-                    <li class="mb-2">
-                      <i class="fas fa-check text-primary-custom me-2"></i><span>Formulaire de contact fonctionnel</span>
+                      <i class="fas fa-check text-primary-custom me-2"></i><span>Référencement de base</span>
                     </li>
                   </ul>
                 </div>
                 <div class="col-md-6">
                   <ul class="list-unstyled">
                     <li class="mb-2">
-                      <i class="fas fa-check text-primary-custom me-2"></i><span>Déploiement et mise en ligne</span>
+                      <i class="fas fa-check text-primary-custom me-2"></i><span>Formulaire de contact</span>
                     </li>
                     <li class="mb-2">
-                      <i class="fas fa-check text-primary-custom me-2"></i><span>Formation à la gestion</span>
-                    </li>
-                    <li class="mb-2">
-                      <i class="fas fa-check text-primary-custom me-2"></i><span>Support technique 3 mois</span>
+                      <i class="fas fa-check text-primary-custom me-2"></i><span>Hébergement et mise en ligne</span>
                     </li>
                   </ul>
                 </div>
@@ -104,35 +99,35 @@
 import { ref } from 'vue'
 import { usePageMeta } from '@/composables/usePageMeta'
 usePageMeta(
-  'Création de Site Web | Loïc Barthoulot',
-  'Site vitrine performant et responsive avec SEO de base, formulaire de contact et déploiement inclus. Stack Vue.js + Bootstrap.',
-  { path: '/services/creation-site-web', image: 'https://images.pexels.com/photos/270348/pexels-photo-270348.jpeg?auto=compress&cs=tinysrgb&w=1200' }
+  'Création de site web | Loïc Barthoulot',
+  'Site vitrine adapté au mobile, avec référencement de base, formulaire de contact et mise en ligne. Vue 3 et TypeScript.',
+  { path: '/services/creation-site-web', image: 'https://loicbarthoulot.ch/images/creation-site-web.jpg' }
 )
 
 const advantages = ref([
   {
     id: 1,
     icon: '📱',
-    title: 'Responsive Design',
-    description: 'Parfait sur tous les appareils : mobile, tablette et desktop'
+    title: 'Mobile, tablette, ordinateur',
+    description: 'La mise en page s\'adapte à la taille de l\'écran.'
   },
   {
     id: 2,
     icon: '⚡',
-    title: 'Performance',
-    description: 'Site rapide et optimisé pour une excellente expérience utilisateur'
+    title: 'Pages légères',
+    description: 'Images compressées, polices et scripts servis depuis le site.'
   },
   {
     id: 3,
     icon: '🔍',
-    title: 'SEO Optimisé',
-    description: 'Référencement de base inclus pour être visible sur Google'
+    title: 'Référencement de base',
+    description: 'Titres, descriptions, plan du site et données structurées.'
   },
   {
     id: 4,
     icon: '🛠️',
-    title: 'Clé en main',
-    description: 'Déploiement inclus, votre site est prêt à l\'emploi'
+    title: 'Mise en ligne',
+    description: 'Nom de domaine, hébergement et déploiement.'
   }
 ])
 </script>

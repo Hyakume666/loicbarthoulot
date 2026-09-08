@@ -9,9 +9,10 @@
       </div>
 
       <div class="text-center mb-5">
-        <h1 class="display-4 fw-bold">Automatisation & IA</h1>
+        <h1 class="display-4 fw-bold">Digitalisation de processus</h1>
         <p class="lead">
-          Gagnez des heures chaque semaine en automatisant vos tâches répétitives avec l'intelligence artificielle
+          J'analyse ce qui se fait à la main dans votre entreprise, puis
+          j'automatise ce qui est répétitif.
         </p>
       </div>
 
@@ -23,15 +24,17 @@
               <div class="text-center mb-4">
                 <div class="icon-feature">🤖</div>
               </div>
-              <h3 class="text-primary-custom text-center mb-4">Automatisation de vos processus</h3>
+              <h3 class="text-primary-custom text-center mb-4">Comment ça se passe</h3>
               <p class="mb-4">
-                Vous perdez du temps dans vos e-mails, vos documents, vos tâches administratives ou la gestion de vos clients ?
-                J'analyse vos processus et mets en place des automatisations IA qui travaillent pour vous, en arrière-plan,
-                sans changer vos outils habituels.
+                Une partie du travail administratif se répète chaque semaine :
+                ressaisir une commande, remettre en forme un document, reporter
+                des chiffres d'un fichier à un autre. Je regarde comment votre
+                entreprise travaille réellement, puis je construis l'outil qui
+                prend en charge ce qui est répétitif.
               </p>
               <p>
-                <strong>Objectif :</strong> vous faire gagner plusieurs heures par semaine, réduire les erreurs et vous permettre
-                de vous concentrer sur votre activité principale.
+                Le but est de supprimer la ressaisie et les écarts qu'elle
+                entraîne. Vos outils actuels restent en place.
               </p>
             </div>
           </div>
@@ -58,11 +61,11 @@
                   <ul class="list-unstyled">
                     <li class="mb-2">
                       <i class="fas fa-check text-primary-custom me-2"></i>
-                      <span>Audit de vos processus et tâches répétitives</span>
+                      <span>Analyse du processus tel qu'il se déroule aujourd'hui</span>
                     </li>
                     <li class="mb-2">
                       <i class="fas fa-check text-primary-custom me-2"></i>
-                      <span>Mise en place de workflows IA (Make, IA, Google, Notion, etc.)</span>
+                      <span>Modélisation et validation avec vous avant développement</span>
                     </li>
                   </ul>
                 </div>
@@ -70,11 +73,11 @@
                   <ul class="list-unstyled">
                     <li class="mb-2">
                       <i class="fas fa-check text-primary-custom me-2"></i>
-                      <span>Tests, ajustements et validation avec vos données réelles</span>
+                      <span>Tests sur vos données réelles</span>
                     </li>
                     <li class="mb-2">
                       <i class="fas fa-check text-primary-custom me-2"></i>
-                      <span>Formation & accompagnement pour rester autonome</span>
+                      <span>Prise en main par vos équipes</span>
                     </li>
                   </ul>
                 </div>
@@ -84,12 +87,12 @@
 
           <!-- Call to action -->
           <div class="text-center">
-            <h3 class="mb-4">Marre des tâches répétitives ?</h3>
+            <h3 class="mb-4">Décrivez-moi une tâche qui vous prend du temps</h3>
             <p class="mb-4">
-              Contactez-moi pour une démo gratuite de 10 minutes et découvrez ce que l'IA peut automatiser dans votre activité
+              Dix minutes suffisent pour dire si elle peut être automatisée.
             </p>
             <router-link to="/contact" class="btn btn-primary-custom btn-lg">
-              Réserver une démo gratuite
+              Me contacter
             </router-link>
           </div>
         </div>
@@ -102,35 +105,35 @@
 import { ref } from 'vue'
 import { usePageMeta } from '@/composables/usePageMeta'
 usePageMeta(
-  'Automatisation IA pour indépendants & PME | Loïc Barthoulot',
-  'Automatisez vos tâches répétitives avec l\'IA : e-mails, documents, chatbots, dashboards. Workflows Make, Notion, Google. Démo gratuite.',
-  { path: '/services/automatisation-ia', image: 'https://images.pexels.com/photos/9028873/pexels-photo-9028873.jpeg?auto=compress&cs=tinysrgb&w=1200' }
+  'Digitalisation de processus | Loïc Barthoulot',
+  'Analyse de vos processus, puis automatisation de ce qui est répétitif : génération de documents, centralisation des données, suivi des dossiers.',
+  { path: '/services/automatisation-ia', image: 'https://loicbarthoulot.ch/images/automatisation-ia.jpg' }
 )
 
 const typesAutomatisations = ref([
   {
     id: 1,
-    icon: '📧',
-    title: 'Automatisation des e-mails',
-    description: 'Tri, classification, réponses suggérées et extraction automatique d\'informations importantes.'
+    icon: '📄',
+    title: 'Génération de documents',
+    description: 'Devis, factures ou comptes rendus produits à partir des données déjà saisies, plutôt que ressaisis.'
   },
   {
     id: 2,
-    icon: '📄',
-    title: 'Génération de documents',
-    description: 'Création automatique de devis, factures, comptes rendus ou PDF à partir de formulaires ou de données existantes.'
+    icon: '📊',
+    title: 'Centralisation des données',
+    description: 'Une seule base pour les informations aujourd\'hui réparties entre plusieurs fichiers.'
   },
   {
     id: 3,
-    icon: '💬',
-    title: 'Chatbots IA personnalisés',
-    description: 'Assistants IA entraînés sur vos documents (tarifs, offres, contrats) pour répondre rapidement et de manière cohérente.'
+    icon: '🔁',
+    title: 'Suppression de la ressaisie',
+    description: 'Les données passent d\'une étape à l\'autre sans être retapées, ce qui supprime les écarts.'
   },
   {
     id: 4,
-    icon: '📊',
-    title: 'Dashboards & centralisation',
-    description: 'Centralisation de vos données dans Notion, Airtable ou Google Sheets avec mise à jour automatique.'
+    icon: '🗂️',
+    title: 'Suivi d\'un dossier',
+    description: 'Chaque dossier a un état visible, de son arrivée à sa clôture.'
   }
 ])
 </script>

@@ -39,7 +39,7 @@ export const services: Service[] = [
   {
     id: 4,
     title: 'Création de site web',
-    description: 'Site vitrine performant et responsive avec SEO de base, design moderne, intégration formulaire de contact et déploiement inclus.',
+    description: 'Site vitrine adapté au mobile, avec référencement de base, formulaire de contact et mise en ligne.',
     price: 'Sur devis',
     image: '/images/creation-site-web.jpg',
     icon: 'fas fa-code',
@@ -47,8 +47,8 @@ export const services: Service[] = [
   },
   {
     id: 5,
-    title: 'Automatisation IA pour indépendants & PME',
-    description: "Gagne des heures chaque semaine en automatisant tes tâches répétitives avec l'IA, sans devoir changer d'outils ni réinventer ton business.",
+    title: 'Digitalisation de processus',
+    description: "J'analyse ce qui se fait à la main dans votre entreprise, puis j'automatise ce qui est répétitif, sans changer vos outils.",
     price: 'Sur devis',
     image: '/images/automatisation-ia.jpg',
     icon: 'fas fa-robot',

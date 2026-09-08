@@ -2,9 +2,10 @@
   <div class="section-padding" style="min-height: 100vh;">
     <div class="container">
       <div class="text-center mb-5">
-        <h1 class="display-4 fw-bold">Mes Services</h1>
+        <h1 class="display-4 fw-bold">Ce que je fais</h1>
         <p class="lead">
-          Une gamme complète de services informatiques pour particuliers et professionnels
+          Applications métier, digitalisation de processus, sites web et
+          support informatique.
         </p>
       </div>
 
@@ -35,13 +36,13 @@
         <div class="row g-4">
           <div class="col-md-4 text-center">
             <div class="icon-feature"><i class="fas fa-bolt"></i></div>
-            <h5>Passion & polyvalence</h5>
-            <p>Que ce soit pour un PC gaming, une machine bureautique ou un site web, je traite chaque projet avec soin et passion, en m'adaptant aux besoins spécifiques de chacun.</p>
+            <h5>L'analyse avant le développement</h5>
+            <p>Je commence par comprendre comment votre entreprise travaille. L'outil vient ensuite, et il suit votre fonctionnement plutôt que l'inverse.</p>
           </div>
           <div class="col-md-4 text-center">
             <div class="icon-feature"><i class="fas fa-shield-alt"></i></div>
-            <h5>Approche personnalisée</h5>
-            <p>Je prends le temps d'écouter vos attentes et de proposer une solution adaptée à votre usage, votre budget et vos objectifs.</p>
+            <h5>Un seul interlocuteur</h5>
+            <p>Vous parlez à la personne qui analyse le besoin, développe l'outil et le met en ligne.</p>
           </div>
           <div class="col-md-4 text-center">
             <div class="icon-feature"><i class="fas fa-tag"></i></div>
@@ -58,8 +59,8 @@
 import { services } from '@/data/services'
 import { usePageMeta } from '@/composables/usePageMeta'
 usePageMeta(
-  'Services IT | Loïc Barthoulot',
-  'Montage PC sur mesure, dépannage, nettoyage, création de site web et automatisation IA. Prestations pour particuliers et petites entreprises.',
+  'Ce que je fais | Loïc Barthoulot',
+  'Applications métier, digitalisation de processus, création de site web, support et matériel informatique pour PME de Suisse romande.',
   { path: '/services' }
 )
 </script>
