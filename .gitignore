@@ -31,11 +31,11 @@ dist-ssr
 CLAUDE.md
 graphify-out/
 
-# Captures de vérification visuelle
+# Captures de vérification visuelle. Tout ce qui vit dans public/ est un
+# asset du site, jamais une capture : on l'exclut de la règle.
 .playwright-mcp/
 *.png
-!public/logo.png
-!public/og.png
+!public/*.png
 
 # Fichiers temporaires de vérification
 sm-tmp.xml
