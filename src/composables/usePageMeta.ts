@@ -10,6 +10,12 @@ export interface PageMetaOptions {
   path?: string
   image?: string
   type?: 'website' | 'article' | 'profile'
+  /**
+   * Fil d'Ariane. Affiché par Google à la place de l'URL brute dans les
+   * résultats, ce qui rend la place de la page dans le site lisible avant
+   * même le clic. L'accueil est ajouté automatiquement.
+   */
+  filAriane?: { nom: string; chemin: string }[]
 }
 
 export function usePageMeta(
@@ -21,6 +27,24 @@ export function usePageMeta(
   const url = `${SITE_URL}${path}`
   const image = options.image ?? DEFAULT_IMAGE
   const type = options.type ?? 'website'
+
+  const etapes = [{ nom: 'Accueil', chemin: '/' }, ...(options.filAriane ?? [])]
+  const filAriane =
+    etapes.length > 1
+      ? [{
+          type: 'application/ld+json',
+          innerHTML: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'BreadcrumbList',
+            itemListElement: etapes.map((e, i) => ({
+              '@type': 'ListItem',
+              position: i + 1,
+              name: e.nom,
+              item: `${SITE_URL}${e.chemin}`
+            }))
+          })
+        }]
+      : []
 
   useHead({
     htmlAttrs: { lang: 'fr' },
@@ -44,6 +68,7 @@ export function usePageMeta(
     ],
     link: [
       { rel: 'canonical', href: url }
-    ]
+    ],
+    script: filAriane
   })
 }

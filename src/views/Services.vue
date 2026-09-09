@@ -106,8 +106,10 @@
 <script setup lang="ts">
 import { usePageMeta } from '@/composables/usePageMeta'
 usePageMeta(
-  'Ce que je fais | Loïc Barthoulot',
-  'Création de site web, digitalisation de processus, sécurité et supervision, support et matériel informatique pour PME de Suisse romande.',
-  { path: '/services' }
+  'Prestations informatiques pour PME — Neuchâtel',
+  'Création de site web, digitalisation de processus, sécurité et dépannage informatique pour PME à Neuchâtel et en Suisse romande.',
+  { path: '/services',
+    filAriane: [{ nom: 'Prestations', chemin: '/services' }]
+  }
 )
 </script>

@@ -101,8 +101,10 @@
 <script setup lang="ts">
 import { usePageMeta } from '@/composables/usePageMeta'
 usePageMeta(
-  'Sécurité et supervision | Loïc Barthoulot',
-  'Supervision de la sécurité de vos postes : surveillance des détections, qualification et traitement des alertes. En partenariat avec PC-Shop Informatique.',
-  { path: '/services/securite-supervision' }
+  'Sécurité informatique pour PME — Neuchâtel',
+  'Supervision de la sécurité de vos postes à Neuchâtel : surveillance des détections, qualification et traitement des alertes. Avec PC-Shop Informatique.',
+  { path: '/services/securite-supervision',
+    filAriane: [{ nom: 'Prestations', chemin: '/services' }, { nom: 'Sécurité et supervision', chemin: '/services/securite-supervision' }]
+  }
 )
 </script>

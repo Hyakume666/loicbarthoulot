@@ -151,8 +151,8 @@
 <script setup lang="ts">
 import { usePageMeta } from '@/composables/usePageMeta'
 usePageMeta(
-  'Loïc Barthoulot — Informatique pour PME de Suisse romande',
-  'Sites web, digitalisation de processus, sécurité et supervision, support et matériel. Prestataire informatique indépendant à Neuchâtel.',
+  'Informatique pour PME à Neuchâtel | Loïc Barthoulot',
+  'Sites web, digitalisation de processus, sécurité et dépannage informatique pour PME à Neuchâtel et en Suisse romande.',
   { path: '/' }
 )
 </script>

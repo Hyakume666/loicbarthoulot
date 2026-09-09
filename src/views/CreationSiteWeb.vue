@@ -78,8 +78,10 @@
 <script setup lang="ts">
 import { usePageMeta } from '@/composables/usePageMeta'
 usePageMeta(
-  'Création de site web | Loïc Barthoulot',
-  'Site vitrine adapté au mobile, avec référencement de base, formulaire de contact et mise en ligne. Vue 3 et TypeScript.',
-  { path: '/services/creation-site-web' }
+  'Création de site web à Neuchâtel | Loïc Barthoulot',
+  'Site vitrine pour PME et indépendants à Neuchâtel : adapté au mobile, référencement de base, formulaire de contact, hébergement et mise en ligne.',
+  { path: '/services/creation-site-web',
+    filAriane: [{ nom: 'Prestations', chemin: '/services' }, { nom: 'Création de site web', chemin: '/services/creation-site-web' }]
+  }
 )
 </script>

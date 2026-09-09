@@ -111,8 +111,10 @@
 <script setup lang="ts">
 import { usePageMeta } from '@/composables/usePageMeta'
 usePageMeta(
-  'Digitalisation de processus | Loïc Barthoulot',
-  'Analyse de vos processus, puis automatisation de ce qui est répétitif : génération de documents, centralisation des données, suivi des dossiers.',
-  { path: '/services/digitalisation-processus' }
+  'Digitalisation de processus pour PME — Neuchâtel',
+  'Analyse de vos processus puis automatisation de ce qui est répétitif : documents générés, données centralisées, dossiers suivis. Neuchâtel et Suisse romande.',
+  { path: '/services/digitalisation-processus',
+    filAriane: [{ nom: 'Prestations', chemin: '/services' }, { nom: 'Digitalisation de processus', chemin: '/services/digitalisation-processus' }]
+  }
 )
 </script>

@@ -98,8 +98,10 @@
 <script setup lang="ts">
 import { usePageMeta } from '@/composables/usePageMeta'
 usePageMeta(
-  'Support et matériel | Loïc Barthoulot',
-  'Assemblage de postes de travail, dépannage matériel et logiciel, récupération de données et entretien. Neuchâtel et Suisse romande.',
-  { path: '/services/support-materiel' }
+  'Dépannage informatique à Neuchâtel | Loïc Barthoulot',
+  'Dépannage matériel et logiciel, récupération de données, assemblage de postes et entretien. Neuchâtel, La Chaux-de-Fonds et Suisse romande.',
+  { path: '/services/support-materiel',
+    filAriane: [{ nom: 'Prestations', chemin: '/services' }, { nom: 'Support et matériel', chemin: '/services/support-materiel' }]
+  }
 )
 </script>
