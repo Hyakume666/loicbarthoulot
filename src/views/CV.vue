@@ -156,7 +156,7 @@
           <article class="entree-cv">
             <div class="entree-cv__tete mb-2">
               <h3 class="h6 mb-0">CFC d'employé de commerce et maturité professionnelle</h3>
-              <p class="entree-cv__date mb-0">2012 – 2015</p>
+              <p class="entree-cv__date mb-0">2012 – 2016</p>
             </div>
             <p class="entree-cv__lieu mb-0">CIFOM ESTER, La Chaux-de-Fonds</p>
           </article>
