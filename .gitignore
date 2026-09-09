@@ -36,3 +36,6 @@ graphify-out/
 *.png
 !public/logo.png
 !public/og.png
+
+# Fichiers temporaires de vérification
+sm-tmp.xml
