@@ -13,6 +13,11 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
+        with:
+          # Historique complet : le sitemap date chaque page depuis son
+          # dernier commit. Avec le clone superficiel par défaut, git log
+          # ne renvoie rien et toutes les dates deviennent celle du build.
+          fetch-depth: 0
 
       - name: Setup Node
         uses: actions/setup-node@v4
