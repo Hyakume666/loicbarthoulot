@@ -78,8 +78,8 @@
 <script setup lang="ts">
 import { usePageMeta } from '@/composables/usePageMeta'
 usePageMeta(
-  'Création de site web à Neuchâtel | Loïc Barthoulot',
-  'Site vitrine pour PME et indépendants à Neuchâtel : adapté au mobile, référencement de base, formulaire de contact, hébergement et mise en ligne.',
+  'Création de site web — La Chaux-de-Fonds et Neuchâtel',
+  'Site vitrine pour PME et indépendants à La Chaux-de-Fonds et Neuchâtel : adapté au mobile, référencement de base, hébergement et mise en ligne.',
   { path: '/services/creation-site-web',
     filAriane: [{ nom: 'Prestations', chemin: '/services' }, { nom: 'Création de site web', chemin: '/services/creation-site-web' }]
   }

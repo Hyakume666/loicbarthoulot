@@ -101,8 +101,8 @@
 <script setup lang="ts">
 import { usePageMeta } from '@/composables/usePageMeta'
 usePageMeta(
-  'Sécurité informatique pour PME — Neuchâtel',
-  'Supervision de la sécurité de vos postes à Neuchâtel : surveillance des détections, qualification et traitement des alertes. Avec PC-Shop Informatique.',
+  'Sécurité informatique PME — La Chaux-de-Fonds, Neuchâtel',
+  'Supervision de la sécurité de vos postes : surveillance des détections, qualification et traitement des alertes. La Chaux-de-Fonds, Neuchâtel, Suisse romande.',
   { path: '/services/securite-supervision',
     filAriane: [{ nom: 'Prestations', chemin: '/services' }, { nom: 'Sécurité et supervision', chemin: '/services/securite-supervision' }]
   }

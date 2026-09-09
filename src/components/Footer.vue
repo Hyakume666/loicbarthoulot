@@ -5,7 +5,7 @@
         <a href="mailto:contact@loicbarthoulot.ch" class="pied-site__adresse">
           contact@loicbarthoulot.ch
         </a>
-        <p class="mb-0">Neuchâtel et Suisse romande</p>
+        <p class="mb-0">La Chaux-de-Fonds, Neuchâtel et Suisse romande</p>
       </div>
 
       <div class="row gy-3 align-items-center">

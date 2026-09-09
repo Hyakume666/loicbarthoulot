@@ -111,8 +111,8 @@
 <script setup lang="ts">
 import { usePageMeta } from '@/composables/usePageMeta'
 usePageMeta(
-  'Digitalisation de processus pour PME — Neuchâtel',
-  'Analyse de vos processus puis automatisation de ce qui est répétitif : documents générés, données centralisées, dossiers suivis. Neuchâtel et Suisse romande.',
+  'Digitalisation de processus — La Chaux-de-Fonds, Neuchâtel',
+  'Analyse de vos processus, puis automatisation de ce qui se répète : documents générés, données centralisées, dossiers suivis. La Chaux-de-Fonds, Neuchâtel.',
   { path: '/services/digitalisation-processus',
     filAriane: [{ nom: 'Prestations', chemin: '/services' }, { nom: 'Digitalisation de processus', chemin: '/services/digitalisation-processus' }]
   }

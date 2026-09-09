@@ -4,7 +4,7 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-11 col-xl-10">
-          <p class="surtitre">Informatique de gestion — Neuchâtel</p>
+          <p class="surtitre">Informatique de gestion — La Chaux-de-Fonds et Neuchâtel</p>
           <h1 class="hero__titre mb-4">
             Je m'occupe de l'informatique
             des <span class="hero__accent">PME romandes</span>.
@@ -151,8 +151,8 @@
 <script setup lang="ts">
 import { usePageMeta } from '@/composables/usePageMeta'
 usePageMeta(
-  'Informatique pour PME à Neuchâtel | Loïc Barthoulot',
-  'Sites web, digitalisation de processus, sécurité et dépannage informatique pour PME à Neuchâtel et en Suisse romande.',
+  'Informatique pour PME — La Chaux-de-Fonds et Neuchâtel',
+  'Sites web, digitalisation de processus, sécurité et dépannage informatique pour PME. La Chaux-de-Fonds, Neuchâtel et Suisse romande.',
   { path: '/' }
 )
 </script>

@@ -26,7 +26,7 @@
             </div>
             <div class="fiche__ligne">
               <span class="fiche__cle">Zone d'intervention</span>
-              <span class="fiche__valeur">Neuchâtel et Suisse romande</span>
+              <span class="fiche__valeur">La Chaux-de-Fonds, Neuchâtel et Suisse romande</span>
             </div>
             <div class="fiche__ligne">
               <span class="fiche__cle">Délai de réponse</span>

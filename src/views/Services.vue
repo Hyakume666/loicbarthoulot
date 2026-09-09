@@ -7,7 +7,8 @@
           <h1 class="hero__titre mb-3">Ce que je fais</h1>
           <p class="hero__texte mb-0">
             Sites web, digitalisation de processus, sécurité et support
-            informatique, pour des PME de Suisse romande.
+            informatique, pour des PME de La Chaux-de-Fonds, Neuchâtel et de
+            Suisse romande.
           </p>
         </div>
       </div>
@@ -106,8 +107,8 @@
 <script setup lang="ts">
 import { usePageMeta } from '@/composables/usePageMeta'
 usePageMeta(
-  'Prestations informatiques pour PME — Neuchâtel',
-  'Création de site web, digitalisation de processus, sécurité et dépannage informatique pour PME à Neuchâtel et en Suisse romande.',
+  'Prestations informatiques — La Chaux-de-Fonds, Neuchâtel',
+  'Création de site web, digitalisation de processus, sécurité et dépannage informatique pour PME. La Chaux-de-Fonds, Neuchâtel et Suisse romande.',
   { path: '/services',
     filAriane: [{ nom: 'Prestations', chemin: '/services' }]
   }

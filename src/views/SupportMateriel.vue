@@ -9,8 +9,8 @@
           <p class="surtitre">Support et matériel</p>
           <h1 class="hero__titre mb-3">Postes de travail, dépannage et entretien</h1>
           <p class="hero__texte mb-0">
-            Pour les particuliers comme pour les PME, sur Neuchâtel et la
-            Suisse romande.
+            Pour les particuliers comme pour les PME, à La Chaux-de-Fonds,
+            Neuchâtel et dans le reste de la Suisse romande.
           </p>
         </div>
       </div>
@@ -98,8 +98,8 @@
 <script setup lang="ts">
 import { usePageMeta } from '@/composables/usePageMeta'
 usePageMeta(
-  'Dépannage informatique à Neuchâtel | Loïc Barthoulot',
-  'Dépannage matériel et logiciel, récupération de données, assemblage de postes et entretien. Neuchâtel, La Chaux-de-Fonds et Suisse romande.',
+  'Dépannage informatique — La Chaux-de-Fonds et Neuchâtel',
+  'Dépannage matériel et logiciel, récupération de données, assemblage de postes et entretien. La Chaux-de-Fonds, Neuchâtel et Suisse romande.',
   { path: '/services/support-materiel',
     filAriane: [{ nom: 'Prestations', chemin: '/services' }, { nom: 'Support et matériel', chemin: '/services/support-materiel' }]
   }
