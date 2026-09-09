@@ -279,7 +279,10 @@ p {
 
 .hero__retour {
   display: inline-block;
-  margin-bottom: 1.75rem;
+  margin-bottom: 1.5rem;
+  // Zone tactile d'au moins 24 px de haut : à 0.875rem le texte seul n'en
+  // faisait que 22, sous le seuil retenu par Google pour le mobile.
+  padding-block: 0.25rem;
   font-size: 0.875rem;
   color: $sourdine;
   text-decoration: none;
@@ -598,6 +601,9 @@ p {
   }
 
   a {
+    display: inline-block;
+    // Même raison que .hero__retour : les liens du pied tombaient à 22 px.
+    padding-block: 0.25rem;
     color: $sourdine;
     text-decoration: none;
 
