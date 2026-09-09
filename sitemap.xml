@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- Généré par scripts/generer-sitemap.mjs. Ne pas modifier à la main. -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://loicbarthoulot.ch/</loc>
@@ -38,7 +39,7 @@
   </url>
   <url>
     <loc>https://loicbarthoulot.ch/cv</loc>
-    <lastmod>2026-09-09</lastmod>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -50,13 +51,13 @@
   </url>
   <url>
     <loc>https://loicbarthoulot.ch/mentions-legales</loc>
-    <lastmod>2026-09-09</lastmod>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.2</priority>
   </url>
   <url>
     <loc>https://loicbarthoulot.ch/confidentialite</loc>
-    <lastmod>2026-09-09</lastmod>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.2</priority>
   </url>
